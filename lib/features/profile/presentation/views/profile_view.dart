@@ -1,5 +1,7 @@
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
+import 'package:egy_exlpor/features/extra_services/presentation/views/extra_service.dart';
+import 'package:egy_exlpor/features/profile/presentation/views/widgets/custom_list_title_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 
@@ -86,10 +88,12 @@ class ProfileView extends StatelessWidget {
                       icon: IconlyLight.closeSquare,
                       text: "Extra Services",
                       function: () {
-                        // await Navigator.pushNamed(
-                        //   context,
-                        //   OrdersScreenFree.routeName,
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>  const ExtraServiceView(),
+                          ),
+                        );
                       },
                     ),
                     const Divider(
@@ -190,58 +194,5 @@ class ProfileView extends StatelessWidget {
             ],
           ),
         ));
-  }
-}
-
-class CustomListTile extends StatelessWidget {
-  const CustomListTile(
-      {super.key,
-      required this.icon,
-      required this.text,
-      required this.function});
-  final String text;
-  final IconData icon;
-  final Function function;
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      onTap: () {
-        function();
-      },
-      leading: Icon(
-        icon,
-        size: 20,
-      ),
-      title: Text(text),
-      trailing: const Icon(IconlyLight.arrowRight2),
-    );
-  }
-}
-
-class TitlesTextWidget extends StatelessWidget {
-  const TitlesTextWidget({
-    Key? key,
-    required this.label,
-    this.fontSize = 20,
-    this.color,
-    this.maxLines,
-  }) : super(key: key);
-
-  final String label;
-  final double fontSize;
-  final Color? color;
-  final int? maxLines;
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      label,
-      maxLines: maxLines,
-      // textAlign: TextAlign.justify,
-      style: TextStyle(
-          color: color,
-          fontSize: fontSize,
-          fontWeight: FontWeight.bold,
-          overflow: TextOverflow.ellipsis),
-    );
   }
 }
