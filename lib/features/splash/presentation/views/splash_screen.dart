@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:egy_exlpor/core/utils/assets.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/features/auth/presentation/views/login_view.dart';
-import 'package:egy_exlpor/features/home/presentation/views/home_view.dart';
+import 'package:egy_exlpor/features/layout/presentation/views/layout_view.dart';
 import 'package:egy_exlpor/features/onboarding/presentation/views/on_boarding_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +39,7 @@ class _SplashViewState extends State<SplashView> {
               stream: FirebaseAuth.instance.authStateChanges(),
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
-                  return const HomeView();
+                  return const LayoutView();
                 } else {
                   return const LoginView();
                 }
