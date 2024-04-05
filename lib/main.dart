@@ -5,6 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,8 +29,8 @@ class MyApp extends StatelessWidget {
       title: "Egy Exlpor",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        textTheme: GoogleFonts.montserratTextTheme(ThemeData().textTheme),
       ),
       home: const SplashView(),
       localizationsDelegates: const [

@@ -2,6 +2,7 @@ import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/features/home/presentation/views/home_view.dart';
 import 'package:egy_exlpor/features/profile/presentation/views/profile_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_iconly/flutter_iconly.dart';
 
 class LayoutViewBody extends StatefulWidget {
   const LayoutViewBody({super.key});
@@ -37,53 +38,65 @@ class _LayoutViewBodyState extends State<LayoutViewBody> {
           setState(() {});
         },
       ),
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: currentIndex,
-        elevation: 0,
-        onDestinationSelected: (value) {
-          currentIndex = value;
-          pageController.jumpToPage(currentIndex);
-          setState(() {});
-        },
-        indicatorColor: kPinkColor,
-        backgroundColor: kWhiteColor.withOpacity(0.8),
-        surfaceTintColor: kPrimaryColor,
-        destinations: const [
-          NavigationDestination(
-            label: 'Home',
-            icon: Icon(Icons.home),
-            selectedIcon: Icon(
-              Icons.home,
-              color: kPrimaryColor,
-            ),
+      bottomNavigationBar: NavigationBarTheme(
+        data: NavigationBarThemeData(
+          labelTextStyle: MaterialStateProperty.resolveWith<TextStyle>(
+            (Set<MaterialState> states) =>
+                states.contains(MaterialState.selected)
+                    ? const TextStyle(color: kPrimaryColor,)
+                    : const TextStyle(color: Colors.black),
           ),
-          NavigationDestination(
-            label: 'Add',
-            icon: Icon(Icons.add_circle_outline),
-            selectedIcon: Icon(
-              Icons.add_circle_outline,
-              color: kPrimaryColor,
+        ),
+        child: NavigationBar(
+          selectedIndex: currentIndex,
+          elevation: 0,
+          onDestinationSelected: (value) {
+            currentIndex = value;
+            pageController.jumpToPage(currentIndex);
+            setState(() {});
+          },
+          indicatorColor: kSeconderyBlueColor,
+          backgroundColor: kWhiteColor.withOpacity(0.8),
+          surfaceTintColor: kPrimaryColor,
+          destinations: const[
+            NavigationDestination(
+              label: 'Home',
+              icon: Icon(Icons.home),
+              selectedIcon: Icon(
+                Icons.home,
+                color: kPrimaryColor,
+              ),
             ),
-          ),
-          // NavigationDestination(
-          //   label: 'Search',
-          //   icon: const Icon(
-          //     Icons.search_outlined,
-          //   ),
-          //   selectedIcon: Icon(
-          //     Icons.search_outlined,
-          //     color: kPrimaryColor,
-          //   ),
-          // ),
-          // NavigationDestination(
-          //   label: 'Profile',
-          //   icon:const Icon(Icons.person_outline),
-          //   selectedIcon: Icon(
-          //     Icons.person_outline,
-          //     color: kPrimaryColor,
-          //   ),
-          // ),
-        ],
+            NavigationDestination(
+              label: 'Profile',
+              icon: Icon(
+                IconlyLight.profile,
+              ),
+              selectedIcon: Icon(
+                IconlyLight.profile,
+                color: kPrimaryColor,
+              ),
+            ),
+            // NavigationDestination(
+            //   label: 'Search',
+            //   icon: const Icon(
+            //     Icons.search_outlined,
+            //   ),
+            //   selectedIcon: Icon(
+            //     Icons.search_outlined,
+            //     color: kPrimaryColor,
+            //   ),
+            // ),
+            // NavigationDestination(
+            //   label: 'Profile',
+            //   icon:const Icon(Icons.person_outline),
+            //   selectedIcon: Icon(
+            //     Icons.person_outline,
+            //     color: kPrimaryColor,
+            //   ),
+            // ),
+          ],
+        ),
       ),
     );
   }

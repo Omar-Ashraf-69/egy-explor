@@ -6,7 +6,7 @@ import 'package:egy_exlpor/features/auth/presentation/views/widgets/custom_check
 import 'package:egy_exlpor/features/auth/presentation/views/widgets/custom_text_field.dart';
 import 'package:egy_exlpor/features/auth/presentation/views/widgets/logo_widget.dart';
 import 'package:egy_exlpor/features/auth/presentation/views/widgets/password_text_field_widget.dart';
-import 'package:egy_exlpor/features/home/presentation/views/home_view.dart';
+import 'package:egy_exlpor/features/layout/presentation/views/layout_view.dart';
 import 'package:flutter/material.dart';
 
 class LoginView extends StatefulWidget {
@@ -100,7 +100,7 @@ class _LoginViewState extends State<LoginView> {
                                 // ignore: use_build_context_synchronously
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const HomeView(),
+                                  builder: (context) => const LayoutView(),
                                 ));
                           } else {
                             // ignore: use_build_context_synchronously
