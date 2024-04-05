@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "443910820495",
+    "project_id": "egy-explor",
+    "storage_bucket": "egy-explor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443910820495:android:a1c310bfbd80e3019916fa",
+        "android_client_info": {
+          "package_name": "com.example.egy_exlpor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuMfyKmBC0gR8UN4KfCwYmurxiUffOnV8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
