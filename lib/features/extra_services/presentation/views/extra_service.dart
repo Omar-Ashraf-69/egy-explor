@@ -4,34 +4,43 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../../../generated/l10n.dart';
+
 class ExtraServiceView extends StatelessWidget {
   const ExtraServiceView({super.key});
-  final List<CardItem> items = const [
-    CardItem(label: 'Map', icon: IconlyBold.location),
-    CardItem(
-      label: 'Weather Forcast',
-      icon: FontAwesomeIcons.cloud,
-    ),
-    CardItem(label: 'Language Translator', icon: Icons.language_outlined),
-    CardItem(
-      label: 'Currency Converter',
-      icon: Icons.currency_exchange_rounded,
-    ),
-    CardItem(
-      label: 'Exchange Currency',
-      icon: Icons.price_change_outlined,
-    ),
-  ];
 
   @override
   Widget build(BuildContext context) {
+    final List<CardItem> items = [
+      CardItem(
+        label: S.of(context).map,
+        icon: IconlyBold.location,
+      ),
+      CardItem(
+        label: S.of(context).weatherForcast,
+        icon: FontAwesomeIcons.cloud,
+      ),
+      CardItem(
+        label: S.of(context).languageTranslator,
+        icon: Icons.language_outlined,
+      ),
+      CardItem(
+        label: S.of(context).currenyConverter,
+        icon: Icons.currency_exchange_rounded,
+      ),
+      CardItem(
+        label: S.of(context).exchangeCurrency,
+        icon: Icons.price_change_outlined,
+      ),
+    ];
+
     return Scaffold(
       backgroundColor: kWhiteColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         centerTitle: true,
-        title: const Text(
-          "Extra Services",
+        title: Text(
+          S.of(context).extraServices,
           style: Styles.textStyle18,
         ),
       ),

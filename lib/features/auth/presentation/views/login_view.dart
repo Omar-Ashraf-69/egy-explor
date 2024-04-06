@@ -9,6 +9,8 @@ import 'package:egy_exlpor/features/auth/presentation/views/widgets/password_tex
 import 'package:egy_exlpor/features/layout/presentation/views/layout_view.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../generated/l10n.dart';
+
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
 
@@ -55,12 +57,13 @@ class _LoginViewState extends State<LoginView> {
                     CustomTextField(
                       textEditingController: emailController,
                       prefixIcon: const Icon(Icons.email_outlined),
-                      label: 'Email',
+                      label: S.of(context).email,
                     ),
                     const SizedBox(
                       height: 15,
                     ),
                     PasswordTextField(
+                      label: S.of(context).password,
                       controller: passController,
                       isPass: isPass,
                       onSuffixTap: () {
@@ -78,9 +81,9 @@ class _LoginViewState extends State<LoginView> {
                                 color: Colors.white,
                               ),
                             )
-                          : const Text(
-                              'LOGIN',
-                              style: TextStyle(
+                          :  Text(
+                              S.of(context).login.toUpperCase(),
+                              style:const TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
                               ),
@@ -128,8 +131,8 @@ class _LoginViewState extends State<LoginView> {
                       height: 15,
                     ),
                     CustomCheckHavingEmailWidget(
-                      checkingMessage: "Don't have an account?  ",
-                      actionMessage: 'Register Now.',
+                      checkingMessage: S.of(context).dontHaveAccount,
+                      actionMessage:S.of(context).registerNow ,
                       onTap: () {
                         //(context).go(AppRouter.kRegisterView);
                         Navigator.pushAndRemoveUntil(

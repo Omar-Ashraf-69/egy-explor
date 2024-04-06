@@ -1,6 +1,5 @@
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
-import 'package:egy_exlpor/features/onboarding/presentation/views/on_boarding_view.dart';
 import 'package:egy_exlpor/features/splash/presentation/views/splash_screen.dart';
 import 'package:egy_exlpor/firebase_options.dart';
 import 'package:egy_exlpor/generated/l10n.dart';

@@ -11,6 +11,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 
+import '../../../../../generated/l10n.dart';
+
 class ProfileViewBody extends StatelessWidget {
   const ProfileViewBody({super.key});
 
@@ -103,7 +105,7 @@ class ProfileViewBody extends StatelessWidget {
                         children: [
                           CustomListTile(
                             icon: IconlyLight.closeSquare,
-                            text: "Extra Services",
+                            text: S.of(context).extraServices,
                             function: () {
                               Navigator.push(
                                 context,
@@ -120,7 +122,7 @@ class ProfileViewBody extends StatelessWidget {
                           ),
                           CustomListTile(
                             icon: IconlyLight.calendar,
-                            text: "Previous trip",
+                            text: S.of(context).previousTrip,
                             function: () async {
                               // await Navigator.pushNamed(
                               //   context,
@@ -134,7 +136,7 @@ class ProfileViewBody extends StatelessWidget {
                           ),
                           CustomListTile(
                             icon: IconlyLight.setting,
-                            text: "Settings",
+                            text: S.of(context).settings,
                             function: () async {
                               // await Navigator.pushNamed(
                               //   context,
@@ -148,7 +150,7 @@ class ProfileViewBody extends StatelessWidget {
                           ),
                           CustomListTile(
                             icon: IconlyLight.message,
-                            text: "Contact us",
+                            text: S.of(context).contactUs,
                             function: () {},
                           ),
                           const Divider(
@@ -189,7 +191,7 @@ class ProfileViewBody extends StatelessWidget {
                           color: kWhiteColor,
                         ),
                         label: Text(
-                          "Log out",
+                          S.of(context).logout,
                           style: TextStyle(
                             color: kWhiteColor,
                           ),

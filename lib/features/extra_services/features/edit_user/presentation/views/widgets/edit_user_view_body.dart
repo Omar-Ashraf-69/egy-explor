@@ -9,6 +9,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../../../../generated/l10n.dart';
+
 class EditProfileViewBody extends StatefulWidget {
   const EditProfileViewBody({super.key});
 
@@ -30,9 +32,10 @@ class _EditProfileViewBodyState extends State<EditProfileViewBody> {
           return Scaffold(
             appBar: AppBar(
               surfaceTintColor: Colors.white,
-              title: const Text(
-                "Profile Detials",
-                style: TextStyle(
+              centerTitle: true,
+              title: Text(
+                S.of(context).profileDetials,
+                style: const TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.w500,
                 ),
@@ -92,7 +95,7 @@ class _EditProfileViewBodyState extends State<EditProfileViewBody> {
                     ),
                     CustomTextField(
                       prefixIcon: const Icon(Icons.person_outline),
-                      label: 'User Name',
+                      label: S.of(context).userName,
                       hintText: state.user.userName,
                       textEditingController: userNameController,
                       isLabelSticked: true,
@@ -102,7 +105,7 @@ class _EditProfileViewBodyState extends State<EditProfileViewBody> {
                     ),
                     CustomTextField(
                       prefixIcon: const Icon(Icons.person_outline),
-                      label: 'email',
+                      label: S.of(context).email,
                       hintText: state.user.email,
                       textEditingController: emailController,
                       isLabelSticked: true,
@@ -118,7 +121,7 @@ class _EditProfileViewBodyState extends State<EditProfileViewBody> {
                               ),
                             )
                           : Text(
-                              "Update".toUpperCase(),
+                              S.of(context).updateProfile.toUpperCase(),
                               style: TextStyle(
                                 fontWeight: FontWeight.w500,
                                 color: kWhiteColor,

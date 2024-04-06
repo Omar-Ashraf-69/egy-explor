@@ -9,6 +9,8 @@ import 'package:egy_exlpor/features/auth/presentation/views/widgets/password_tex
 import 'package:egy_exlpor/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../generated/l10n.dart';
+
 class RegisterView extends StatefulWidget {
   const RegisterView({super.key});
 
@@ -57,7 +59,7 @@ class _RegisterViewState extends State<RegisterView> {
                     CustomTextField(
                       textEditingController: userNameController,
                       prefixIcon: const Icon(Icons.atm_outlined),
-                      label: 'Username',
+                      label: S.of(context).userName,
                     ),
                     const SizedBox(
                       height: 15,
@@ -65,12 +67,13 @@ class _RegisterViewState extends State<RegisterView> {
                     CustomTextField(
                       textEditingController: emailController,
                       prefixIcon: const Icon(Icons.email_outlined),
-                      label: 'Email',
+                      label: S.of(context).email,
                     ),
                     const SizedBox(
                       height: 15,
                     ),
                     PasswordTextField(
+                      label: S.of(context).password,
                       controller: passController,
                       isPass: isPass,
                       onSuffixTap: () {
@@ -88,9 +91,9 @@ class _RegisterViewState extends State<RegisterView> {
                                 color: Colors.white,
                               ),
                             )
-                          : const Text(
-                              'REGISTER',
-                              style: TextStyle(
+                          : Text(
+                              S.of(context).register,
+                              style: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
                               ),
@@ -122,21 +125,20 @@ class _RegisterViewState extends State<RegisterView> {
                                 ),
                               ),
                             );
-                            isLoading = false;
-                            setState(() {});
                           }
                         } else {
                           autovalidateMode = AutovalidateMode.always;
-                          setState(() {});
                         }
+                        isLoading = false;
+                        setState(() {});
                       },
                     ),
                     const SizedBox(
                       height: 15,
                     ),
                     CustomCheckHavingEmailWidget(
-                      checkingMessage: "Have an account?  ",
-                      actionMessage: 'Login Now.',
+                      checkingMessage: S.of(context).alreadyHaveAccount,
+                      actionMessage: S.of(context).loginNow,
                       onTap: () {
                         Navigator.pushAndRemoveUntil(
                             context,

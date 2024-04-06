@@ -5,12 +5,14 @@ import 'package:flutter/material.dart';
 class PasswordTextField extends StatelessWidget {
   PasswordTextField({
     super.key,
+    required this.label,
     required this.controller,
     this.onSuffixTap,
     this.isPass = true,
   });
   final TextEditingController controller;
   final void Function()? onSuffixTap;
+  final String label;
   bool isPass;
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,7 @@ class PasswordTextField extends StatelessWidget {
         suffixIcon: InkWell(
           onTap: onSuffixTap,
           child: Padding(
-            padding: const EdgeInsets.only(right: 16.0),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: isPass
                 ? const Icon(
                     Icons.remove_red_eye_outlined,
@@ -40,9 +42,9 @@ class PasswordTextField extends StatelessWidget {
                 : const Icon(Icons.remove_red_eye_rounded),
           ),
         ),
-        label: const Text(
-          "Password",
-          style: TextStyle(
+        label: Text(
+          label,
+          style: const TextStyle(
             fontWeight: FontWeight.w500,
           ),
         ),

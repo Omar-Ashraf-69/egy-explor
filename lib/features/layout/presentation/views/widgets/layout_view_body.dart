@@ -2,6 +2,7 @@ import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart'
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/features/home/presentation/views/home_view.dart';
 import 'package:egy_exlpor/features/profile/presentation/views/profile_view.dart';
+import 'package:egy_exlpor/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
@@ -63,21 +64,21 @@ class _LayoutViewBodyState extends State<LayoutViewBody> {
           indicatorColor: kSeconderyBlueColor,
           backgroundColor: kWhiteColor.withOpacity(0.8),
           surfaceTintColor: kPrimaryColor,
-          destinations: const [
+          destinations: [
             NavigationDestination(
-              label: 'Home',
-              icon: Icon(Icons.home),
-              selectedIcon: Icon(
+              label: S.of(context).home,
+              icon: const Icon(Icons.home),
+              selectedIcon: const Icon(
                 Icons.home,
                 color: kPrimaryColor,
               ),
             ),
             NavigationDestination(
-              label: 'Profile',
-              icon: Icon(
+              label: S.of(context).profile,
+              icon: const Icon(
                 IconlyLight.profile,
               ),
-              selectedIcon: Icon(
+              selectedIcon: const Icon(
                 IconlyLight.profile,
                 color: kPrimaryColor,
               ),

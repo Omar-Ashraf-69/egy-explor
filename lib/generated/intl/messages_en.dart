@@ -22,7 +22,36 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "aboutUs": MessageLookupByLibrary.simpleMessage("About Us"),
+        "alreadyHaveAccount":
+            MessageLookupByLibrary.simpleMessage("Already have an account? "),
+        "ar": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "cantBeEmpty":
+            MessageLookupByLibrary.simpleMessage(" can\'t be empty."),
+        "changePassword":
+            MessageLookupByLibrary.simpleMessage("Change Password"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("Contact Us"),
+        "currenyConverter":
+            MessageLookupByLibrary.simpleMessage("Curreny Converter"),
+        "dontHaveAccount":
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account? "),
+        "editProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "en": MessageLookupByLibrary.simpleMessage("English"),
+        "exchangeCurrency":
+            MessageLookupByLibrary.simpleMessage("Exchange Currency"),
+        "extraServices": MessageLookupByLibrary.simpleMessage("Extra Services"),
+        "forgetPassword":
+            MessageLookupByLibrary.simpleMessage("Forget Password?"),
         "getStared": MessageLookupByLibrary.simpleMessage("Get Started"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
+        "languageTranslator":
+            MessageLookupByLibrary.simpleMessage("language Translator"),
+        "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "loginNow": MessageLookupByLibrary.simpleMessage("Login Now"),
+        "logout": MessageLookupByLibrary.simpleMessage("logout"),
+        "map": MessageLookupByLibrary.simpleMessage("Map"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "onBoardingPage1Suffix": MessageLookupByLibrary.simpleMessage("Wide"),
         "onBoardingPage1Title": MessageLookupByLibrary.simpleMessage(
@@ -34,8 +63,26 @@ class MessageLookup extends MessageLookupByLibrary {
             "People don\'t take trips trips take "),
         "onBoardingPage2subTitle": MessageLookupByLibrary.simpleMessage(
             "To get the best of your adventure you just need to leave and go where you like we are waiting for you"),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "previousTrip": MessageLookupByLibrary.simpleMessage("Previous Trip"),
+        "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "profileDetials":
+            MessageLookupByLibrary.simpleMessage("Profile Details"),
+        "register": MessageLookupByLibrary.simpleMessage("Register"),
+        "registerNow": MessageLookupByLibrary.simpleMessage("Register Now"),
+        "selectLanguage":
+            MessageLookupByLibrary.simpleMessage("Select Language"),
+        "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "splashTitle": MessageLookupByLibrary.simpleMessage("Egy Exlpor"),
-        "title": MessageLookupByLibrary.simpleMessage("Flutter localization")
+        "termsOfService":
+            MessageLookupByLibrary.simpleMessage("Terms of Service"),
+        "title": MessageLookupByLibrary.simpleMessage("Flutter localization"),
+        "updateProfile": MessageLookupByLibrary.simpleMessage("Update Profile"),
+        "userName": MessageLookupByLibrary.simpleMessage("UserName"),
+        "version": MessageLookupByLibrary.simpleMessage("Version"),
+        "weatherForcast":
+            MessageLookupByLibrary.simpleMessage("Weather Forcast")
       };
 }
