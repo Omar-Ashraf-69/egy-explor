@@ -83,24 +83,7 @@ class _LayoutViewBodyState extends State<LayoutViewBody> {
                 color: kPrimaryColor,
               ),
             ),
-            // NavigationDestination(
-            //   label: 'Search',
-            //   icon: const Icon(
-            //     Icons.search_outlined,
-            //   ),
-            //   selectedIcon: Icon(
-            //     Icons.search_outlined,
-            //     color: kPrimaryColor,
-            //   ),
-            // ),
-            // NavigationDestination(
-            //   label: 'Profile',
-            //   icon:const Icon(Icons.person_outline),
-            //   selectedIcon: Icon(
-            //     Icons.person_outline,
-            //     color: kPrimaryColor,
-            //   ),
-            // ),
+            
           ],
         ),
       ),

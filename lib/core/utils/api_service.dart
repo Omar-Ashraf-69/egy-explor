@@ -1,14 +1,55 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 
 class ApiService {
-  //https://www.googleapis.com/books/v1/volumes?Filtering=free-ebooks&q=subject:cooking
-  final String _baseUrl = 'https://www.googleapis.com/books/v1/';
   final Dio _dio;
 
   ApiService(this._dio);
 
-  Future<Map<String, dynamic>> get({required String endpoint}) async {
-    Response response = await _dio.get("$_baseUrl$endpoint");
+  // Future<Map<String, dynamic>> get({required String endpoint}) async {
+  //   Response response = await _dio.get("$endpoint");
+  //   return response.data;
+  // }
+
+  Future<Map<String, dynamic>> get(
+      {required String url, @required String? token}) async {
+    _dio.options.headers['Authorization'] = 'Bearer ${token ?? ""}';
+    Response response = await _dio.get(
+      url,
+      options: Options(headers: _dio.options.headers),
+    );
     return response.data;
   }
+
+  Future<Map<String, dynamic>> post(
+      {required String url,
+      @required dynamic body,
+      @required String? token}) async {
+    _dio.options.headers['Authorization'] = 'Bearer ${token ?? ""}';
+    Response response = await _dio.post(
+      url,
+      data: body,
+      options: Options(headers: _dio.options.headers),
+    );
+    return response.data;
+    
+  }
+  Future<Map<String, dynamic>> put(
+      {required String url,
+      @required dynamic body,
+      @required String? token}) async {
+    _dio.options.headers['Authorization'] = 'Bearer ${token ?? ""}';
+    _dio.options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+    log('url = $url body = $body token = $token ');
+
+    Response response = await _dio.put(
+      url,
+      data: body,
+      options: Options(headers: _dio.options.headers),
+    );
+    return response.data; 
+  }
+  
 }
