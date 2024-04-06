@@ -10,6 +10,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../../../generated/l10n.dart';
+
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
 
@@ -48,7 +50,10 @@ class _SplashViewState extends State<SplashView> {
         await prefs.setBool('seenOnboarding', true);
         // ignore: use_build_context_synchronously
         Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => const OnBoardingView(),),);
+          MaterialPageRoute(
+            builder: (context) => const OnBoardingView(),
+          ),
+        );
       }
     });
   }
@@ -67,9 +72,9 @@ class _SplashViewState extends State<SplashView> {
             const SizedBox(
               height: 20,
             ),
-            const Text(
-              'Egy Exlpor',
-              style: TextStyle(
+            Text(
+              S.of(context).splashTitle,
+              style: const TextStyle(
                 fontSize: 26,
                 fontWeight: FontWeight.w700,
                 color: kPrimaryColor,

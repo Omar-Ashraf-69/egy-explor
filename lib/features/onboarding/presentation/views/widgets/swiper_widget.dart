@@ -5,6 +5,7 @@ import 'package:egy_exlpor/core/utils/custom_button_widget.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/auth/presentation/views/login_view.dart';
 import 'package:egy_exlpor/features/onboarding/presentation/views/widgets/on_boarding_widget.dart';
+import 'package:egy_exlpor/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class SwiperWidget extends StatefulWidget {
@@ -18,24 +19,23 @@ class SwiperWidgetState extends State<SwiperWidget> {
   static PageController pageController = PageController();
   int currentPage = 0;
   static bool isLastPage = false;
-  List<OnBoardingPageWidget> pages = const [
-    OnBoardingPageWidget(
-      title: 'Life is Short and The world is ',
-      suffixText: 'Wide',
-      subTitle:
-          'At Friends tours and travel, we customize reliable and trutworthy educational tours to destinations all over the world',
-      image: AssetsData.onboarding1,
-    ),
-    OnBoardingPageWidget(
-      title: "People don't take trips trips take ",
-      suffixText: 'people',
-      subTitle:
-          'To get the best of your adventure you just need to leave and go where you like we are waiting for you',
-      image: AssetsData.onboarding2,
-    ),
-  ];
+
   @override
   Widget build(BuildContext context) {
+    List<OnBoardingPageWidget> pages = [
+      OnBoardingPageWidget(
+        title: S.of(context).onBoardingPage1Title,
+        suffixText: S.of(context).onBoardingPage1Suffix,
+        subTitle: S.of(context).onBoardingPage1subTitle,
+        image: AssetsData.onboarding1,
+      ),
+      OnBoardingPageWidget(
+        title: S.of(context).onBoardingPage2Title,
+        suffixText: S.of(context).onBoardingPage2Suffix,
+        subTitle: S.of(context).onBoardingPage2subTitle,
+        image: AssetsData.onboarding2,
+      ),
+    ];
     return Column(
       children: [
         Expanded(
@@ -77,7 +77,9 @@ class SwiperWidgetState extends State<SwiperWidget> {
           padding: const EdgeInsets.symmetric(horizontal: 12.0),
           child: CustomButtonWidget(
             label: Text(
-              SwiperWidgetState.isLastPage ? 'Get Started' : "Next",
+              SwiperWidgetState.isLastPage
+                  ? S.of(context).getStared
+                  : S.of(context).next,
               style: Styles.textStyle16.copyWith(
                 color: kWhiteColor,
                 fontWeight: FontWeight.w600,

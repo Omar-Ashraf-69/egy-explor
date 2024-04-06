@@ -1,5 +1,14 @@
 {
-  "title":"ترجمه فلاتر",
-  "subtitle":"لقد ضغطت على الزر هذا عدة مرات  " 
+  "title": "الترجمة في فلاتر",
+  "onBoardingPage1Title": "الحياة قصيرة والعالم ",
+  "onBoardingPage1Suffix": "واسع",
+  "onBoardingPage1subTitle": "في جولات وسفر الأصدقاء، نقوم بتخصيص جولات تعليمية موثوقة وموثوقة إلى وجهات في جميع أنحاء العالم",
+  "onBoardingPage2Title": "الناس لا يقومون برحلات الرحلات تأخذ ",
+  "onBoardingPage2Suffix": "الناس",
+  "onBoardingPage2subTitle": "للحصول على أفضل مغامرتك، ما عليك سوى ترك المكان والذهاب حيث تحب، نحن ننتظرك",
+  "getStared": "البدء",
+  "next": "التالي",
+  "skip": "تخطى",
+  "splashTitle":"استكشف مصر"
 
 }

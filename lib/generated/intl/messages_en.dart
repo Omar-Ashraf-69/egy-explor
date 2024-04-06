@@ -22,8 +22,20 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "subtitle": MessageLookupByLibrary.simpleMessage(
-            "You have pushed the button this many times "),
+        "getStared": MessageLookupByLibrary.simpleMessage("Get Started"),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "onBoardingPage1Suffix": MessageLookupByLibrary.simpleMessage("Wide"),
+        "onBoardingPage1Title": MessageLookupByLibrary.simpleMessage(
+            "Life is Short and The world is "),
+        "onBoardingPage1subTitle": MessageLookupByLibrary.simpleMessage(
+            "At Friends tours and travel, we customize reliable and trutworthy educational tours to destinations all over the world"),
+        "onBoardingPage2Suffix": MessageLookupByLibrary.simpleMessage("people"),
+        "onBoardingPage2Title": MessageLookupByLibrary.simpleMessage(
+            "People don\'t take trips trips take "),
+        "onBoardingPage2subTitle": MessageLookupByLibrary.simpleMessage(
+            "To get the best of your adventure you just need to leave and go where you like we are waiting for you"),
+        "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+        "splashTitle": MessageLookupByLibrary.simpleMessage("Egy Exlpor"),
         "title": MessageLookupByLibrary.simpleMessage("Flutter localization")
       };
 }

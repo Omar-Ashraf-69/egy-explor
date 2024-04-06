@@ -22,8 +22,20 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "subtitle": MessageLookupByLibrary.simpleMessage(
-            "لقد ضغطت على الزر هذا عدة مرات  "),
-        "title": MessageLookupByLibrary.simpleMessage("ترجمه فلاتر")
+        "getStared": MessageLookupByLibrary.simpleMessage("البدء"),
+        "next": MessageLookupByLibrary.simpleMessage("التالي"),
+        "onBoardingPage1Suffix": MessageLookupByLibrary.simpleMessage("واسع"),
+        "onBoardingPage1Title":
+            MessageLookupByLibrary.simpleMessage("الحياة قصيرة والعالم "),
+        "onBoardingPage1subTitle": MessageLookupByLibrary.simpleMessage(
+            "في جولات وسفر الأصدقاء، نقوم بتخصيص جولات تعليمية موثوقة وموثوقة إلى وجهات في جميع أنحاء العالم"),
+        "onBoardingPage2Suffix": MessageLookupByLibrary.simpleMessage("الناس"),
+        "onBoardingPage2Title": MessageLookupByLibrary.simpleMessage(
+            "الناس لا يقومون برحلات الرحلات تأخذ "),
+        "onBoardingPage2subTitle": MessageLookupByLibrary.simpleMessage(
+            "للحصول على أفضل مغامرتك، ما عليك سوى ترك المكان والذهاب حيث تحب، نحن ننتظرك"),
+        "skip": MessageLookupByLibrary.simpleMessage("تخطى"),
+        "splashTitle": MessageLookupByLibrary.simpleMessage("استكشف مصر"),
+        "title": MessageLookupByLibrary.simpleMessage("الترجمة في فلاتر")
       };
 }

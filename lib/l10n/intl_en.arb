@@ -1,5 +1,15 @@
 {
   "title":"Flutter localization",
-  "subtitle":"You have pushed the button this many times "
+  "onBoardingPage1Title":"Life is Short and The world is ",
+  "onBoardingPage1Suffix":"Wide",
+  "onBoardingPage1subTitle":"At Friends tours and travel, we customize reliable and trutworthy educational tours to destinations all over the world",
+  "onBoardingPage2Title":"People don't take trips trips take ",
+  "onBoardingPage2Suffix":"people",
+  "onBoardingPage2subTitle":"To get the best of your adventure you just need to leave and go where you like we are waiting for you",
+  "getStared":"Get Started",
+  "next":"Next",
+  "skip":"Skip",
+  "splashTitle":"Egy Exlpor"
+
 
 }

@@ -60,11 +60,101 @@ class S {
     );
   }
 
-  /// `You have pushed the button this many times `
-  String get subtitle {
+  /// `Life is Short and The world is `
+  String get onBoardingPage1Title {
     return Intl.message(
-      'You have pushed the button this many times ',
-      name: 'subtitle',
+      'Life is Short and The world is ',
+      name: 'onBoardingPage1Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wide`
+  String get onBoardingPage1Suffix {
+    return Intl.message(
+      'Wide',
+      name: 'onBoardingPage1Suffix',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `At Friends tours and travel, we customize reliable and trutworthy educational tours to destinations all over the world`
+  String get onBoardingPage1subTitle {
+    return Intl.message(
+      'At Friends tours and travel, we customize reliable and trutworthy educational tours to destinations all over the world',
+      name: 'onBoardingPage1subTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `People don't take trips trips take `
+  String get onBoardingPage2Title {
+    return Intl.message(
+      'People don\'t take trips trips take ',
+      name: 'onBoardingPage2Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `people`
+  String get onBoardingPage2Suffix {
+    return Intl.message(
+      'people',
+      name: 'onBoardingPage2Suffix',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To get the best of your adventure you just need to leave and go where you like we are waiting for you`
+  String get onBoardingPage2subTitle {
+    return Intl.message(
+      'To get the best of your adventure you just need to leave and go where you like we are waiting for you',
+      name: 'onBoardingPage2subTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get Started`
+  String get getStared {
+    return Intl.message(
+      'Get Started',
+      name: 'getStared',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skip`
+  String get skip {
+    return Intl.message(
+      'Skip',
+      name: 'skip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Egy Exlpor`
+  String get splashTitle {
+    return Intl.message(
+      'Egy Exlpor',
+      name: 'splashTitle',
       desc: '',
       args: [],
     );

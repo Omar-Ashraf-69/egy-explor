@@ -4,6 +4,8 @@ import 'package:egy_exlpor/features/onboarding/presentation/views/widgets/on_boa
 import 'package:egy_exlpor/features/auth/presentation/views/login_view.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../generated/l10n.dart';
+
 class OnBoardingView extends StatelessWidget {
   const OnBoardingView({super.key});
 
@@ -21,7 +23,7 @@ class OnBoardingView extends StatelessWidget {
                   (route) => false);
             },
             child: Text(
-              'Skip',
+              S.of(context).skip,
               style: Styles.textStyle16.copyWith(
                 color: kPrimaryColor,
                 fontWeight: FontWeight.w600,
