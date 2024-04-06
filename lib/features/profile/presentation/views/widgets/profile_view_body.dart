@@ -1,3 +1,4 @@
+import 'package:egy_exlpor/core/managers/app_them_cubit/app_them_cubit.dart';
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart';
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_state.dart';
 import 'package:egy_exlpor/core/services/auth.dart';
@@ -18,6 +19,8 @@ class ProfileViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = BlocProvider.of<ThemeCubit>(context);
+
     return BlocBuilder<UserCubit, UserState>(
       builder: (context, state) {
         if (state is UserLoaded) {
@@ -158,23 +161,26 @@ class ProfileViewBody extends StatelessWidget {
                             indent: 20,
                           ),
                           const SizedBox(
-                            height: 30,
+                            height: 10,
                           ),
-                          // SwitchListTile(
-                          //   secondary: Image.asset(
-                          //     AssetsManager.theme,
-                          //     height: 30,
-                          //   ),
-                          //   title: Text(themeProvider.getIsDarkTheme
-                          //       ? "Dark mode"
-                          //       : "Light mode"),
-                          //   value: themeProvider.getIsDarkTheme,
-                          //   onChanged: (value) {
-                          //     themeProvider.setDarkTheme(themeValue: value);
-                          //   },
-                          // ),
+                          SwitchListTile(
+                            secondary: Image.asset(
+                              AssetsData.theme,
+                              height: 30,
+                            ),
+                            title: Text(themeProvider.getIsDarkTheme
+                                ? "Dark mode"
+                                : "Light mode"),
+                            value: themeProvider.getIsDarkTheme,
+                            onChanged: (value) {
+                              themeProvider.setDarkTheme(themeValue: value);
+                            },
+                          ),
                         ],
                       ),
+                    ),
+                    const SizedBox(
+                      height: 10,
                     ),
                     Center(
                       child: ElevatedButton.icon(
@@ -198,18 +204,6 @@ class ProfileViewBody extends StatelessWidget {
                         ),
                         onPressed: () async {
                           await Authentication().signOut(context);
-
-                          // await Navigator.pushNamed(
-                          //   context,
-                          //   LoginScreen.routName,
-                          // );
-                          // await MyAppMethods.showErrorORWarningDialog(
-                          //     context: context,
-                          //     subtitle: "Are you sure?",
-                          //     fct: () async {
-
-                          //     },
-                          //     isError: false);
                         },
                       ),
                     ),

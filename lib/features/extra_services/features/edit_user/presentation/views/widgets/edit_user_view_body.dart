@@ -8,6 +8,8 @@ import 'package:egy_exlpor/features/auth/presentation/views/widgets/custom_text_
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../../../generated/l10n.dart';
 
@@ -104,7 +106,7 @@ class _EditProfileViewBodyState extends State<EditProfileViewBody> {
                       height: 20,
                     ),
                     CustomTextField(
-                      prefixIcon: const Icon(Icons.person_outline),
+                      prefixIcon: const Icon(Icons.email),
                       label: S.of(context).email,
                       hintText: state.user.email,
                       textEditingController: emailController,

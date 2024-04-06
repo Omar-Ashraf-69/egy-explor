@@ -15,3 +15,4 @@ Color kSeconderyOrangeColor = const Color(0xffE23632);
 Color kWhiteColor = const Color(0xffF0Eff5);
 Color kPinkColor = const Color(0xFFFAD3D9);
 Color kPrimaryRedColor = const Color(0xffc92120);
+Color kTextFieldColor = const Color(0xFF2C2441);

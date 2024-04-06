@@ -50,7 +50,7 @@ class _LayoutViewBodyState extends State<LayoutViewBody> {
                     ? const TextStyle(
                         color: kPrimaryColor,
                       )
-                    : const TextStyle(color: Colors.black),
+                    : const TextStyle(),
           ),
         ),
         child: NavigationBar(
@@ -62,7 +62,6 @@ class _LayoutViewBodyState extends State<LayoutViewBody> {
             setState(() {});
           },
           indicatorColor: kSeconderyBlueColor,
-          backgroundColor: kWhiteColor.withOpacity(0.8),
           surfaceTintColor: kPrimaryColor,
           destinations: [
             NavigationDestination(
@@ -83,7 +82,6 @@ class _LayoutViewBodyState extends State<LayoutViewBody> {
                 color: kPrimaryColor,
               ),
             ),
-            
           ],
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:egy_exlpor/core/managers/app_them_cubit/app_them_cubit.dart';
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/features/splash/presentation/views/splash_screen.dart';
@@ -27,51 +28,71 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => UserCubit(),
-      child: MaterialApp(
-        // routerConfig: AppRouter.router,
-        title: "Egy Exlpor",
-        debugShowCheckedModeBanner: false,
-
-        darkTheme: ThemeData.dark(
-          useMaterial3: true,
-        ).copyWith(
-            scaffoldBackgroundColor: kBlackColor,
-            appBarTheme: const AppBarTheme(
-              color: kBlackColor,
-            ),
-            textTheme: GoogleFonts.montserratTextTheme(
-              ThemeData.dark().textTheme,
-            ),
-            iconTheme: const IconThemeData(
-              color: Colors.white,
-            )),
-        theme: ThemeData.light(
-          useMaterial3: true,
-        ).copyWith(
-          textTheme: GoogleFonts.montserratTextTheme(
-            ThemeData.light().textTheme,
-          ),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => UserCubit(),
         ),
-        themeMode: ThemeMode.light,
+        BlocProvider(
+          create: (context) => ThemeCubit(),
+        ),
+      ],
+      child: BlocBuilder<ThemeCubit, bool>(
+        builder: (context, isDark) {
+          return MaterialApp(
+            // routerConfig: AppRouter.router,
+            title: "Egy Exlpor",
+            debugShowCheckedModeBanner: false,
 
-        home: const SplashView(),
-        localizationsDelegates: const [
-          S.delegate,
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-        ],
-        supportedLocales: S.delegate.supportedLocales,
-        localeResolutionCallback: (locale, supportedLocales) {
-          for (var supportedLocale in supportedLocales) {
-            if (locale != null &&
-                supportedLocale.languageCode == locale.languageCode) {
-              return locale;
-            }
-          }
-          return supportedLocales.first;
+            darkTheme: ThemeData.dark(
+              useMaterial3: true,
+            ).copyWith(
+              scaffoldBackgroundColor: kBlackColor,
+              appBarTheme: const AppBarTheme(
+                color: kBlackColor,
+              ),
+              textTheme: GoogleFonts.montserratTextTheme(
+                ThemeData.dark().textTheme,
+              ),
+              iconTheme: const IconThemeData(
+                color: Colors.white,
+              ),
+              inputDecorationTheme: InputDecorationTheme(
+                fillColor: isDark ? kTextFieldColor : kWhiteColor,
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: isDark ? Colors.white : Colors.black,
+                  ),
+                ),
+              ),
+            ),
+            theme: ThemeData.light(
+              useMaterial3: true,
+            ).copyWith(
+              textTheme: GoogleFonts.montserratTextTheme(
+                ThemeData.light().textTheme,
+              ),
+            ),
+            themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
+
+            home: const SplashView(),
+            localizationsDelegates: const [
+              S.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: S.delegate.supportedLocales,
+            localeResolutionCallback: (locale, supportedLocales) {
+              for (var supportedLocale in supportedLocales) {
+                if (locale != null &&
+                    supportedLocale.languageCode == locale.languageCode) {
+                  return locale;
+                }
+              }
+              return supportedLocales.first;
+            },
+          );
         },
       ),
     );

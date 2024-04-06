@@ -35,9 +35,7 @@ class ExtraServiceView extends StatelessWidget {
     ];
 
     return Scaffold(
-      backgroundColor: kWhiteColor,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
         centerTitle: true,
         title: Text(
           S.of(context).extraServices,
@@ -77,11 +75,12 @@ class CardItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 0,
+      elevation: 1,
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(
-        24,
-      )),
+        borderRadius: BorderRadius.circular(
+          24,
+        ),
+      ),
       child: SizedBox(
         height: 150,
         width: 150,
