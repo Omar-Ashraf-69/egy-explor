@@ -18,39 +18,53 @@ class OnBoardingPageWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset(
-          image,
-          width: double.infinity,
-        ),
-        RichText(
-          textAlign: TextAlign.center,
-          text: TextSpan(
-            text: title,
-            style: Styles.textStyle30.copyWith(
-              color: kPrimarytextColor,
-            ),
-            children: [
-              TextSpan(
-                text: suffixText,
-                style: const TextStyle(
-                  fontSize: 33,
-                  color: kPrimaryColor,
-                ),
-              ),
-            ],
+        ClipRRect(
+          borderRadius:
+              BorderRadius.circular(26), // Set your desired border radius
+          child: Image.asset(
+            image,
+            width: double.infinity,
+            height: MediaQuery.of(context).size.height * 0.42,
+            fit: BoxFit.cover,
           ),
         ),
-        
         const SizedBox(
-          height: 15,
+          height: 18,
         ),
-        Text(
-          subTitle,
-          style: Styles.textStyle16.copyWith(
-            fontWeight: FontWeight.w600,
-            color: Colors.grey,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+          child: RichText(
+            textAlign: TextAlign.center,
+            text: TextSpan(
+              text: title,
+              style: Styles.textStyle30.copyWith(
+                color: kPrimarytextColor,
+              ),
+              children: [
+                TextSpan(
+                  text: suffixText,
+                  style: const TextStyle(
+                    fontSize: 33,
+                    color: kPrimaryColor,
+                  ),
+                ),
+              ],
+            ),
           ),
-          textAlign: TextAlign.center,
+        ),
+        const SizedBox(
+          height: 16,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+          child: Text(
+            subTitle,
+            style: Styles.textStyle16.copyWith(
+              fontWeight: FontWeight.w600,
+              color: Colors.grey,
+            ),
+            textAlign: TextAlign.center,
+          ),
         ),
       ],
     );

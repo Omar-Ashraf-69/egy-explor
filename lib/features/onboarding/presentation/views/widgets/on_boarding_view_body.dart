@@ -8,8 +8,7 @@ class OnBoardingViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Padding(
       padding: EdgeInsets.symmetric(
-        horizontal: 12.0,
-        vertical: 8,
+        vertical: 10,
       ),
       child: SwiperWidget(),
     );

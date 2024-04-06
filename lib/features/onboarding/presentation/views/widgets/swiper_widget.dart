@@ -1,4 +1,5 @@
 import 'package:card_swiper/card_swiper.dart';
+import 'package:egy_exlpor/core/utils/assets.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/custom_button_widget.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
@@ -23,14 +24,14 @@ class SwiperWidgetState extends State<SwiperWidget> {
       suffixText: 'Wide',
       subTitle:
           'At Friends tours and travel, we customize reliable and trutworthy educational tours to destinations all over the world',
-      image: 'assets/images/finance1.png',
+      image: AssetsData.onboarding1,
     ),
     OnBoardingPageWidget(
       title: "People don't take trips trips take ",
       suffixText: 'people',
       subTitle:
           'To get the best of your adventure you just need to leave and go where you like we are waiting for you',
-      image: 'assets/images/finance2.png',
+      image: AssetsData.onboarding2,
     ),
   ];
   @override
@@ -68,13 +69,13 @@ class SwiperWidgetState extends State<SwiperWidget> {
               ],
             ),
           ),
-          
         ),
-        
-          const SizedBox(
-            height: 20,
-          ),
-          CustomButtonWidget(
+        const SizedBox(
+          height: 20,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+          child: CustomButtonWidget(
             label: Text(
               SwiperWidgetState.isLastPage ? 'Get Started' : "Next",
               style: Styles.textStyle16.copyWith(
@@ -97,6 +98,7 @@ class SwiperWidgetState extends State<SwiperWidget> {
               }
             },
           ),
+        ),
       ],
     );
   }
