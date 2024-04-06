@@ -1,7 +1,9 @@
+import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/features/home/presentation/views/home_view.dart';
 import 'package:egy_exlpor/features/profile/presentation/views/profile_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 
 class LayoutViewBody extends StatefulWidget {
@@ -19,6 +21,7 @@ class _LayoutViewBodyState extends State<LayoutViewBody> {
   void initState() {
     // Provider.of<UserProvider>(context, listen: false).getUserDetails();
     super.initState();
+    BlocProvider.of<UserCubit>(context).getUserDetails();
   }
 
   @override
@@ -43,7 +46,9 @@ class _LayoutViewBodyState extends State<LayoutViewBody> {
           labelTextStyle: MaterialStateProperty.resolveWith<TextStyle>(
             (Set<MaterialState> states) =>
                 states.contains(MaterialState.selected)
-                    ? const TextStyle(color: kPrimaryColor,)
+                    ? const TextStyle(
+                        color: kPrimaryColor,
+                      )
                     : const TextStyle(color: Colors.black),
           ),
         ),
@@ -58,7 +63,7 @@ class _LayoutViewBodyState extends State<LayoutViewBody> {
           indicatorColor: kSeconderyBlueColor,
           backgroundColor: kWhiteColor.withOpacity(0.8),
           surfaceTintColor: kPrimaryColor,
-          destinations: const[
+          destinations: const [
             NavigationDestination(
               label: 'Home',
               icon: Icon(Icons.home),

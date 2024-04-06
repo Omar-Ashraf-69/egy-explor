@@ -1,7 +1,7 @@
 import 'package:egy_exlpor/core/services/auth.dart';
 import 'package:egy_exlpor/features/auth/presentation/views/login_view.dart';
 import 'package:egy_exlpor/features/auth/presentation/views/widgets/app_name_widget.dart';
-import 'package:egy_exlpor/features/auth/presentation/views/widgets/custom_button_widget.dart';
+import 'package:egy_exlpor/core/utils/custom_button_widget.dart';
 import 'package:egy_exlpor/features/auth/presentation/views/widgets/custom_check_having_email_widget.dart';
 import 'package:egy_exlpor/features/auth/presentation/views/widgets/custom_text_field.dart';
 import 'package:egy_exlpor/features/auth/presentation/views/widgets/logo_widget.dart';

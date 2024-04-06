@@ -21,18 +21,15 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     super.initState();
-
     _checkFirstSeen();
   }
 
   void _checkFirstSeen() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     bool seen = (prefs.getBool('seenOnboarding') ?? false);
-
     Timer(const Duration(seconds: 2), () async {
       if (seen == true) {
         //context.go(AppRouter.kHomeView);
-
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) {
             return StreamBuilder<User?>(
@@ -49,11 +46,9 @@ class _SplashViewState extends State<SplashView> {
         );
       } else {
         await prefs.setBool('seenOnboarding', true);
-        //context.go(AppRouter.kOnBoardingView);
-
         // ignore: use_build_context_synchronously
         Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => const OnBoardingView()));
+            MaterialPageRoute(builder: (context) => const OnBoardingView(),),);
       }
     });
   }
