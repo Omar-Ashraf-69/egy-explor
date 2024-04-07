@@ -1,9 +1,11 @@
+import 'package:egy_exlpor/core/helpers/size_config.dart';
 import 'package:egy_exlpor/core/managers/app_them_cubit/app_them_cubit.dart';
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/features/splash/presentation/views/splash_screen.dart';
 import 'package:egy_exlpor/firebase_options.dart';
 import 'package:egy_exlpor/generated/l10n.dart';
+import 'package:egy_exlpor/routes.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -54,11 +56,9 @@ class MyApp extends StatelessWidget {
               textTheme: GoogleFonts.montserratTextTheme(
                 ThemeData.dark().textTheme,
               ),
-              
               iconTheme: const IconThemeData(
                 color: Colors.white,
               ),
-              
               inputDecorationTheme: InputDecorationTheme(
                 fillColor: isDark ? kTextFieldColor : kWhiteColor,
                 focusedBorder: OutlineInputBorder(
@@ -76,8 +76,14 @@ class MyApp extends StatelessWidget {
               ),
             ),
             themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
-
-            home: const SplashView(),
+            routes: routes,
+            onGenerateRoute: generateRoutes,
+            home: Builder(
+              builder: (context) {
+                SizeConfig.init(context);
+                return const SplashView();
+              },
+            ),
             localizationsDelegates: const [
               S.delegate,
               GlobalMaterialLocalizations.delegate,
