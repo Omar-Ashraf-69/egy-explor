@@ -42,17 +42,16 @@ class MyApp extends StatelessWidget {
       child: BlocBuilder<ThemeCubit, bool>(
         builder: (context, isDark) {
           return MaterialApp(
-            // routerConfig: AppRouter.router,
             title: "Egy Exlpor",
             debugShowCheckedModeBanner: false,
-
             darkTheme: ThemeData.dark(
               useMaterial3: true,
             ).copyWith(
-              scaffoldBackgroundColor: kBlackColor,
+              //scaffoldBackgroundColor: kBlackColor,
               appBarTheme: const AppBarTheme(
-                color: kBlackColor,
-              ),
+                  // color: kBlackColor,
+                  ),
+
               textTheme: GoogleFonts.montserratTextTheme(
                 ThemeData.dark().textTheme,
               ),

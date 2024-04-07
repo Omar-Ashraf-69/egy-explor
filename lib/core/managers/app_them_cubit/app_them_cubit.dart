@@ -12,9 +12,9 @@ class ThemeCubit extends Cubit<bool> {
   Future<void> setDarkTheme({required bool themeValue}) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setBool(THEME_STATUS, themeValue);
-    _darkTheme = themeValue;
-
     emit(themeValue);
+
+    _darkTheme = themeValue;
   }
 
   Future<bool> getTheme() async {

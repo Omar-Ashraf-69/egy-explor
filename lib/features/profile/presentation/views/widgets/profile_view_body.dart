@@ -156,12 +156,7 @@ class ProfileViewBody extends StatelessWidget {
                           CustomListTile(
                             icon: IconlyLight.setting,
                             text: S.of(context).settings,
-                            function: () async {
-                              // await Navigator.pushNamed(
-                              //   context,
-                              //   ViewedRecentlyScreen.routName,
-                              // );
-                            },
+                            function: () async {},
                           ),
                           const Divider(
                             endIndent: 35,
@@ -179,17 +174,21 @@ class ProfileViewBody extends StatelessWidget {
                           const SizedBox(
                             height: 10,
                           ),
-                          SwitchListTile(
-                            secondary: Image.asset(
-                              AssetsData.theme,
-                              height: 30,
-                            ),
-                            title: Text(themeProvider.getIsDarkTheme
-                                ? "Dark mode"
-                                : "Light mode"),
-                            value: themeProvider.getIsDarkTheme,
-                            onChanged: (value) {
-                              themeProvider.setDarkTheme(themeValue: value);
+                          BlocBuilder<ThemeCubit, bool>(
+                            builder: (context, state) {
+                              return SwitchListTile(
+                                secondary: Image.asset(
+                                  AssetsData.theme,
+                                  height: 30,
+                                ),
+                                title: Text(themeProvider.getIsDarkTheme
+                                    ? "Dark mode"
+                                    : "Light mode"),
+                                value: themeProvider.getIsDarkTheme,
+                                onChanged: (value) {
+                                  themeProvider.setDarkTheme(themeValue: value);
+                                },
+                              );
                             },
                           ),
                         ],

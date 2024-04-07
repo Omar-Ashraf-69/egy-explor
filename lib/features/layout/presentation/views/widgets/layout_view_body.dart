@@ -76,10 +76,10 @@ class _LayoutViewBodyState extends State<LayoutViewBody> {
             ),
             const NavigationDestination(
               label: "Explore",
-              icon:  Icon(
+              icon: Icon(
                 Icons.explore_outlined,
               ),
-              selectedIcon:  Icon(
+              selectedIcon: Icon(
                 Icons.explore,
                 color: kPrimaryColor,
               ),
