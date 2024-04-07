@@ -18,7 +18,7 @@ class ItemUtilityHotelWidget extends StatelessWidget {
         ImageHelper.loadFromAsset(
           icon,
         ),
-        SizedBox(
+        const SizedBox(
           height: kTopPadding,
         ),
         Text(name, textAlign: TextAlign.center,),

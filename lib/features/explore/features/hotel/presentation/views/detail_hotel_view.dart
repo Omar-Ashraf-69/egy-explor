@@ -13,9 +13,9 @@ class DetailHotelView extends StatefulWidget {
   static const String routeName = '/detail_hotel_screen';
 
   const DetailHotelView({
-    Key? key,
+    super.key,
     required this.hotelModel,
-  }) : super(key: key);
+  });
 
   final HotelModel hotelModel;
 
@@ -50,8 +50,8 @@ class _DetailHotelViewState extends State<DetailHotelView> {
                   ),
                   color: Colors.white,
                 ),
-                padding: EdgeInsets.all(kItemPadding),
-                child: Icon(
+                padding:const EdgeInsets.all(kItemPadding),
+                child:const Icon(
                   FontAwesomeIcons.arrowLeft,
                   size: kDefaultPadding,
                   color: Colors.black,
@@ -73,8 +73,8 @@ class _DetailHotelViewState extends State<DetailHotelView> {
                   ),
                   color: Colors.white,
                 ),
-                padding: EdgeInsets.all(kItemPadding),
-                child: Icon(
+                padding:const EdgeInsets.all(kItemPadding),
+                child:const Icon(
                   FontAwesomeIcons.solidHeart,
                   size: kDefaultPadding,
                   color: Colors.red,
@@ -87,8 +87,8 @@ class _DetailHotelViewState extends State<DetailHotelView> {
             maxChildSize: 0.8,
             builder: (BuildContext context, ScrollController scrollController) {
               return Container(
-                padding: EdgeInsets.symmetric(horizontal: kMediumPadding),
-                decoration: BoxDecoration(
+                padding:const EdgeInsets.symmetric(horizontal: kMediumPadding),
+                decoration:const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(kDefaultPadding * 2),
@@ -99,7 +99,7 @@ class _DetailHotelViewState extends State<DetailHotelView> {
                   children: [
                     Container(
                       alignment: Alignment.center,
-                      margin: EdgeInsets.only(top: kDefaultPadding),
+                      margin:const EdgeInsets.only(top: kDefaultPadding),
                       child: Container(
                         height: 5,
                         width: 60,
@@ -109,7 +109,7 @@ class _DetailHotelViewState extends State<DetailHotelView> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: kMediumPadding,
                     ),
                     Expanded(
@@ -126,7 +126,7 @@ class _DetailHotelViewState extends State<DetailHotelView> {
                                     widget.hotelModel.hotelName,
                                     style: TextStyles.defaultStyle.fontHeader.bold,
                                   ),
-                                  Spacer(),
+                                  const Spacer(),
                                   Text(
                                     '\$${widget.hotelModel.price.toString()}',
                                     style: TextStyles.defaultStyle.fontHeader.bold,
@@ -137,7 +137,7 @@ class _DetailHotelViewState extends State<DetailHotelView> {
                                   ),
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: kDefaultPadding,
                               ),
                               Row(
@@ -145,7 +145,7 @@ class _DetailHotelViewState extends State<DetailHotelView> {
                                   ImageHelper.loadFromAsset(
                                     AssetHelper.icoLocationBlank,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: kMinPadding,
                                   ),
                                   Text(
@@ -157,13 +157,13 @@ class _DetailHotelViewState extends State<DetailHotelView> {
                                   ),
                                 ],
                               ),
-                              DashLineWidget(),
+                              const DashLineWidget(),
                               Row(
                                 children: [
                                   ImageHelper.loadFromAsset(
                                     AssetHelper.icoStar,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: kMinPadding,
                                   ),
                                   Text(
@@ -173,46 +173,46 @@ class _DetailHotelViewState extends State<DetailHotelView> {
                                     ' (${widget.hotelModel.numberOfReview} reviews)',
                                     style: TextStyles.defaultStyle.subTitleTextColor,
                                   ),
-                                  Spacer(),
+                                  const Spacer(),
                                   Text(
                                     'See All',
                                     style: TextStyles.defaultStyle.bold.primaryTextColor,
                                   ),
                                 ],
                               ),
-                              DashLineWidget(),
+                              const DashLineWidget(),
                               Text(
                                 'Infomation',
                                 style: TextStyles.defaultStyle.bold,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: kDefaultPadding,
                               ),
-                              Text(
+                              const Text(
                                 '''You will find every comfort because many of the services that the hotel offers for travellers and of course the hotel is very comfortable.''',
                               ),
-                              ItemUtilityHotelWidget(),
-                              SizedBox(
+                              const ItemUtilityHotelWidget(),
+                              const SizedBox(
                                 height: kDefaultPadding,
                               ),
                               Text(
                                 'Location',
                                 style: TextStyles.defaultStyle.bold,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: kDefaultPadding,
                               ),
-                              Text(
+                              const Text(
                                 '''Located in the famous neighborhood of Seoul, Grand Luxury’s is set in a building built in the 2010s.''',
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: kDefaultPadding,
                               ),
                               ImageHelper.loadFromAsset(
                                 AssetHelper.imageMap,
                                 width: double.infinity,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: kMediumPadding,
                               ),
                               ItemButtonWidget(
@@ -220,7 +220,7 @@ class _DetailHotelViewState extends State<DetailHotelView> {
                                   onTap: () {
                                     Navigator.of(context).pushNamed(RoomView.routeName);
                                   }),
-                              SizedBox(
+                              const SizedBox(
                                 height: kMediumPadding,
                               ),
                             ],

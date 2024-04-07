@@ -2,7 +2,7 @@ import 'package:egy_exlpor/core/constants/color_palatte.dart';
 import 'package:egy_exlpor/core/constants/dimension_constants.dart';
 import 'package:flutter/material.dart';
 class DashLineWidget extends StatelessWidget {
-  const DashLineWidget({Key? key, this.height = 1, this.color = ColorPalette.dividerColor}) : super(key: key);
+  const DashLineWidget({super.key, this.height = 1, this.color = ColorPalette.dividerColor});
 
   final double height;
   final Color color;
@@ -18,6 +18,8 @@ class DashLineWidget extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
           child: Flex(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            direction: Axis.horizontal,
             children: List.generate(dashCount, (_) {
               return SizedBox(
                 width: dashWidth,
@@ -27,8 +29,6 @@ class DashLineWidget extends StatelessWidget {
                 ),
               );
             }),
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            direction: Axis.horizontal,
           ),
         );
       },

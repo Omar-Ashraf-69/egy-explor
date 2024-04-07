@@ -30,7 +30,7 @@ class _CheckOutViewState extends State<CheckOutView> {
 
   Widget _buildItemOptionsCheckout(String icon, String title, String value) {
     return Container(
-      padding: EdgeInsets.all(kDefaultPadding),
+      padding:const EdgeInsets.all(kDefaultPadding),
       decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(kDefaultPadding)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,7 +40,7 @@ class _CheckOutViewState extends State<CheckOutView> {
               ImageHelper.loadFromAsset(
                 icon,
               ),
-              SizedBox(
+              const SizedBox(
                 width: kDefaultPadding,
               ),
               Text(
@@ -49,7 +49,7 @@ class _CheckOutViewState extends State<CheckOutView> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: kMediumPadding,
           ),
           Container(
@@ -60,7 +60,7 @@ class _CheckOutViewState extends State<CheckOutView> {
                 40,
               ),
             ),
-            padding: EdgeInsets.all(kMinPadding),
+            padding:const EdgeInsets.all(kMinPadding),
             child: Row(
               children: [
                 Container(
@@ -71,11 +71,11 @@ class _CheckOutViewState extends State<CheckOutView> {
                     color: Colors.white,
                   ),
                   alignment: Alignment.center,
-                  child: Icon(
+                  child:const Icon(
                     Icons.add,
                   ),
                 ),
-                SizedBox(width: kDefaultPadding),
+                const SizedBox(width: kDefaultPadding),
                 Text(
                   value,
                   style: TextStyles.defaultStyle.primaryTextColor.bold,
@@ -111,15 +111,15 @@ class _CheckOutViewState extends State<CheckOutView> {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: kMinPadding,
         ),
         Text(nameStep, style: TextStyles.defaultStyle.fontCaption.whiteTextColor),
-        SizedBox(
+        const SizedBox(
           width: kMinPadding,
         ),
         if (!isEnd)
-          SizedBox(
+          const SizedBox(
             width: kDefaultPadding,
             child: Divider(
               height: 1,
@@ -128,7 +128,7 @@ class _CheckOutViewState extends State<CheckOutView> {
             ),
           ),
         if (!isEnd)
-          SizedBox(
+          const SizedBox(
             width: kMinPadding,
           ),
       ],
@@ -147,23 +147,23 @@ class _CheckOutViewState extends State<CheckOutView> {
                     steps.indexOf(e) + 1, e, steps.indexOf(e) == steps.length - 1, steps.indexOf(e) == 0))
                 .toList(),
           ),
-          SizedBox(
+          const SizedBox(
             height: kMinPadding,
           ),
           Expanded(
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: kMediumPadding,
                   ),
                   ItemRoomWidget(roomModel: widget.roomModel, numberOfRoom: 1),
                   _buildItemOptionsCheckout(AssetHelper.icoUser, 'Contact Details', 'Add Contact'),
-                  SizedBox(
+                  const SizedBox(
                     height: kMediumPadding,
                   ),
                   _buildItemOptionsCheckout(AssetHelper.icoPromo, 'Promo Code', 'Add Promo Code'),
-                  SizedBox(
+                  const SizedBox(
                     height: kMediumPadding,
                   ),
                   ItemButtonWidget(
@@ -173,7 +173,7 @@ class _CheckOutViewState extends State<CheckOutView> {
                       //Navigator.of(context).popUntil((route) => route.settings.name == MainApp.routeName);
                     },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: kMediumPadding,
                   ),
                 ],

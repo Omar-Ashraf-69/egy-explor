@@ -29,7 +29,7 @@ class _HotelBookingViewState extends State<HotelBookingView> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 24 * 2,
             ),
             ItemOptionsBookingWidget(
@@ -43,10 +43,12 @@ class _HotelBookingViewState extends State<HotelBookingView> {
               value: selectDate ?? 'Select date',
               icon: AssetHelper.icoCalendal,
               onTap: () async {
-                final result =
-                    await Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => SelectDateView(),
-                ));
+                // final result =
+                //     await Navigator.of(context).push(MaterialPageRoute(
+                //   builder: (context) => SelectDateView(),
+                // ));
+                final result = await Navigator.of(context)
+                    .pushNamed(SelectDateView.routeName);
                 if (result is List<DateTime?>) {
                   setState(() {
                     selectDate =

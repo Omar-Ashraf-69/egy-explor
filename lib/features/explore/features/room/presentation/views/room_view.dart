@@ -6,7 +6,7 @@ import 'package:egy_exlpor/features/explore/features/room/presentation/views/wid
 import 'package:flutter/material.dart';
 
 class RoomView extends StatefulWidget {
-  const RoomView({Key? key}) : super(key: key);
+  const RoomView({super.key});
 
   static const String routeName = '/rooms_screen';
 

@@ -24,10 +24,10 @@ class _GuestAndRoomViewState extends State<GuestAndRoomView> {
   Widget build(BuildContext context) {
     return AppBarContainer(
       titleString: 'Add guest and room',
-      paddingContent: EdgeInsets.all(kMediumPadding),
+      paddingContent:const EdgeInsets.all(kMediumPadding),
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: kMediumPadding,
           ),
           ItemChangeGuestAndRoom(
@@ -42,7 +42,7 @@ class _GuestAndRoomViewState extends State<GuestAndRoomView> {
             icon: AssetHelper.icoRoom,
             value: 'Room',
           ),
-          SizedBox(
+          const SizedBox(
             height: kDefaultPadding,
           ),
           ItemButtonWidget(

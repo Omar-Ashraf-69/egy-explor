@@ -1,7 +1,7 @@
+import 'package:egy_exlpor/core/constants/textstyle_ext.dart';
 import 'package:egy_exlpor/core/utils/assets.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/image_helper.dart';
-import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -53,8 +53,8 @@ class AppBarContainer extends StatelessWidget {
                                 ),
                                 color: Colors.white,
                               ),
-                              padding: EdgeInsets.all(10),
-                              child: Icon(
+                              padding: const EdgeInsets.all(10),
+                              child: const Icon(
                                 FontAwesomeIcons.arrowLeft,
                                 size: 16,
                                 color: Colors.black,
@@ -68,14 +68,14 @@ class AppBarContainer extends StatelessWidget {
                               children: [
                                 Text(
                                   titleString ?? '',
-                                  style: Styles.textStyle18,
+                                  style: TextStyles.defaultStyle.fontHeader.whiteTextColor.bold,
                                 ),
                                 if (subTitleString != null)
                                   Padding(
                                     padding: const EdgeInsets.only(top: 24),
                                     child: Text(
                                       subTitleString!,
-                                      style: Styles.textStyle18,
+                                      style: TextStyles.defaultStyle.fontCaption.whiteTextColor,
                                     ),
                                   ),
                               ],
@@ -90,8 +90,8 @@ class AppBarContainer extends StatelessWidget {
                               ),
                               color: Colors.white,
                             ),
-                            padding: EdgeInsets.all(10),
-                            child: Icon(
+                            padding: const EdgeInsets.all(10),
+                            child: const Icon(
                               FontAwesomeIcons.bars,
                               size: 16,
                               color: Colors.black,
@@ -103,8 +103,8 @@ class AppBarContainer extends StatelessWidget {
               flexibleSpace: Stack(
                 children: [
                   Container(
-                    decoration: BoxDecoration(
-                      gradient: const LinearGradient(
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
                         colors: [Color(0xff8F67E8), Color(0xff6357CC)],
                       ),
                       borderRadius: BorderRadius.only(
@@ -136,7 +136,7 @@ class AppBarContainer extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 156),
+            margin:const  EdgeInsets.only(top: 156),
             padding: paddingContent,
             child: child,
           ),

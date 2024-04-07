@@ -1,11 +1,10 @@
 import 'package:egy_exlpor/core/constants/color_palatte.dart';
 import 'package:egy_exlpor/core/constants/dimension_constants.dart';
-import 'package:egy_exlpor/core/utils/styles.dart';
+import 'package:egy_exlpor/core/constants/textstyle_ext.dart';
 import 'package:flutter/material.dart';
 
 class ItemButtonWidget extends StatelessWidget {
-  const ItemButtonWidget({Key? key, required this.data, this.onTap, this.color})
-      : super(key: key);
+  const ItemButtonWidget({super.key, required this.data, this.onTap, this.color});
 
   final String data;
   final Function()? onTap;
@@ -16,7 +15,7 @@ class ItemButtonWidget extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: kDefaultPadding),
+        padding:const EdgeInsets.symmetric(vertical: kDefaultPadding),
         width: double.infinity,
         decoration: BoxDecoration(
           color: color,
@@ -27,11 +26,9 @@ class ItemButtonWidget extends StatelessWidget {
         child: Text(
           data,
           style: color == null
-              ? Styles.textStyle18.copyWith(
-                  fontWeight: FontWeight.bold,
-                )
-              : Styles.textStyle18.copyWith(
-                  fontWeight: FontWeight.bold,
+              ? TextStyles.defaultStyle.whiteTextColor.bold
+              : TextStyles.defaultStyle.bold.copyWith(
+                  color: ColorPalette.primaryColor,
                 ),
         ),
       ),

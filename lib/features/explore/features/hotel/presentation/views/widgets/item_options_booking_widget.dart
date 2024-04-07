@@ -1,7 +1,8 @@
 import 'package:egy_exlpor/core/constants/dimension_constants.dart';
+import 'package:egy_exlpor/core/constants/textstyle_ext.dart';
 import 'package:egy_exlpor/core/utils/image_helper.dart';
-import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+
 class ItemOptionsBookingWidget extends StatelessWidget {
   const ItemOptionsBookingWidget({
     super.key,
@@ -21,18 +22,18 @@ class ItemOptionsBookingWidget extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.all(kDefaultPadding),
+        padding:const EdgeInsets.all(kDefaultPadding),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(kTopPadding),
           color: Colors.white,
         ),
-        margin: EdgeInsets.only(bottom: kMediumPadding),
+        margin:const  EdgeInsets.only(bottom: kMediumPadding),
         child: Row(
           children: [
             ImageHelper.loadFromAsset(
               icon,
             ),
-            SizedBox(
+            const SizedBox(
               width: kDefaultPadding,
             ),
             Column(
@@ -40,14 +41,14 @@ class ItemOptionsBookingWidget extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: Styles.textStyle18,
+                  style: TextStyles.defaultStyle.fontCaption,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: kMinPadding,
                 ),
                 Text(
                   value,
-                  style:Styles.textStyle18,
+                  style: TextStyles.defaultStyle.bold,
                 ),
               ],
             )

@@ -9,11 +9,11 @@ import 'package:flutter/material.dart';
 
 class ItemRoomWidget extends StatelessWidget {
   const ItemRoomWidget({
-    Key? key,
+    super.key,
     required this.roomModel,
     this.onTap,
     this.numberOfRoom,
-  }) : super(key: key);
+  });
 
   final RoomModel roomModel;
   final Function()? onTap;
@@ -26,7 +26,7 @@ class ItemRoomWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(kMediumPadding),
         color: Colors.white,
       ),
-      margin: EdgeInsets.only(bottom: kMediumPadding),
+      margin:const EdgeInsets.only(bottom: kMediumPadding),
       padding: const EdgeInsets.all(kDefaultPadding),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -43,14 +43,14 @@ class ItemRoomWidget extends StatelessWidget {
                       roomModel.roomName,
                       style: TextStyles.defaultStyle.fontHeader.bold,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: kDefaultPadding,
                     ),
                     Text(
                       'Room Size: ${roomModel.size} m2',
                       maxLines: 2,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: kDefaultPadding,
                     ),
                     Text(
@@ -61,12 +61,13 @@ class ItemRoomWidget extends StatelessWidget {
               ),
               Expanded(
                 flex: 3,
-                child: ImageHelper.loadFromAsset(roomModel.roomImage, radius: BorderRadius.circular(kItemPadding)),
+                child: ImageHelper.loadFromAsset(roomModel.roomImage,
+                    radius: BorderRadius.circular(kItemPadding)),
               ),
             ],
           ),
-          ItemUtilityHotelWidget(),
-          DashLineWidget(),
+          const ItemUtilityHotelWidget(),
+          const DashLineWidget(),
           Row(
             children: [
               Expanded(
@@ -77,7 +78,7 @@ class ItemRoomWidget extends StatelessWidget {
                       '\$${roomModel.price.toString()}',
                       style: TextStyles.defaultStyle.fontHeader.bold,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: kMinPadding,
                     ),
                     Text(

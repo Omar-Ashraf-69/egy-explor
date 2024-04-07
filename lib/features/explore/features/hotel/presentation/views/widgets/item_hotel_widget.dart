@@ -24,16 +24,16 @@ class ItemHotelWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(kDefaultPadding),
         color: Colors.white,
       ),
-      margin: EdgeInsets.only(bottom: kMediumPadding),
+      margin:const EdgeInsets.only(bottom: kMediumPadding),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
             width: double.infinity,
-            margin: EdgeInsets.only(right: kDefaultPadding),
+            margin:const EdgeInsets.only(right: kDefaultPadding),
             child: ImageHelper.loadFromAsset(
               hotelModel.hotelImage,
-              radius: BorderRadius.only(
+              radius:const BorderRadius.only(
                 topLeft: Radius.circular(
                   kDefaultPadding,
                 ),
@@ -44,7 +44,7 @@ class ItemHotelWidget extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(
+            padding:const EdgeInsets.all(
               kDefaultPadding,
             ),
             child: Column(
@@ -54,7 +54,7 @@ class ItemHotelWidget extends StatelessWidget {
                   hotelModel.hotelName,
                   style: TextStyles.defaultStyle.fontHeader.bold,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: kDefaultPadding,
                 ),
                 Row(
@@ -62,7 +62,7 @@ class ItemHotelWidget extends StatelessWidget {
                     ImageHelper.loadFromAsset(
                       AssetHelper.icoLocationBlank,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: kMinPadding,
                     ),
                     Text(
@@ -75,7 +75,7 @@ class ItemHotelWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: kDefaultPadding,
                 ),
                 Row(
@@ -83,7 +83,7 @@ class ItemHotelWidget extends StatelessWidget {
                     ImageHelper.loadFromAsset(
                       AssetHelper.icoStar,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: kMinPadding,
                     ),
                     Text(
@@ -95,7 +95,7 @@ class ItemHotelWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-                DashLineWidget(),
+                const DashLineWidget(),
                 Row(
                   children: [
                     Expanded(
@@ -106,7 +106,7 @@ class ItemHotelWidget extends StatelessWidget {
                             '\$${hotelModel.price.toString()}',
                             style: TextStyles.defaultStyle.fontHeader.bold,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: kMinPadding,
                           ),
                           Text(

@@ -7,7 +7,6 @@ import 'package:egy_exlpor/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LayoutViewBody extends StatefulWidget {
   const LayoutViewBody({super.key});
@@ -75,12 +74,12 @@ class _LayoutViewBodyState extends State<LayoutViewBody> {
                 color: kPrimaryColor,
               ),
             ),
-            NavigationDestination(
+            const NavigationDestination(
               label: "Explore",
-              icon: const Icon(
+              icon:  Icon(
                 Icons.explore_outlined,
               ),
-              selectedIcon: const Icon(
+              selectedIcon:  Icon(
                 Icons.explore,
                 color: kPrimaryColor,
               ),

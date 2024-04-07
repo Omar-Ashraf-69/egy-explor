@@ -40,6 +40,9 @@ class SelectDateView extends StatelessWidget {
               }
             },
           ),
+          const SizedBox(
+            height: kDefaultPadding,
+          ),
           ItemButtonWidget(
             data: 'Select',
             onTap: () {
