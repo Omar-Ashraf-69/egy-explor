@@ -1,15 +1,16 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart';
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_state.dart';
 import 'package:egy_exlpor/core/services/cloud.dart';
 import 'package:egy_exlpor/core/utils/assets.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/custom_button_widget.dart';
+import 'package:egy_exlpor/core/utils/functions/pick_image.dart';
+import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/auth/presentation/views/widgets/custom_text_field.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_iconly/flutter_iconly.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../../../generated/l10n.dart';
 
@@ -56,13 +57,28 @@ class _EditProfileViewBodyState extends State<EditProfileViewBody> {
                         clipBehavior: Clip.none,
                         children: [
                           profilePic == null
-                              ? const CircleAvatar(
-                                  radius: 70,
-                                  backgroundImage:
-                                      AssetImage(AssetsData.manPic),
-                                )
+                              ? BlocProvider.of<UserCubit>(context)
+                                      .user!
+                                      .profilePic
+                                      .isEmpty
+                                  ? const CircleAvatar(
+                                      radius: 50,
+                                      backgroundImage:
+                                          AssetImage(AssetsData.manPic),
+                                    )
+                                  : CircleAvatar(
+                                      radius: 50,
+                                      backgroundColor: Colors.grey,
+                                      onBackgroundImageError:
+                                          (exception, stackTrace) =>
+                                              const Icon(Icons.error),
+                                      backgroundImage:
+                                          CachedNetworkImageProvider(
+                                        state.user.profilePic,
+                                      ),
+                                    )
                               : CircleAvatar(
-                                  radius: 70,
+                                  radius: 50,
                                   backgroundImage: MemoryImage(profilePic!),
                                 ),
                           Positioned(
@@ -70,10 +86,32 @@ class _EditProfileViewBodyState extends State<EditProfileViewBody> {
                             right: -10,
                             child: IconButton(
                               onPressed: () {
-                                // Uint8List? file = await pickImage();
-                                // setState(() {
-                                //   profilePic = file;
-                                // });
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) {
+                                      return AlertDialog(
+                                        content: Text(
+                                          "Choice image source:",
+                                          style: Styles.textStyle20.copyWith(
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                        ),
+                                        actions: <Widget>[
+                                          alertActionButtonWidget(
+                                              openCamera: true,
+                                              label: "  Camera",
+                                              icon: Icons.camera_alt),
+                                          const SizedBox(
+                                            height: 10,
+                                          ),
+                                          alertActionButtonWidget(
+                                            openCamera: false,
+                                            label: "  Gallery",
+                                            icon: Icons.photo,
+                                          ),
+                                        ],
+                                      );
+                                    });
                               },
                               alignment: Alignment.bottomRight,
                               style: IconButton.styleFrom(
@@ -184,5 +222,36 @@ class _EditProfileViewBodyState extends State<EditProfileViewBody> {
       throw Exception(res);
     }
     BlocProvider.of<UserCubit>(context).getUserDetails();
+  }
+
+  Widget alertActionButtonWidget({
+    required bool openCamera,
+    required String label,
+    required IconData icon,
+  }) {
+    return TextButton(
+      child: Row(
+        children: [
+          Icon(
+            icon,
+            color: kPrimaryColor,
+            size: 30,
+          ),
+          Text(
+            label,
+            style: Styles.textStyle18,
+          ),
+        ],
+      ),
+      onPressed: () async {
+        Navigator.of(context).pop();
+        Uint8List? file = await pickImage(
+          openCamera: openCamera,
+        );
+        setState(() {
+          profilePic = file;
+        });
+      },
+    );
   }
 }

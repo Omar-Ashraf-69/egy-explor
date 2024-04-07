@@ -82,6 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تحديث الملف الشخصي"),
         "userName": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "version": MessageLookupByLibrary.simpleMessage("الإصدار"),
-        "weatherForcast": MessageLookupByLibrary.simpleMessage("توقعات الطقس")
+        "weatherForcast": MessageLookupByLibrary.simpleMessage("توقعات الطقس"),
+        "welcome": MessageLookupByLibrary.simpleMessage("مرحبًا, ")
       };
 }

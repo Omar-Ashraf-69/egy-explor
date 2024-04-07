@@ -1,4 +1,3 @@
-import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {

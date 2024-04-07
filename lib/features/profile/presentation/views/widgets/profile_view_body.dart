@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:egy_exlpor/core/managers/app_them_cubit/app_them_cubit.dart';
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart';
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_state.dart';
@@ -26,17 +27,19 @@ class ProfileViewBody extends StatelessWidget {
         if (state is UserLoaded) {
           return Scaffold(
               appBar: AppBar(
-                leading: Padding(
-                  padding: const EdgeInsets.only(left: 12.0),
-                  child: Image.asset(
-                    AssetsData.manPic,
-                  ),
-                ),
-                title: Text(
-                  BlocProvider.of<UserCubit>(context).user!.userName,
-                  style: Styles.textStyle16.copyWith(
-                    fontWeight: FontWeight.w600,
-                  ),
+                title: Row(
+                  children: [
+                    Text(
+                      S.of(context).welcome,
+                      style: Styles.textStyle16,
+                    ),
+                    Text(
+                      BlocProvider.of<UserCubit>(context).user!.userName,
+                      style: Styles.textStyle16.copyWith(
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ],
                 ),
                 actions: [
                   Padding(
@@ -67,22 +70,35 @@ class ProfileViewBody extends StatelessWidget {
                     ),
                     Column(
                       children: [
-                        Container(
-                          height: 100,
-                          width: 100,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Theme.of(context).cardColor,
-                            border: Border.all(
-                              color: Theme.of(context).colorScheme.background,
-                              width: 3,
-                            ),
-                            image: const DecorationImage(
-                              image: AssetImage(AssetsData.manPic),
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
+                        state.user.profilePic.isNotEmpty
+                            ? CircleAvatar(
+                                radius: 50,
+                                backgroundColor: Colors.grey,
+                                onBackgroundImageError:
+                                    (exception, stackTrace) =>
+                                        const Icon(Icons.error),
+                                backgroundImage: CachedNetworkImageProvider(
+                                  state.user.profilePic,
+                                ),
+                              )
+                            : Container(
+                                height: 100,
+                                width: 100,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Theme.of(context).cardColor,
+                                  border: Border.all(
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .background,
+                                    width: 3,
+                                  ),
+                                  image: const DecorationImage(
+                                    image: AssetImage(AssetsData.manPic),
+                                    fit: BoxFit.fill,
+                                  ),
+                                ),
+                              ),
                         const SizedBox(
                           height: 12,
                         ),

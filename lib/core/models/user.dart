@@ -24,6 +24,7 @@ class UserModel {
       password: snapshot['password'],
       profilePic: snapshot['profilePic'],
     );
+    
   }
 
   Map<String, dynamic> toJson() {

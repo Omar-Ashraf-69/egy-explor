@@ -1,4 +1,5 @@
 {
+  "welcome":"Welcome, ",
   "title":"Flutter localization",
   "onBoardingPage1Title":"Life is Short and The world is ",
   "onBoardingPage1Suffix":"Wide",

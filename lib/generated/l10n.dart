@@ -50,6 +50,16 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Welcome, `
+  String get welcome {
+    return Intl.message(
+      'Welcome, ',
+      name: 'welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Flutter localization`
   String get title {
     return Intl.message(

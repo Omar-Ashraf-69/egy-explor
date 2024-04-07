@@ -83,6 +83,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "userName": MessageLookupByLibrary.simpleMessage("UserName"),
         "version": MessageLookupByLibrary.simpleMessage("Version"),
         "weatherForcast":
-            MessageLookupByLibrary.simpleMessage("Weather Forcast")
+            MessageLookupByLibrary.simpleMessage("Weather Forcast"),
+        "welcome": MessageLookupByLibrary.simpleMessage("Welcome, ")
       };
 }

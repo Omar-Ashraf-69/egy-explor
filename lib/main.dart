@@ -54,9 +54,11 @@ class MyApp extends StatelessWidget {
               textTheme: GoogleFonts.montserratTextTheme(
                 ThemeData.dark().textTheme,
               ),
+              
               iconTheme: const IconThemeData(
                 color: Colors.white,
               ),
+              
               inputDecorationTheme: InputDecorationTheme(
                 fillColor: isDark ? kTextFieldColor : kWhiteColor,
                 focusedBorder: OutlineInputBorder(
