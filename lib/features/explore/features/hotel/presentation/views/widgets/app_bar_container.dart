@@ -17,7 +17,8 @@ class AppBarContainer extends StatelessWidget {
     this.paddingContent = const EdgeInsets.symmetric(
       horizontal: 24.0,
     ),
-  })  : assert(title != null || titleString != null, 'title or titleString can\'t be null');
+  }) : assert(title != null || titleString != null,
+            'title or titleString can\'t be null');
 
   final Widget child;
   final Widget? title;
@@ -68,14 +69,16 @@ class AppBarContainer extends StatelessWidget {
                               children: [
                                 Text(
                                   titleString ?? '',
-                                  style: TextStyles.defaultStyle.fontHeader.whiteTextColor.bold,
+                                  style: TextStyles.defaultStyle.fontHeader
+                                      .whiteTextColor.bold,
                                 ),
                                 if (subTitleString != null)
                                   Padding(
                                     padding: const EdgeInsets.only(top: 24),
                                     child: Text(
                                       subTitleString!,
-                                      style: TextStyles.defaultStyle.fontCaption.whiteTextColor,
+                                      style: TextStyles.defaultStyle.fontCaption
+                                          .whiteTextColor,
                                     ),
                                   ),
                               ],
@@ -105,7 +108,10 @@ class AppBarContainer extends StatelessWidget {
                   Container(
                     decoration: const BoxDecoration(
                       gradient: LinearGradient(
-                        colors: [Color(0xff8F67E8), Color(0xff6357CC)],
+                        colors: [
+                          kSeconderyGreenColor,
+                          kPrimaryColor,
+                        ],
                       ),
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(35),
@@ -136,7 +142,7 @@ class AppBarContainer extends StatelessWidget {
             ),
           ),
           Container(
-            margin:const  EdgeInsets.only(top: 156),
+            margin: const EdgeInsets.only(top: 156),
             padding: paddingContent,
             child: child,
           ),
