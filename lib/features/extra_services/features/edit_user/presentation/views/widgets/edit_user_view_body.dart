@@ -5,6 +5,7 @@ import 'package:egy_exlpor/core/services/cloud.dart';
 import 'package:egy_exlpor/core/utils/assets.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/custom_button_widget.dart';
+import 'package:egy_exlpor/core/utils/custom_icon_button.dart';
 import 'package:egy_exlpor/core/utils/functions/pick_image.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/auth/presentation/views/widgets/custom_text_field.dart';
@@ -34,6 +35,13 @@ class _EditProfileViewBodyState extends State<EditProfileViewBody> {
         if (state is UserLoaded) {
           return Scaffold(
             appBar: AppBar(
+              leading:const Padding(
+                padding:  EdgeInsets.all(6),
+                child:  CustomIconButton(
+                  icon: Icon(Icons.chevron_left_outlined),
+                  pop: true,
+                ),
+              ),
               surfaceTintColor: Colors.white,
               centerTitle: true,
               title: Text(
@@ -162,9 +170,9 @@ class _EditProfileViewBodyState extends State<EditProfileViewBody> {
                             )
                           : Text(
                               S.of(context).updateProfile.toUpperCase(),
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                              style: Styles.textStyle16.copyWith(
                                 color: kWhiteColor,
+                                fontWeight: FontWeight.w600,
                               ),
                             ),
                       onTap: () async {
@@ -176,6 +184,7 @@ class _EditProfileViewBodyState extends State<EditProfileViewBody> {
                               ? state.user.userName
                               : userNameController.text,
                           file: profilePic,
+                          
                           uId: state.user.userId,
                           context: context,
                         );

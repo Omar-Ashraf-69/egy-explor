@@ -8,14 +8,16 @@ import 'package:egy_exlpor/features/explore/features/hotel/presentation/views/wi
 import 'package:egy_exlpor/features/explore/features/room/presentation/views/room_view.dart';
 import 'package:egy_exlpor/features/explore/features/select_date/presentation/views/select_date_view.dart';
 import 'package:egy_exlpor/features/layout/presentation/views/layout_view.dart';
+import 'package:egy_exlpor/features/notification/presentation/view/notification_view.dart';
 import 'package:flutter/material.dart';
 final Map<String, WidgetBuilder> routes = {
-  HotelView.routeName: (context) => HotelView(),
-  LayoutView.routeName:(context) => LayoutView(),
+  HotelView.routeName: (context) =>const HotelView(),
+  LayoutView.routeName:(context) =>const LayoutView(),
   SelectDateView.routeName: (context) => SelectDateView(),
-  GuestAndRoomView.routeName: (context) => GuestAndRoomView(),
-  RoomView.routeName: (context) => RoomView(),
-  HotelBookingView.routeName: (context) => HotelBookingView(),
+  GuestAndRoomView.routeName: (context) =>const GuestAndRoomView(),
+  RoomView.routeName: (context) => const RoomView(),
+  HotelBookingView.routeName: (context) =>const HotelBookingView(),
+  NotificationView.routeName: (context) =>const NotificationView(),
 };
 
 MaterialPageRoute<dynamic>? generateRoutes(RouteSettings settings) {

@@ -1,11 +1,8 @@
-import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/home/data/models/recommended_places_model.dart';
 import 'package:egy_exlpor/features/home/presentation/views/tourist_details_view.dart';
-import 'package:egy_exlpor/features/home/presentation/views/widgets/custom_icon_button.dart';
 import 'package:egy_exlpor/features/home/presentation/views/widgets/love_icon_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:ionicons/ionicons.dart';
 
 class BestDestinationsWidget extends StatelessWidget {

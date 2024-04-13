@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class RoomView extends StatefulWidget {
   const RoomView({super.key});
 
-  static const String routeName = '/rooms_screen';
+  static const String routeName = '/rooms_view';
 
   @override
   State<RoomView> createState() => _RoomViewState();

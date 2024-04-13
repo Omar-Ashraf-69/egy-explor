@@ -8,7 +8,7 @@ import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 // ignore: must_be_immutable
 class SelectDateView extends StatelessWidget {
   SelectDateView({super.key});
-  static const String routeName = '/select_date_screen';
+  static const String routeName = '/select_date_view';
 
   DateTime? rangeStartDate;
   DateTime? rangeEndDate;

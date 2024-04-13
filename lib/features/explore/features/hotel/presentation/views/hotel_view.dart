@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class HotelView extends StatefulWidget {
   const HotelView({super.key});
 
-  static const String routeName = '/hotels_screen';
+  static const String routeName = '/hotels_view';
 
   @override
   State<HotelView> createState() => _HotelViewState();
