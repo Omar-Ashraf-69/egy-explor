@@ -76,16 +76,16 @@ class BestDestinationsWidget extends StatelessWidget {
                             ],
                           ),
                         ),
-                        const Padding(
-                          padding: EdgeInsets.only(top: 4.0),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4.0),
                           child: Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 Ionicons.location_outline,
                                 size: 20,
                               ),
-                              SizedBox(width: 5),
-                              Text(
+                              const SizedBox(width: 5),
+                              const Text(
                                 "French Polynesia",
                                 style: TextStyle(
                                   fontSize: 12,
@@ -94,7 +94,6 @@ class BestDestinationsWidget extends StatelessWidget {
                               ),
                               Spacer(),
                               LoveIconWidget(
-                                icon: Ionicons.heart_outline,
                               ),
                             ],
                           ),
