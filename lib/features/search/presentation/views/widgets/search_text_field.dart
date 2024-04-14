@@ -29,8 +29,11 @@ class SearchTextField extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             const SizedBox(
-              height: 40,
-              child: VerticalDivider(),
+              height: 35,
+              child: VerticalDivider(
+                indent: 2,
+                thickness: 2,
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(right: 10.0),

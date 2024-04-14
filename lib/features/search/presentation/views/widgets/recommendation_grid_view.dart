@@ -1,4 +1,4 @@
-import 'package:egy_exlpor/features/search/presentation/views/widgets/recommendation_card.dart';
+import 'package:egy_exlpor/features/search/presentation/views/widgets/recommendation_card_item.dart';
 import 'package:flutter/material.dart';
 
 class RecommendationGridView extends StatelessWidget {

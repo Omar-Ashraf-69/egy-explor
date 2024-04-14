@@ -1,3 +1,4 @@
+import 'package:egy_exlpor/core/utils/address_widget.dart';
 import 'package:egy_exlpor/core/utils/spot_image.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/favorites/presentation/views/widgets/favorites_icon.dart';
@@ -44,22 +45,7 @@ class FavoritesCardItem extends StatelessWidget {
                 const SizedBox(
                   height: 3,
                 ),
-                const Row(
-                  children: [
-                    Icon(
-                      Ionicons.location_outline,
-                      size: 20,
-                    ),
-                    SizedBox(width: 5),
-                    Text(
-                      "French Polynesia",
-                      style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ],
-                ),
+                const AddressWidget(),
               ],
             ),
           ),

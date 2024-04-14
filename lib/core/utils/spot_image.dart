@@ -7,8 +7,14 @@ class SpotImage extends StatelessWidget {
   const SpotImage({
     super.key,
     this.isFavoritesView = false,
+    this.height = 140,
+    this.index = 3,
+    this.notHomeScreen = true,
   });
   final bool isFavoritesView;
+  final double height;
+  final int index;
+  final bool notHomeScreen;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -16,23 +22,24 @@ class SpotImage extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(12),
           child: Image.asset(
-            recommendedPlaces[3].image,
+            recommendedPlaces[index].image,
             width: double.maxFinite,
             fit: BoxFit.cover,
-            height: 140,
+            height: height,
           ),
         ),
-        isFavoritesView
-            ?const Positioned(
-                top: 7,
-                right: 7,
-                child: FavoritesIcon(),
-              )
-            : const Positioned(
-                top: 5,
-                right: 5,
-                child: LoveIconWidget(),
-              ),
+        if (notHomeScreen)
+          isFavoritesView
+              ? const Positioned(
+                  top: 7,
+                  right: 7,
+                  child: FavoritesIcon(),
+                )
+              : const Positioned(
+                  top: 7,
+                  right: 7,
+                  child: LoveIconWidget(),
+                ),
       ],
     );
   }
