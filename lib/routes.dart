@@ -9,6 +9,7 @@ import 'package:egy_exlpor/features/explore/features/room/presentation/views/roo
 import 'package:egy_exlpor/features/explore/features/select_date/presentation/views/select_date_view.dart';
 import 'package:egy_exlpor/features/layout/presentation/views/layout_view.dart';
 import 'package:egy_exlpor/features/notification/presentation/view/notification_view.dart';
+import 'package:egy_exlpor/features/search/presentation/views/search_view.dart';
 import 'package:flutter/material.dart';
 final Map<String, WidgetBuilder> routes = {
   HotelView.routeName: (context) =>const HotelView(),
@@ -18,6 +19,7 @@ final Map<String, WidgetBuilder> routes = {
   RoomView.routeName: (context) => const RoomView(),
   HotelBookingView.routeName: (context) =>const HotelBookingView(),
   NotificationView.routeName: (context) =>const NotificationView(),
+  SearchView.routeName: (context) =>const SearchView(),
 };
 
 MaterialPageRoute<dynamic>? generateRoutes(RouteSettings settings) {
