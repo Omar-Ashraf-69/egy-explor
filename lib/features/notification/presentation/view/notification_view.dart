@@ -1,4 +1,4 @@
-import 'package:egy_exlpor/features/notification/presentation/view/widgets/notification_view_%20body.dart';
+import 'package:egy_exlpor/features/notification/presentation/view/widgets/notification_view_body.dart';
 import 'package:flutter/material.dart';
 
 class NotificationView extends StatelessWidget {

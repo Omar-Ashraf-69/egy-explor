@@ -1,7 +1,5 @@
-import 'package:egy_exlpor/core/utils/custom_icon_button.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/favorites/presentation/views/widgets/favorites_grid_view.dart';
-import 'package:egy_exlpor/features/search/presentation/views/widgets/recommendation_grid_view.dart';
 import 'package:flutter/material.dart';
 
 class FavoritesViewBody extends StatelessWidget {

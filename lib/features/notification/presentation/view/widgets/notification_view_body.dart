@@ -3,7 +3,6 @@ import 'package:egy_exlpor/core/utils/custom_icon_button.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/notification/presentation/view/widgets/notification_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class NotificationViewBody extends StatefulWidget {
   const NotificationViewBody({super.key});
@@ -29,13 +28,13 @@ class _NotificationViewBodyState extends State<NotificationViewBody>
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CustomIconButton(
+                const CustomIconButton(
                   icon: Icon(
                     Icons.chevron_left_outlined,
                   ),
                   pop: true,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Text(
@@ -80,17 +79,17 @@ class _NotificationViewBodyState extends State<NotificationViewBody>
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Expanded(
               child: ListView.separated(
-                itemCount: 14,
+                itemCount: 4,
                 padding: EdgeInsets.zero,
                 itemBuilder: (context, index) {
-                  return NotificationItem();
+                  return const NotificationItem();
                 },
-                separatorBuilder: (context, index) => SizedBox(
+                separatorBuilder: (context, index) =>const SizedBox(
                   height: 10,
                 ),
               ),
