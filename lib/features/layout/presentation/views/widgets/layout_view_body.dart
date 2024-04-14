@@ -1,12 +1,14 @@
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/features/explore/presentation/views/explore_view.dart';
+import 'package:egy_exlpor/features/favorites/presentation/views/favorites_view.dart';
 import 'package:egy_exlpor/features/home/presentation/views/home_view.dart';
 import 'package:egy_exlpor/features/profile/presentation/views/profile_view.dart';
 import 'package:egy_exlpor/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:ionicons/ionicons.dart';
 
 class LayoutViewBody extends StatefulWidget {
   const LayoutViewBody({super.key});
@@ -35,6 +37,7 @@ class _LayoutViewBodyState extends State<LayoutViewBody> {
         children: const [
           HomeView(),
           ExploreView(),
+          FavoritesView(),
           ProfileView(),
           // SearchScreen(),
           // ProfileScreen(),
@@ -81,6 +84,16 @@ class _LayoutViewBodyState extends State<LayoutViewBody> {
               ),
               selectedIcon: Icon(
                 Icons.explore,
+                color: kPrimaryColor,
+              ),
+            ),
+            const NavigationDestination(
+              label: "Favorites",
+              icon: Icon(
+                Ionicons.heart_outline,
+              ),
+              selectedIcon: Icon(
+                Ionicons.heart_outline,
                 color: kPrimaryColor,
               ),
             ),

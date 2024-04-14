@@ -1,4 +1,7 @@
+import 'package:egy_exlpor/core/managers/app_them_cubit/app_them_cubit.dart';
+import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
@@ -44,6 +47,9 @@ class CustomTextField extends StatelessWidget {
           ),
         ),
         filled: true,
+        fillColor: !BlocProvider.of<ThemeCubit>(context).getIsDarkTheme
+            ? kWhiteColor
+            : null,
         focusedBorder: OutlineInputBorder(
           borderSide: const BorderSide(),
           borderRadius: BorderRadius.circular(16),

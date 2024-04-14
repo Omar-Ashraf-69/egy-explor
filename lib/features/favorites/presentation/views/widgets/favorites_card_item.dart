@@ -1,13 +1,12 @@
 import 'package:egy_exlpor/core/utils/spot_image.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
+import 'package:egy_exlpor/features/favorites/presentation/views/widgets/favorites_icon.dart';
 import 'package:egy_exlpor/features/home/data/models/recommended_places_model.dart';
-import 'package:egy_exlpor/features/home/presentation/views/widgets/love_icon_widget.dart';
-import 'package:egy_exlpor/features/search/presentation/views/widgets/price_rate_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
-class RecommendationCardItem extends StatelessWidget {
-  const RecommendationCardItem({
+class FavoritesCardItem extends StatelessWidget {
+  const FavoritesCardItem({
     super.key,
   });
 
@@ -30,7 +29,9 @@ class RecommendationCardItem extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SpotImage(),
+                const SpotImage(
+                  isFavoritesView: true,
+                ),
                 const SizedBox(height: 5),
                 Text(
                   "St Regis Bora Bora",
@@ -59,10 +60,6 @@ class RecommendationCardItem extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 3,
-                ),
-                const PriceRateWidget(),
               ],
             ),
           ),

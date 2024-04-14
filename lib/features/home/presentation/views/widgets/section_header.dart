@@ -6,9 +6,10 @@ import 'package:flutter/material.dart';
 class SectionHeader extends StatelessWidget {
   const SectionHeader({
     super.key,
-    required this.title,
+    required this.title,  this.subtitle = "View All",
   });
   final String title;
+  final String subtitle ;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class SectionHeader extends StatelessWidget {
         GestureDetector(
           onTap: () {},
           child: Text(
-            "View All",
+            subtitle,
             style: Styles.textStyle16.copyWith(
               color: kPrimaryColor,
               fontWeight: FontWeight.w700,
