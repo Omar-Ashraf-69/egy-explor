@@ -1,4 +1,5 @@
 import 'package:egy_exlpor/core/utils/colors.dart';
+import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -17,9 +18,7 @@ class CustomCheckHavingEmailWidget extends StatelessWidget {
     return RichText(
       text: TextSpan(
         text: checkingMessage,
-        style: const TextStyle(
-          color: Colors.black,
-        ),
+        style: Styles.textStyle14,
         children: [
           TextSpan(
             text: actionMessage,
