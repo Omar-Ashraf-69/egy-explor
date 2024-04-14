@@ -10,6 +10,7 @@ import 'package:egy_exlpor/features/explore/features/select_date/presentation/vi
 import 'package:egy_exlpor/features/favorites/presentation/views/favorites_view.dart';
 import 'package:egy_exlpor/features/layout/presentation/views/layout_view.dart';
 import 'package:egy_exlpor/features/notification/presentation/view/notification_view.dart';
+import 'package:egy_exlpor/features/reveal_monuments/presentation/views/reveal_view.dart';
 import 'package:egy_exlpor/features/search/presentation/views/search_view.dart';
 import 'package:flutter/material.dart';
 final Map<String, WidgetBuilder> routes = {
@@ -22,6 +23,7 @@ final Map<String, WidgetBuilder> routes = {
   NotificationView.routeName: (context) =>const NotificationView(),
   SearchView.routeName: (context) =>const SearchView(),
   FavoritesView.routeName: (context) =>const FavoritesView(),
+  RevealView.routeName: (context) =>const RevealView(),
 };
 
 MaterialPageRoute<dynamic>? generateRoutes(RouteSettings settings) {

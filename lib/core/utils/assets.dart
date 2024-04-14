@@ -7,5 +7,7 @@ class AssetsData {
   static const String theme = 'assets/images/theme.png';
   static const String icoOvalTop = 'assets/icons/ico_calendal.png';
   static const String icoOvalBottom = 'assets/icons/ico_oval_bottom.png';
+  static const String addImageIcon = 'assets/icons/add_image.png';
+  static const String imageFram = 'assets/images/image_fram.png';
 
 }

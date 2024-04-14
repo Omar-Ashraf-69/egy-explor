@@ -4,6 +4,7 @@ import 'package:egy_exlpor/features/explore/presentation/views/explore_view.dart
 import 'package:egy_exlpor/features/favorites/presentation/views/favorites_view.dart';
 import 'package:egy_exlpor/features/home/presentation/views/home_view.dart';
 import 'package:egy_exlpor/features/profile/presentation/views/profile_view.dart';
+import 'package:egy_exlpor/features/reveal_monuments/presentation/views/reveal_view.dart';
 import 'package:egy_exlpor/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -37,10 +38,9 @@ class _LayoutViewBodyState extends State<LayoutViewBody> {
         children: const [
           HomeView(),
           ExploreView(),
+          RevealView(),
           FavoritesView(),
           ProfileView(),
-          // SearchScreen(),
-          // ProfileScreen(),
         ],
         onPageChanged: (value) {
           currentIndex = value;
@@ -84,6 +84,18 @@ class _LayoutViewBodyState extends State<LayoutViewBody> {
               ),
               selectedIcon: Icon(
                 Icons.explore,
+                color: kPrimaryColor,
+              ),
+            ),
+            const NavigationDestination(
+              label: "Reveal",
+              icon: Icon(
+                Icons.camera,
+                size: 40,
+              ),
+              selectedIcon: Icon(
+                Icons.camera,
+                size: 40,
                 color: kPrimaryColor,
               ),
             ),
