@@ -1,5 +1,6 @@
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/home/data/models/recommended_places_model.dart';
+import 'package:egy_exlpor/features/home/presentation/views/widgets/love_icon_widget.dart';
 import 'package:egy_exlpor/features/search/presentation/views/widgets/price_rate_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
@@ -28,14 +29,23 @@ class RecommendationCardItem extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Image.asset(
-                    recommendedPlaces[4].image,
-                    width: double.maxFinite,
-                    fit: BoxFit.cover,
-                    height: 140,
-                  ),
+                Stack(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Image.asset(
+                        recommendedPlaces[4].image,
+                        width: double.maxFinite,
+                        fit: BoxFit.cover,
+                        height: 140,
+                      ),
+                    ),
+                    const Positioned(
+                      top: 5,
+                      right: 5,
+                      child: LoveIconWidget(),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 5),
                 Text(

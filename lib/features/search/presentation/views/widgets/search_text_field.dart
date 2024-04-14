@@ -16,10 +16,6 @@ class SearchTextField extends StatelessWidget {
       keyboardType: TextInputType.text,
       onChanged: (value) {},
       decoration: InputDecoration(
-        // floatingLabelBehavior: isLabelSticked
-        //     ? FloatingLabelBehavior.always
-        //     : FloatingLabelBehavior.auto,
-
         prefixIcon: const Icon(
           Ionicons.search_outline,
         ),
