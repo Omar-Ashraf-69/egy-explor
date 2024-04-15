@@ -47,3 +47,11 @@ class ServerFailure extends Failure {
     }
   }
 }
+
+class CacheFailure extends Failure {
+  CacheFailure({required super.error});
+}
+
+class NetworkFailure extends Failure {
+  NetworkFailure({required super.error});
+}

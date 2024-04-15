@@ -2,6 +2,8 @@ import 'package:egy_exlpor/core/helpers/size_config.dart';
 import 'package:egy_exlpor/core/managers/app_them_cubit/app_them_cubit.dart';
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
+import 'package:egy_exlpor/core/utils/pref_utils.dart';
+import 'package:egy_exlpor/core/utils/themes.dart';
 import 'package:egy_exlpor/features/splash/presentation/views/splash_screen.dart';
 import 'package:egy_exlpor/firebase_options.dart';
 import 'package:egy_exlpor/generated/l10n.dart';
@@ -11,7 +13,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+
+
+var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,6 +25,8 @@ void main() async {
   );
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
       .then((_) {
+            PrefUtils.init();
+
     runApp(const MyApp());
   });
 }
@@ -44,36 +51,8 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             title: "Egy Exlpor",
             debugShowCheckedModeBanner: false,
-            darkTheme: ThemeData.dark(
-              useMaterial3: true,
-            ).copyWith(
-              //scaffoldBackgroundColor: kBlackColor,
-              appBarTheme: const AppBarTheme(
-                  // color: kBlackColor,
-                  ),
-
-              textTheme: GoogleFonts.montserratTextTheme(
-                ThemeData.dark().textTheme,
-              ),
-              iconTheme: const IconThemeData(
-                color: Colors.white,
-              ),
-              inputDecorationTheme: InputDecorationTheme(
-                fillColor: isDark ? kTextFieldColor : kWhiteColor,
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: isDark ? Colors.white : Colors.black,
-                  ),
-                ),
-              ),
-            ),
-            theme: ThemeData.light(
-              useMaterial3: true,
-            ).copyWith(
-              textTheme: GoogleFonts.montserratTextTheme(
-                ThemeData.light().textTheme,
-              ),
-            ),
+            darkTheme: Themes.darkTheme(isDark: isDark),
+            theme: Themes.lightTheme(isDark: isDark),
             themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
             routes: routes,
             onGenerateRoute: generateRoutes,
