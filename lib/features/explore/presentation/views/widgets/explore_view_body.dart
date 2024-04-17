@@ -1,4 +1,4 @@
-import 'package:egy_exlpor/features/explore/features/hotel/presentation/views/hotel_booking_view.dart';
+import 'package:egy_exlpor/features/select_room/presentation/views/select_room_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -10,16 +10,17 @@ class ExploreViewBody extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
-            onPressed: () {
-              Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => const HotelBookingView(),
-                    ),
-                  );
-            },
-            child:const  Icon(
-              FontAwesomeIcons.hotel,
-            ),),
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => const SelectRoomView(),
+              ),
+            );
+          },
+          child: const Icon(
+            FontAwesomeIcons.hotel,
+          ),
+        ),
       ),
     );
   }

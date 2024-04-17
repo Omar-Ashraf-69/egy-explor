@@ -13,5 +13,9 @@ class AssetsData {
   static const String imgRectangle818 = 'assets/images/img_rectangle_818.png';
   static const String imgRectangle18 = 'assets/images/img_rectangle_18.png';
   static const String imgGroup160 = 'assets/images/img_group_160.png';
+  static const String imgRoom1 = 'assets/images/img_room_1.svg';
+  static const String imgProfileFill = 'assets/images/img_profile_fill.svg';
+  static const String imgSmokeFill = 'assets/images/img_smoke_fill.svg';
+  static const String imgRectangle113 = 'assets/images/img_rectangle_113.png';
 
 }

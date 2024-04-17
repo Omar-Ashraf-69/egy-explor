@@ -1,6 +1,5 @@
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/home/data/models/recommended_places_model.dart';
-import 'package:egy_exlpor/features/home/presentation/views/tourist_details_view.dart';
 import 'package:egy_exlpor/features/reveal_monuments/destination_feature/presentation/views/destination_view.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
