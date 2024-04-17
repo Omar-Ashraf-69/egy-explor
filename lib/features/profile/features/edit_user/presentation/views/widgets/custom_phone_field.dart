@@ -29,6 +29,7 @@ class CustomPhoneNumber extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 60,
       decoration: BoxDecoration(
         color: !BlocProvider.of<ThemeCubit>(context).getIsDarkTheme
             ? kWhiteColor
@@ -55,6 +56,7 @@ class CustomPhoneNumber extends StatelessWidget {
                     "+${country.phoneCode}",
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
+                      fontSize: 16,
                     ),
                   ),
                   CustomImageView(

@@ -90,6 +90,7 @@ class CustomTextFormField extends StatelessWidget {
               EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
           controller: controller,
           focusNode: focusNode,
+          
           onTapOutside: (event) {
             if (focusNode != null) {
               focusNode?.unfocus();
