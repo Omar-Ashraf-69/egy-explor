@@ -1,4 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:country_pickers/country.dart';
+import 'package:country_pickers/country_pickers.dart';
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart';
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_state.dart';
 import 'package:egy_exlpor/core/services/cloud.dart';
@@ -9,6 +11,7 @@ import 'package:egy_exlpor/core/utils/custom_icon_button.dart';
 import 'package:egy_exlpor/core/utils/functions/pick_image.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/auth/presentation/views/widgets/custom_text_field.dart';
+import 'package:egy_exlpor/features/profile/features/edit_user/presentation/views/widgets/custom_phone_field.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,19 +28,21 @@ class EditProfileViewBody extends StatefulWidget {
 class _EditProfileViewBodyState extends State<EditProfileViewBody> {
   Uint8List? profilePic;
   bool isUpdating = false;
+  String phone = '';
   @override
   @override
   Widget build(BuildContext context) {
     TextEditingController userNameController = TextEditingController();
     TextEditingController emailController = TextEditingController();
+    TextEditingController phoneController = TextEditingController();
     return BlocBuilder<UserCubit, UserState>(
       builder: (context, state) {
         if (state is UserLoaded) {
           return Scaffold(
             appBar: AppBar(
-              leading:const Padding(
-                padding:  EdgeInsets.all(6),
-                child:  CustomIconButton(
+              leading: const Padding(
+                padding: EdgeInsets.all(6),
+                child: CustomIconButton(
                   icon: Icon(Icons.chevron_left_outlined),
                   pop: true,
                 ),
@@ -159,6 +164,21 @@ class _EditProfileViewBodyState extends State<EditProfileViewBody> {
                       isLabelSticked: true,
                     ),
                     const SizedBox(
+                      height: 20,
+                    ),
+                    CustomPhoneNumber(
+                      hintText: state.user.phoneNumber,
+                      controller: phoneController,
+                      country: phone.isEmpty
+                          ? CountryPickerUtils.getCountryByPhoneCode(
+                              state.user.countryCode.substring(1))
+                          : CountryPickerUtils.getCountryByPhoneCode(phone),
+                      onTap: (Country value) {
+                        phone = value.phoneCode;
+                        setState(() {});
+                      },
+                    ),
+                    const SizedBox(
                       height: 30,
                     ),
                     CustomButtonWidget(
@@ -184,9 +204,13 @@ class _EditProfileViewBodyState extends State<EditProfileViewBody> {
                               ? state.user.userName
                               : userNameController.text,
                           file: profilePic,
-                          
                           uId: state.user.userId,
                           context: context,
+                          phoneNumber: phoneController.text.isEmpty
+                              ? state.user.phoneNumber
+                              : phoneController.text,
+                          countryCode:
+                              phone.isEmpty ? state.user.countryCode : phone,
                         );
                         setState(() {
                           isUpdating = false;
@@ -213,12 +237,16 @@ class _EditProfileViewBodyState extends State<EditProfileViewBody> {
     required String userName,
     Uint8List? file,
     required String uId,
+    String? phoneNumber,
+    String? countryCode,
     required BuildContext context,
   }) async {
     String res = await CloudMethods().editProfile(
       uId: uId,
       userName: userName,
       file: file,
+      phoneNumber: phoneNumber,
+      countryCode: "+$countryCode",
     );
 
     if (res == "success") {

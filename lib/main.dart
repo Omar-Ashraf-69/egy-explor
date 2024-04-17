@@ -1,7 +1,6 @@
 import 'package:egy_exlpor/core/helpers/size_config.dart';
 import 'package:egy_exlpor/core/managers/app_them_cubit/app_them_cubit.dart';
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart';
-import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/pref_utils.dart';
 import 'package:egy_exlpor/core/utils/themes.dart';
 import 'package:egy_exlpor/features/splash/presentation/views/splash_screen.dart';
@@ -25,7 +24,7 @@ void main() async {
   );
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
       .then((_) {
-            PrefUtils.init();
+      PrefUtils.init();
 
     runApp(const MyApp());
   });

@@ -9,5 +9,6 @@ class AssetsData {
   static const String icoOvalBottom = 'assets/icons/ico_oval_bottom.png';
   static const String addImageIcon = 'assets/icons/add_image.png';
   static const String imageFram = 'assets/images/image_fram.png';
+  static const String imgArrowUp = 'assets/images/img_arrow_up.svg';
 
 }

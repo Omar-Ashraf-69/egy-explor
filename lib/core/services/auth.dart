@@ -19,6 +19,8 @@ class Authentication {
       {required String email,
       required String pass,
       required String userName,
+      required String phoneNumber,
+      required String countryCode,
       }) async {
     String message = '';
     try {
@@ -33,6 +35,8 @@ class Authentication {
         email: email,
         password: pass,
         profilePic: '',
+        phoneNumber: phoneNumber,
+        countryCode: countryCode,
       );
       await FirebaseFirestore.instance
           .collection('users')

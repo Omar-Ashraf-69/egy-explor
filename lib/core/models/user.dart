@@ -6,6 +6,8 @@ class UserModel {
   String email;
   String profilePic;
   String userName;
+  String phoneNumber;
+  String countryCode;
 
   UserModel({
     required this.userId,
@@ -13,6 +15,8 @@ class UserModel {
     required this.email,
     required this.password,
     required this.profilePic,
+    required this.phoneNumber,
+    required this.countryCode,
   });
 
   factory UserModel.fromDocument(DocumentSnapshot snap) {
@@ -23,8 +27,9 @@ class UserModel {
       email: snapshot['email'],
       password: snapshot['password'],
       profilePic: snapshot['profilePic'],
+      phoneNumber: snapshot['phoneNumber'],
+      countryCode: snapshot['countryCode'],
     );
-    
   }
 
   Map<String, dynamic> toJson() {
@@ -34,6 +39,8 @@ class UserModel {
       'email': email,
       'password': password,
       'profilePic': profilePic,
+      'phoneNumber': phoneNumber,
+      'countryCode': countryCode,
     };
   }
 }

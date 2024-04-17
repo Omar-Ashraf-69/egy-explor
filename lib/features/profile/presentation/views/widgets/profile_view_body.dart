@@ -6,7 +6,7 @@ import 'package:egy_exlpor/core/services/auth.dart';
 import 'package:egy_exlpor/core/utils/assets.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
-import 'package:egy_exlpor/features/extra_services/features/edit_user/presentation/views/edit_user_view.dart';
+import 'package:egy_exlpor/features/profile/features/edit_user/presentation/views/edit_user_view.dart';
 import 'package:egy_exlpor/features/extra_services/presentation/views/extra_service.dart';
 import 'package:egy_exlpor/features/profile/presentation/views/widgets/custom_list_title_widget.dart';
 import 'package:flutter/material.dart';

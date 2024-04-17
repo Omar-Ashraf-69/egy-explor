@@ -9,6 +9,8 @@ class CloudMethods {
     required String uId,
     required String userName,
     Uint8List? file,
+    String? phoneNumber,
+    String? countryCode,
   }) async {
     String response = 'some eerror error';
     try {
@@ -21,6 +23,8 @@ class CloudMethods {
           'userId': uId,
           if (userName.isNotEmpty) 'userName': userName,
           if (profilePic.isNotEmpty) 'profilePic': profilePic,
+          if (phoneNumber!= null) 'phoneNumber': phoneNumber,
+          if (countryCode!= null) 'countryCode': countryCode,
         };
         await FirebaseFirestore.instance.collection('users').doc(uId).update(updateData);
       }

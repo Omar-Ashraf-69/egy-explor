@@ -1,3 +1,7 @@
+import 'dart:developer';
+
+import 'package:country_pickers/country.dart';
+import 'package:country_pickers/country_pickers.dart';
 import 'package:egy_exlpor/core/services/auth.dart';
 import 'package:egy_exlpor/features/auth/presentation/views/login_view.dart';
 import 'package:egy_exlpor/features/auth/presentation/views/widgets/app_name_widget.dart';
@@ -7,6 +11,7 @@ import 'package:egy_exlpor/features/auth/presentation/views/widgets/custom_text_
 import 'package:egy_exlpor/features/auth/presentation/views/widgets/logo_widget.dart';
 import 'package:egy_exlpor/features/auth/presentation/views/widgets/password_text_field_widget.dart';
 import 'package:egy_exlpor/features/layout/presentation/views/layout_view.dart';
+import 'package:egy_exlpor/features/profile/features/edit_user/presentation/views/widgets/custom_phone_field.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../generated/l10n.dart';
@@ -24,6 +29,8 @@ class _RegisterViewState extends State<RegisterView> {
   final TextEditingController passController = TextEditingController();
 
   final TextEditingController emailController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
+  String phone = '';
   bool isPass = true;
   final GlobalKey<FormState> formKey = GlobalKey();
   bool isLoading = false;
@@ -78,6 +85,19 @@ class _RegisterViewState extends State<RegisterView> {
                       isPass: isPass,
                       onSuffixTap: () {
                         isPass = !isPass;
+                        setState(() {});
+                      },
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    CustomPhoneNumber(
+                      controller: phoneController,
+                      country: phone.isEmpty
+                          ? CountryPickerUtils.getCountryByPhoneCode('1')
+                          : CountryPickerUtils.getCountryByPhoneCode(phone),
+                      onTap: (Country value) {
+                        phone = value.phoneCode;
                         setState(() {});
                       },
                     ),
@@ -163,6 +183,8 @@ class _RegisterViewState extends State<RegisterView> {
       email: emailController.text,
       pass: passController.text,
       userName: userNameController.text,
+      phoneNumber: phoneController.text,
+      countryCode: "+$phone",
     );
   }
 }
