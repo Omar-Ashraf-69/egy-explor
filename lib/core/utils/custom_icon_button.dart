@@ -8,10 +8,12 @@ class CustomIconButton extends StatelessWidget {
     required this.icon,
     this.route,
     this.pop,
+    this.color,
   });
   final Widget icon;
   final String? route;
   final bool? pop;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +24,10 @@ class CustomIconButton extends StatelessWidget {
         padding: EdgeInsets.zero,
         margin: EdgeInsets.zero,
         decoration: BoxDecoration(
-          color: BlocProvider.of<ThemeCubit>(context).getIsDarkTheme
-              ? Colors.grey.shade900
-              : Colors.grey.shade200,
+          color: color ??
+              (BlocProvider.of<ThemeCubit>(context).getIsDarkTheme
+                  ? Colors.grey.shade900
+                  : Colors.grey.shade200),
           shape: BoxShape.circle,
         ),
         child: IconButton(

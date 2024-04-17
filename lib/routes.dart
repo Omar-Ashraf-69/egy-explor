@@ -11,6 +11,7 @@ import 'package:egy_exlpor/features/favorites/presentation/views/favorites_view.
 import 'package:egy_exlpor/features/layout/presentation/views/layout_view.dart';
 import 'package:egy_exlpor/features/notification/presentation/view/notification_view.dart';
 import 'package:egy_exlpor/features/onboarding/presentation/views/on_boarding_view.dart';
+import 'package:egy_exlpor/features/reveal_monuments/destination_feature/presentation/views/destination_view.dart';
 import 'package:egy_exlpor/features/reveal_monuments/presentation/views/reveal_view.dart';
 import 'package:egy_exlpor/features/search/presentation/views/search_view.dart';
 import 'package:flutter/material.dart';
@@ -26,6 +27,7 @@ final Map<String, WidgetBuilder> routes = {
   SearchView.routeName: (context) =>const SearchView(),
   FavoritesView.routeName: (context) =>const FavoritesView(),
   RevealView.routeName: (context) =>const RevealView(),
+  DestinationView.routeName: (context) =>const DestinationView(),
 };
 
 MaterialPageRoute<dynamic>? generateRoutes(RouteSettings settings) {

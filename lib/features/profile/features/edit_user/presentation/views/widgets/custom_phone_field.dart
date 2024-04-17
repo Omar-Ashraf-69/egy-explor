@@ -1,7 +1,7 @@
 import 'package:egy_exlpor/core/managers/app_them_cubit/app_them_cubit.dart';
 import 'package:egy_exlpor/core/utils/assets.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
-import 'package:egy_exlpor/features/profile/features/edit_user/presentation/views/widgets/custom_image_view.dart';
+import 'package:egy_exlpor/core/utils/custom_image_view.dart';
 import 'package:egy_exlpor/features/profile/features/edit_user/presentation/views/widgets/custom_text_form_field.dart';
 import 'package:egy_exlpor/features/profile/features/edit_user/presentation/views/widgets/validate_phone.dart';
 import 'package:flutter/material.dart';

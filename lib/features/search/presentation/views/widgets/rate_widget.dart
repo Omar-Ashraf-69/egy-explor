@@ -1,11 +1,11 @@
-
 import 'package:flutter/material.dart';
 
 class RateWidget extends StatelessWidget {
   const RateWidget({
     super.key,
+    this.showRateCount = false,
   });
-
+  final bool showRateCount;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -22,6 +22,17 @@ class RateWidget extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
+        const SizedBox(
+          width: 2,
+        ),
+        if (showRateCount)
+          const Text(
+            "(331)",
+            style: TextStyle(
+              color: Colors.grey,
+              fontSize: 14,
+            ),
+          ),
       ],
     );
   }

@@ -10,5 +10,8 @@ class AssetsData {
   static const String addImageIcon = 'assets/icons/add_image.png';
   static const String imageFram = 'assets/images/image_fram.png';
   static const String imgArrowUp = 'assets/images/img_arrow_up.svg';
+  static const String imgRectangle818 = 'assets/images/img_rectangle_818.png';
+  static const String imgRectangle18 = 'assets/images/img_rectangle_18.png';
+  static const String imgGroup160 = 'assets/images/img_group_160.png';
 
 }

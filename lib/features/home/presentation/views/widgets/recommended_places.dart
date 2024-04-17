@@ -1,6 +1,7 @@
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/home/data/models/recommended_places_model.dart';
 import 'package:egy_exlpor/features/home/presentation/views/tourist_details_view.dart';
+import 'package:egy_exlpor/features/reveal_monuments/destination_feature/presentation/views/destination_view.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
@@ -27,13 +28,14 @@ class RecommendedPlaces extends StatelessWidget {
                 child: InkWell(
                   borderRadius: BorderRadius.circular(12),
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => TouristDetailsView(
-                            image: recommendedPlaces[index].image,
-                          ),
-                        ));
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //       builder: (context) => TouristDetailsView(
+                    //         image: recommendedPlaces[index].image,
+                    //       ),
+                    //     ));
+                    Navigator.pushNamed(context, DestinationView.routeName);
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(10),
