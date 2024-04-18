@@ -1,9 +1,11 @@
+import 'package:egy_exlpor/core/managers/app_them_cubit/app_them_cubit.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/custom_button_widget.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/reveal_monuments/destination_feature/presentation/views/widgets/about_destination_part.dart';
 import 'package:egy_exlpor/features/reveal_monuments/destination_feature/presentation/views/widgets/destination_basic_info_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class DetailsSection extends StatelessWidget {
   const DetailsSection({
@@ -24,7 +26,9 @@ class DetailsSection extends StatelessWidget {
             topLeft: Radius.circular(22),
             topRight: Radius.circular(22),
           ),
-          color: kWhiteColor,
+          color: !BlocProvider.of<ThemeCubit>(context).getIsDarkTheme
+              ? kWhiteColor
+              : null,
         ),
         child: SingleChildScrollView(
           child: Column(

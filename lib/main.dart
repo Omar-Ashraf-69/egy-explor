@@ -13,8 +13,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-
-
 var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
 
 void main() async {
@@ -24,7 +22,7 @@ void main() async {
   );
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
       .then((_) {
-      PrefUtils.init();
+    PrefUtils.init();
 
     runApp(const MyApp());
   });

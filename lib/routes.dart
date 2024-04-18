@@ -8,6 +8,7 @@ import 'package:egy_exlpor/features/explore/features/hotel/presentation/views/wi
 import 'package:egy_exlpor/features/explore/features/room/presentation/views/room_view.dart';
 import 'package:egy_exlpor/features/explore/features/select_date/presentation/views/select_date_view.dart';
 import 'package:egy_exlpor/features/favorites/presentation/views/favorites_view.dart';
+import 'package:egy_exlpor/features/hotel/presentation/views/hotel_view.dart';
 import 'package:egy_exlpor/features/layout/presentation/views/layout_view.dart';
 import 'package:egy_exlpor/features/notification/presentation/view/notification_view.dart';
 import 'package:egy_exlpor/features/onboarding/presentation/views/on_boarding_view.dart';
@@ -29,7 +30,8 @@ final Map<String, WidgetBuilder> routes = {
   FavoritesView.routeName: (context) =>const FavoritesView(),
   RevealView.routeName: (context) =>const RevealView(),
   DestinationView.routeName: (context) =>const DestinationView(),
-  SelectRoomView.routeName : (context) =>const SelectRoomView(),  
+  SelectRoomView.routeName : (context) =>const SelectRoomView(),
+  HotelDetailsView.routeName: (context) =>const HotelDetailsView(),  
 };
 
 MaterialPageRoute<dynamic>? generateRoutes(RouteSettings settings) {

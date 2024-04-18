@@ -14,6 +14,7 @@ const kPrimarytextColor = Color(0xFF100E23);
 Color kSeconderyOrangeColor = const Color(0xffE23632);
 Color kWhiteColor = const Color(0xffF0Eff5);
 Color kPinkColor = const Color(0xFFFAD3D9);
+Color kGreyColor = const Color(0xFF9E9E9E);
 Color kPrimaryRedColor = const Color(0xffc92120);
 Color kTextFieldColor = const Color(0xFF2C2441);
 const Color backgroundScaffoldColor = Color(0xFFF2F2F2);
