@@ -16,6 +16,7 @@ import 'package:egy_exlpor/features/reveal_monuments/destination_feature/present
 import 'package:egy_exlpor/features/reveal_monuments/presentation/views/reveal_view.dart';
 import 'package:egy_exlpor/features/select_room/presentation/views/select_room_view.dart';
 import 'package:egy_exlpor/features/search/presentation/views/search_view.dart';
+import 'package:egy_exlpor/features/spot/presentation/views/spot_view.dart';
 import 'package:flutter/material.dart';
 final Map<String, WidgetBuilder> routes = {
   OnBoardingView.routeName: (context) =>const OnBoardingView(),
@@ -31,7 +32,8 @@ final Map<String, WidgetBuilder> routes = {
   RevealView.routeName: (context) =>const RevealView(),
   DestinationView.routeName: (context) =>const DestinationView(),
   SelectRoomView.routeName : (context) =>const SelectRoomView(),
-  HotelDetailsView.routeName: (context) =>const HotelDetailsView(),  
+  HotelDetailsView.routeName: (context) =>const HotelDetailsView(),
+  SpotView.routeName : (context) =>const SpotView(),  
 };
 
 MaterialPageRoute<dynamic>? generateRoutes(RouteSettings settings) {

@@ -1,9 +1,8 @@
 import 'package:egy_exlpor/core/utils/address_widget.dart';
 import 'package:egy_exlpor/core/utils/spot_image.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
-import 'package:egy_exlpor/features/home/data/models/recommended_places_model.dart';
-import 'package:egy_exlpor/features/home/presentation/views/tourist_details_view.dart';
 import 'package:egy_exlpor/features/home/presentation/views/widgets/love_icon_widget.dart';
+import 'package:egy_exlpor/features/spot/presentation/views/spot_view.dart';
 import 'package:flutter/material.dart';
 
 class BestDestinationItem extends StatelessWidget {
@@ -42,14 +41,7 @@ class CardItem extends StatelessWidget {
       child: InkWell(
         borderRadius: BorderRadius.circular(12),
         onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => TouristDetailsView(
-                image: recommendedPlaces[index].image,
-              ),
-            ),
-          );
+          Navigator.pushNamed(context, SpotView.routeName);
         },
         child: Padding(
           padding: const EdgeInsets.all(10),
