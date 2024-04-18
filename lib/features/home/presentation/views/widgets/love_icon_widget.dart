@@ -4,9 +4,9 @@ import 'package:ionicons/ionicons.dart';
 
 class LoveIconWidget extends StatefulWidget {
   const LoveIconWidget({
-    super.key,
+    super.key, this.iconSize,
   });
-
+  final double? iconSize;
   @override
   State<LoveIconWidget> createState() => _LoveIconWidgetState();
 }
@@ -21,8 +21,8 @@ class _LoveIconWidgetState extends State<LoveIconWidget> {
         color: Colors.grey.withOpacity(.33),
         shape: BoxShape.circle,
       ),
-      width: 35,
-      height: 35,
+      width:widget.iconSize ?? 30,
+      height: widget.iconSize ?? 30,
       child: InkWell(
         borderRadius: BorderRadius.circular(15),
         onTap: () {

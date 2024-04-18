@@ -14,6 +14,7 @@ import 'package:egy_exlpor/features/notification/presentation/view/notification_
 import 'package:egy_exlpor/features/onboarding/presentation/views/on_boarding_view.dart';
 import 'package:egy_exlpor/features/reveal_monuments/destination_feature/presentation/views/destination_view.dart';
 import 'package:egy_exlpor/features/reveal_monuments/presentation/views/reveal_view.dart';
+import 'package:egy_exlpor/features/search_result/presentation/views/search_result_view.dart';
 import 'package:egy_exlpor/features/select_room/presentation/views/select_room_view.dart';
 import 'package:egy_exlpor/features/search/presentation/views/search_view.dart';
 import 'package:egy_exlpor/features/spot/presentation/views/spot_view.dart';
@@ -34,6 +35,7 @@ final Map<String, WidgetBuilder> routes = {
   SelectRoomView.routeName : (context) =>const SelectRoomView(),
   HotelDetailsView.routeName: (context) =>const HotelDetailsView(),
   SpotView.routeName : (context) =>const SpotView(),  
+  SearchResultView.routeName : (context) =>const SearchResultView(),  
 };
 
 MaterialPageRoute<dynamic>? generateRoutes(RouteSettings settings) {

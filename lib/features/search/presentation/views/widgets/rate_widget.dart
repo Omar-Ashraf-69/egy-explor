@@ -1,3 +1,4 @@
+import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class RateWidget extends StatelessWidget {
@@ -9,18 +10,18 @@ class RateWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisSize: MainAxisSize.min,
       children: [
         Icon(
           Icons.star,
           color: Colors.yellow.shade700,
-          size: 22,
+          size: 20,
         ),
-        const Text(
+        Text(
           "4.4",
-          style: TextStyle(
-            fontSize: 16,
+          style: Styles.textStyle14.copyWith(
             fontWeight: FontWeight.w600,
-          ),
+          )
         ),
         const SizedBox(
           width: 2,
