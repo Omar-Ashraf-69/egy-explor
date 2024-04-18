@@ -1,5 +1,4 @@
 import 'package:egy_exlpor/features/hotel/presentation/views/hotel_view.dart';
-import 'package:egy_exlpor/features/select_room/presentation/views/select_room_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

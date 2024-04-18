@@ -5,6 +5,7 @@ import 'package:egy_exlpor/core/widgets/custom_view_container.dart';
 import 'package:egy_exlpor/features/hotel/presentation/views/widgets/about_section.dart';
 import 'package:egy_exlpor/features/hotel/presentation/views/widgets/facilities_section.dart';
 import 'package:egy_exlpor/features/hotel/presentation/views/widgets/hotel_basic_info_widget.dart';
+import 'package:egy_exlpor/features/select_room/presentation/views/select_room_view.dart';
 import 'package:flutter/material.dart';
 
 class HotalDetailsSection extends StatelessWidget {
@@ -35,6 +36,8 @@ class HotalDetailsSection extends StatelessWidget {
                 ),
               ),
               buttonColor: kPrimaryColor,
+              onTap: () =>
+                  Navigator.pushNamed(context, SelectRoomView.routeName),
             ),
           ],
         ),
