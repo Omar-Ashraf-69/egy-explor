@@ -1,8 +1,6 @@
 import 'package:egy_exlpor/core/utils/assets.dart';
 
 
-/// This class is used in the [hotelcard_item_widget] screen.
-// ignore_for_file: must_be_immutable
 
 class HotelcardItemModel {
   HotelcardItemModel(

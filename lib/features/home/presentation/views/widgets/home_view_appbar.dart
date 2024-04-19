@@ -1,4 +1,3 @@
-
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart';
 import 'package:egy_exlpor/core/utils/custom_icon_button.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
@@ -8,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ionicons/ionicons.dart';
 
-class HomeScreenAppBar extends StatelessWidget {
-  const HomeScreenAppBar({
+class HomeViewAppBar extends StatelessWidget {
+  const HomeViewAppBar({
     super.key,
   });
 

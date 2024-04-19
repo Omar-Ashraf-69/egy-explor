@@ -1,7 +1,7 @@
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart';
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_state.dart';
 import 'package:egy_exlpor/features/home/presentation/views/widgets/best_destinations_widget.dart';
-import 'package:egy_exlpor/features/home/presentation/views/widgets/home_screen_appbar.dart';
+import 'package:egy_exlpor/features/home/presentation/views/widgets/home_view_appbar.dart';
 import 'package:egy_exlpor/features/home/presentation/views/widgets/recommended_places.dart';
 import 'package:egy_exlpor/features/home/presentation/views/widgets/section_header.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +24,7 @@ class HomeViewBody extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  HomeScreenAppBar(),
+                  HomeViewAppBar(),
                   SizedBox(height: 10),
                   SectionHeader(title: "Recommendation"),
                   RecommendedPlaces(),
