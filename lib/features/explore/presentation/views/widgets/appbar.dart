@@ -9,10 +9,9 @@ import 'package:ionicons/ionicons.dart';
 PreferredSizeWidget exploreViewAppBar(BuildContext context) {
   return AppBar(
     automaticallyImplyLeading: false,
-        elevation: 0, // Remove shadow
-
+    elevation: 0, // Remove shadow
+    surfaceTintColor: Colors.transparent,
     title: Row(
-
       mainAxisSize: MainAxisSize.min,
       children: [
         Container(

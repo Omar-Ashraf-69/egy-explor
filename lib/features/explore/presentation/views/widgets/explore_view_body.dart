@@ -49,42 +49,58 @@ class ExploreViewBody extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 12,
-                ),
-                SectionHeader(title: "Categories"),
-                SizedBox(
-                  height: 12,
-                ),
-                SizedBox(
-                  height: 80,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    physics: const BouncingScrollPhysics(),
-                    itemBuilder: (context, index) => CategoryItem(
-                      iconImage: categoryItems[index]['iconImage']!,
-                      title: categoryItems[index]['title']!,
+                Expanded(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 12,
+                        ),
+                        SectionHeader(title: "Categories"),
+                        SizedBox(
+                          height: 12,
+                        ),
+                        SizedBox(
+                          height: 80,
+                          child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            physics: const BouncingScrollPhysics(),
+                            itemBuilder: (context, index) => CategoryItem(
+                              iconImage: categoryItems[index]['iconImage']!,
+                              title: categoryItems[index]['title']!,
+                            ),
+                            itemCount: categoryItems.length,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 12,
+                        ),
+                        SectionHeader(title: "Popular Spots"),
+                        SizedBox(
+                          height: 12,
+                        ),
+                        SizedBox(
+                          height: 170,
+                          child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            physics: const BouncingScrollPhysics(),
+                            itemBuilder: (context, index) =>
+                                const PopularSpotWidget(),
+                            itemCount: 5,
+                          ),
+                        ),
+                      ],
                     ),
-                    itemCount: categoryItems.length,
                   ),
-                ),
-                SizedBox(
-                  height: 12,
-                ),
-                SectionHeader(title: "Popular Spots"),
-                SizedBox(
-                  height: 12,
-                ),
-                SizedBox(
-                  height: 170,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    physics: const BouncingScrollPhysics(),
-                    itemBuilder: (context, index) => const PopularSpotWidget(),
-                    itemCount: 5,
-                  ),
-                ),
                 
+
+
+
+
+
+
+                ),
+
               ],
             ),
           ),
