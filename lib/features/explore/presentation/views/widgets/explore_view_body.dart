@@ -1,5 +1,13 @@
+import 'package:egy_exlpor/core/utils/assets.dart';
+import 'package:egy_exlpor/core/utils/colors.dart';
+import 'package:egy_exlpor/core/utils/styles.dart';
+import 'package:egy_exlpor/core/widgets/section_header.dart';
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/appbar.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:ionicons/ionicons.dart';
 
 class ExploreViewBody extends StatelessWidget {
   const ExploreViewBody({super.key});
@@ -7,63 +15,60 @@ class ExploreViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        resizeToAvoidBottomInset: false,
-        appBar: exploreViewAppBar(context),
-        body: Column(children: [
-          
-        ],),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 10.0),
+        child: Scaffold(
+          resizeToAvoidBottomInset: false,
+          appBar: exploreViewAppBar(context),
+          body: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 8),
+            child: Column(
+              children: [
+                SearchBar(
+                  elevation: MaterialStatePropertyAll(0),
+                  backgroundColor: MaterialStatePropertyAll(kWhiteColor),
+                  leading: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                    child: Icon(
+                      IconlyLight.search,
+                      color: kGreyColor,
+                    ),
+                  ),
+                  keyboardType: TextInputType.text,
+                  hintText: 'Search',
+                  hintStyle: MaterialStatePropertyAll(
+                    Styles.textStyle16.copyWith(
+                      fontWeight: FontWeight.w600,
+                      color: kGreyColor,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+                SectionHeader(title: "Categories"),
+                SizedBox(
+                  height: 12,
+                ),
+                SizedBox(
+                  height: 80,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    physics: const BouncingScrollPhysics(),
+                    itemBuilder: (context, index) => CategoryItem(
+                      iconImage: categoryItems[index]['iconImage']!,
+                      title: categoryItems[index]['title']!,
+                    ),
+                    itemCount: categoryItems.length,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
-
-  /// Section Widget
-
-  // /// Section Widget
-  // Widget _buildColumncategorie(BuildContext context) {
-  //   return Padding(
-  //     padding: EdgeInsets.only(
-  //       left: 21,
-  //       right: 11,
-  //     ),
-  //     child: Column(
-  //       children: [
-  //         _buildRowpopularspots(
-  //           context,
-  //           popularspots: "lbl_categories",
-  //           seeallOne: "lbl_see_all",
-  //         ),
-  //         SizedBox(height: 13),
-  //         SizedBox(
-  //           height: 73,
-  //           child: BlocSelector<ExploreBloc, ExploreState, ExploreModel?>(
-  //             selector: (state) => state.exploreModelObj,
-  //             builder: (context, exploreModelObj) {
-  //               return ListView.separated(
-  //                 scrollDirection: Axisorizontal,
-  //                 separatorBuilder: (context, index) {
-  //                   return SizedBox(
-  //                     width: 17,
-  //                   );
-  //                 },
-  //                 itemCount:
-  //                     exploreModelObj?.listmountaintexItemList.length ?? 0,
-  //                 itemBuilder: (context, index) {
-  //                   ListmountaintexItemModel model =
-  //                       exploreModelObj?.listmountaintexItemList[index] ??
-  //                           ListmountaintexItemModel();
-  //                   return ListmountaintexItemWidget(
-  //                     model,
-  //                   );
-  //                 },
-  //               );
-  //             },
-  //           ),
-  //         )
-  //       ],
-  //     ),
-  //   );
-  // }
 
   // /// Section Widget
   // Widget _buildColumnpopularsp(BuildContext context) {
@@ -372,4 +377,56 @@ class ExploreViewBody extends StatelessWidget {
   //     ),
   //   );
   // }
+}
+
+final List<Map<String, String>> categoryItems = [
+  {'title': 'Safari', 'iconImage': AssetsData.iconSafari},
+  {'title': 'Mountains', 'iconImage': AssetsData.iconMountain},
+  {'title': 'Beach', 'iconImage': AssetsData.iconBeach},
+  {'title': 'Camp', 'iconImage': AssetsData.iconCamp},
+  {'title': 'Lake', 'iconImage': AssetsData.iconLake},
+];
+
+class CategoryItem extends StatelessWidget {
+  const CategoryItem({
+    super.key,
+    required this.title,
+    required this.iconImage,
+  });
+  final String title;
+  final String iconImage;
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(right: 14.0),
+      child: Container(
+        width: 75,
+        padding: EdgeInsets.zero,
+        decoration: BoxDecoration(
+          color: kWhiteColor,
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset(
+                iconImage,
+                color: kPrimaryBlueColor,
+                height: 40,
+                width: 45,
+              ),
+              Text(
+                title,
+                style: Styles.textStyle12.copyWith(
+                  fontWeight: FontWeight.w600,
+                  color: kGreyColor,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }

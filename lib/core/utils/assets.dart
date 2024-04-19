@@ -1,4 +1,18 @@
 class AssetsData {
+//icons
+
+    static const String iconMountain = 'assets/icons/mountains.png';
+    static const String iconLake = 'assets/icons/lake.png';
+    static const String iconCamp = 'assets/icons/camp.png';
+    static const String iconBeach= 'assets/icons/beach.png';
+    static const String iconSafari= 'assets/icons/safari.png';
+
+
+
+
+
+//images
+
   static const String logo = 'assets/images/logo.svg';
   static const String manPic = 'assets/images/man.png';
   static const String womanPic = 'assets/images/woman.png';
