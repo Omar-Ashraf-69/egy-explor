@@ -5,8 +5,10 @@ class RateWidget extends StatelessWidget {
   const RateWidget({
     super.key,
     this.showRateCount = false,
+    this.color,
   });
   final bool showRateCount;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -17,12 +19,11 @@ class RateWidget extends StatelessWidget {
           color: Colors.yellow.shade700,
           size: 20,
         ),
-        Text(
-          "4.4",
-          style: Styles.textStyle14.copyWith(
-            fontWeight: FontWeight.w600,
-          )
-        ),
+        Text("4.4",
+            style: Styles.textStyle14.copyWith(
+              fontWeight: FontWeight.w600,
+              color: color,
+            ),),
         const SizedBox(
           width: 2,
         ),
@@ -32,6 +33,7 @@ class RateWidget extends StatelessWidget {
             style: TextStyle(
               color: Colors.grey,
               fontSize: 14,
+
             ),
           ),
       ],

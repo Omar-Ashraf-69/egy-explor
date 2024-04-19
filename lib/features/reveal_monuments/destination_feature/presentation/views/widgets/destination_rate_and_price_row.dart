@@ -1,7 +1,7 @@
 
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/search/presentation/views/widgets/price_rate_widget.dart';
-import 'package:egy_exlpor/features/search/presentation/views/widgets/rate_widget.dart';
+import 'package:egy_exlpor/core/widgets/rate_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 

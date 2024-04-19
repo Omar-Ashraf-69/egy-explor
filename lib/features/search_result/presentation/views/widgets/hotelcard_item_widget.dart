@@ -2,7 +2,7 @@ import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/custom_image_view.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/home/presentation/views/widgets/love_icon_widget.dart';
-import 'package:egy_exlpor/features/search/presentation/views/widgets/rate_widget.dart';
+import 'package:egy_exlpor/core/widgets/rate_widget.dart';
 import 'package:egy_exlpor/features/search_result/data/models/hotelcard_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';

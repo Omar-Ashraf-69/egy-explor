@@ -1,26 +1,30 @@
-
 import 'package:flutter/material.dart';
-import 'package:ionicons/ionicons.dart';
+import 'package:flutter_iconly/flutter_iconly.dart';
 
 class AddressWidget extends StatelessWidget {
   const AddressWidget({
     super.key,
+    this.color,
+    this.size,
   });
-
+  final double? size;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
         Icon(
-          Ionicons.location_outline,
-          size: 20,
+          IconlyLight.location,
+          size: size ?? 20,
+          color: color,
         ),
         SizedBox(width: 5),
         Text(
           "French Polynesia",
           style: TextStyle(
-            fontSize: 12,
+            fontSize: size ?? 12,
             fontWeight: FontWeight.w700,
+            color: color,
           ),
         ),
       ],
