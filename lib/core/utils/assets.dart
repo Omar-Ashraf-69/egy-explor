@@ -5,8 +5,12 @@ class AssetsData {
     static const String iconLake = 'assets/icons/lake.png';
     static const String iconCamp = 'assets/icons/camp.png';
     static const String iconBeach= 'assets/icons/beach.png';
-    static const String iconSafari= 'assets/icons/safari.png';
 
+    static const String iconSafari= 'assets/icons/safari.png';
+    static const String iconCar= 'assets/icons/carIcon.png';
+    static const String iconHotel= 'assets/icons/hotelIcon.png';
+    static const String iconAirplane= 'assets/icons/airplaneIcon.png';
+    static const String iconFood= 'assets/icons/food.png';
 
 
 
