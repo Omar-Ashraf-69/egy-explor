@@ -52,6 +52,7 @@ PreferredSizeWidget exploreViewAppBar(BuildContext context) {
                   BlocProvider.of<UserCubit>(context).user!.userName,
                   style: Styles.textStyle16.copyWith(
                     fontWeight: FontWeight.w600,
+                    color: kBlackColor,
                   ),
                 ),
               ),

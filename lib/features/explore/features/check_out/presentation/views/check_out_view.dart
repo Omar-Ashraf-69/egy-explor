@@ -10,6 +10,7 @@ import 'package:egy_exlpor/features/explore/features/room/presentation/views/wid
 import 'package:egy_exlpor/features/explore/features/select_date/presentation/views/widgets/item_button_widget.dart';
 import 'package:egy_exlpor/features/layout/presentation/views/layout_view.dart';
 import 'package:flutter/material.dart';
+
 class CheckOutView extends StatefulWidget {
   const CheckOutView({super.key, required this.roomModel});
 
@@ -30,8 +31,10 @@ class _CheckOutViewState extends State<CheckOutView> {
 
   Widget _buildItemOptionsCheckout(String icon, String title, String value) {
     return Container(
-      padding:const EdgeInsets.all(kDefaultPadding),
-      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(kDefaultPadding)),
+      padding: const EdgeInsets.all(kDefaultPadding),
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(kDefaultPadding)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -60,7 +63,7 @@ class _CheckOutViewState extends State<CheckOutView> {
                 40,
               ),
             ),
-            padding:const EdgeInsets.all(kMinPadding),
+            padding: const EdgeInsets.all(kMinPadding),
             child: Row(
               children: [
                 Container(
@@ -71,7 +74,7 @@ class _CheckOutViewState extends State<CheckOutView> {
                     color: Colors.white,
                   ),
                   alignment: Alignment.center,
-                  child:const Icon(
+                  child: const Icon(
                     Icons.add,
                   ),
                 ),
@@ -114,7 +117,8 @@ class _CheckOutViewState extends State<CheckOutView> {
         const SizedBox(
           width: kMinPadding,
         ),
-        Text(nameStep, style: TextStyles.defaultStyle.fontCaption.whiteTextColor),
+        Text(nameStep,
+            style: TextStyles.defaultStyle.fontCaption.whiteTextColor),
         const SizedBox(
           width: kMinPadding,
         ),
@@ -144,7 +148,10 @@ class _CheckOutViewState extends State<CheckOutView> {
           Row(
             children: steps
                 .map((e) => _buildItemCheckOutStep(
-                    steps.indexOf(e) + 1, e, steps.indexOf(e) == steps.length - 1, steps.indexOf(e) == 0))
+                    steps.indexOf(e) + 1,
+                    e,
+                    steps.indexOf(e) == steps.length - 1,
+                    steps.indexOf(e) == 0))
                 .toList(),
           ),
           const SizedBox(
@@ -158,18 +165,21 @@ class _CheckOutViewState extends State<CheckOutView> {
                     height: kMediumPadding,
                   ),
                   ItemRoomWidget(roomModel: widget.roomModel, numberOfRoom: 1),
-                  _buildItemOptionsCheckout(AssetHelper.icoUser, 'Contact Details', 'Add Contact'),
+                  _buildItemOptionsCheckout(
+                      AssetHelper.icoUser, 'Contact Details', 'Add Contact'),
                   const SizedBox(
                     height: kMediumPadding,
                   ),
-                  _buildItemOptionsCheckout(AssetHelper.icoPromo, 'Promo Code', 'Add Promo Code'),
+                  _buildItemOptionsCheckout(
+                      AssetHelper.icoPromo, 'Promo Code', 'Add Promo Code'),
                   const SizedBox(
                     height: kMediumPadding,
                   ),
                   ItemButtonWidget(
                     data: 'PayMent',
                     onTap: () {
-                      Navigator.of(context).popUntil((route) => route.settings.name == LayoutView.routeName);
+                      Navigator.of(context).pushNamedAndRemoveUntil(
+                          LayoutView.routeName, (route) => false);
                       //Navigator.of(context).popUntil((route) => route.settings.name == MainApp.routeName);
                     },
                   ),

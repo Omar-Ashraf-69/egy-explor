@@ -1,3 +1,4 @@
+import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +16,7 @@ class RoomTitleWidget extends StatelessWidget {
             roomTitle,
             style: Styles.textStyle16.copyWith(
               fontWeight: FontWeight.w600,
+              color: kBlackColor,
             ),
           ),
           const SizedBox(height: 13),

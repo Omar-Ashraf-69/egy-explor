@@ -3,6 +3,7 @@ import 'package:egy_exlpor/core/utils/custom_image_view.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/home/presentation/views/widgets/love_icon_widget.dart';
 import 'package:egy_exlpor/core/widgets/rate_widget.dart';
+import 'package:egy_exlpor/features/hotel/presentation/views/hotel_view.dart';
 import 'package:egy_exlpor/features/search_result/data/models/hotelcard_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
@@ -49,6 +50,7 @@ class HotelcardItemWidget extends StatelessWidget {
                         hotelcardItemModelObj.hotelName!,
                         style: Styles.textStyle14.copyWith(
                           fontWeight: FontWeight.w600,
+                          color: kBlackColor,
                         ),
                         // style: theme.textTheme.titleSmall,
                       ),
@@ -62,7 +64,9 @@ class HotelcardItemWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-                const RateWidget(),
+                const RateWidget(
+                  color: kBlackColor,
+                ),
                 const SizedBox(height: 4),
                 Row(
                   children: [
@@ -91,6 +95,7 @@ class HotelcardItemWidget extends StatelessWidget {
                         hotelcardItemModelObj.priceText!,
                         style: Styles.textStyle18.copyWith(
                           fontWeight: FontWeight.w600,
+                          color: kBlackColor,
                         ),
                         // style: theme.textTheme.titleMedium,
                       ),
@@ -98,7 +103,10 @@ class HotelcardItemWidget extends StatelessWidget {
                         padding: const EdgeInsets.only(bottom: 2.5),
                         child: Text(
                           hotelcardItemModelObj.priceUnitText!,
-                          style: Styles.textStyle12,
+                          style: Styles.textStyle12.copyWith(
+                            color: kBlackColor,
+                          ),
+
                           // style: theme.textTheme.bodySmall,
                         ),
                       ),
@@ -113,7 +121,10 @@ class HotelcardItemWidget extends StatelessWidget {
                               EdgeInsets.symmetric(vertical: 2, horizontal: 8),
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(
+                                context, HotelDetailsView.routeName);
+                          },
                           child: Text(
                             'Book Now',
                             style: Styles.textStyle12.copyWith(

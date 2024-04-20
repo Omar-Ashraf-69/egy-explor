@@ -26,7 +26,7 @@ class ExploreViewBody extends StatelessWidget {
             child: Column(
               children: [
                 SearchBar(
-                  elevation:const MaterialStatePropertyAll(0),
+                  elevation: const MaterialStatePropertyAll(0),
                   backgroundColor: MaterialStatePropertyAll(kWhiteColor),
                   leading: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12.0),
@@ -43,6 +43,9 @@ class ExploreViewBody extends StatelessWidget {
                       color: kGreyColor,
                     ),
                   ),
+                  textStyle: MaterialStatePropertyAll(TextStyle(
+                    color: kBlackColor,
+                  )),
                 ),
                 Expanded(
                   child: SingleChildScrollView(
@@ -132,16 +135,12 @@ class ExploreViewBody extends StatelessWidget {
   }
 }
 
-
 final List<Map<String, String>> servicesItems = [
   {'title': 'Airplane', 'iconImage': AssetsData.iconAirplane},
   {'title': 'Hotel', 'iconImage': AssetsData.iconHotel},
   {'title': 'Uber', 'iconImage': AssetsData.iconCar},
   {'title': 'Restaurant', 'iconImage': AssetsData.iconFood},
 ];
-
-
-
 
 final List<Map<String, String>> categoryItems = [
   {'title': 'Safari', 'iconImage': AssetsData.iconSafari},

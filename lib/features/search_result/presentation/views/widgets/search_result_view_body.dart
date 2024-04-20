@@ -191,7 +191,7 @@ class SearchResultViewBody extends StatelessWidget {
             height: 10,
           );
         },
-        itemCount: 2,
+        itemCount: 5,
         itemBuilder: (context, index) {
           return HotelcardItemWidget(
             HotelcardItemModel(),
