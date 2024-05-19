@@ -1,6 +1,7 @@
 import 'package:egy_exlpor/core/utils/assets.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/custom_image_view.dart';
+import 'package:egy_exlpor/core/utils/functions/show_payment_model_bottom_sheet.dart';
 import 'package:egy_exlpor/features/select_room/data/models/roomcard_item_model.dart';
 import 'package:egy_exlpor/features/select_room/presentation/views/widgets/room_details_part.dart';
 import 'package:egy_exlpor/features/select_room/presentation/views/widgets/room_title_widget.dart';
@@ -34,7 +35,9 @@ class RoomCardItemWidget extends StatelessWidget {
           RoomDetailsPart(
             roomcardItemModelObj: roomcardItemModelObj,
           ),
-          const SelectRoomButton(),
+          SelectRoomButton(
+            onPressed: () => showPaymentModelBottomSheet(context),
+          ),
         ],
       ),
     );

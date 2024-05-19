@@ -14,11 +14,16 @@ class ApiService {
   // }
 
   Future<Map<String, dynamic>> get(
-      {required String url, @required String? token}) async {
-    _dio.options.headers['Authorization'] = 'Bearer ${token ?? ""}';
+      {required String url,
+      Map<String, String>? headers,
+      @required String? token}) async {
+    // _dio.options.headers['Authorization'] = 'Bearer ${token ?? ""}';
     Response response = await _dio.get(
       url,
-      options: Options(headers: _dio.options.headers),
+      options: Options(
+        // contentType: 'application/x-www-form-urlencoded',
+        headers: headers ?? {'Authorization': 'Bearer ${token ?? ""}'},
+      ),
     );
     return response.data;
   }
@@ -26,16 +31,19 @@ class ApiService {
   Future<Map<String, dynamic>> post(
       {required String url,
       @required dynamic body,
+      Map<String, String>? headers,
       @required String? token}) async {
-    _dio.options.headers['Authorization'] = 'Bearer ${token ?? ""}';
     Response response = await _dio.post(
       url,
       data: body,
-      options: Options(headers: _dio.options.headers),
+      options: Options(
+        // contentType: 'application/x-www-form-urlencoded',
+        headers: headers ?? {'Authorization': 'Bearer ${token ?? ""}'},
+      ),
     );
     return response.data;
-    
   }
+
   Future<Map<String, dynamic>> put(
       {required String url,
       @required dynamic body,
@@ -49,7 +57,6 @@ class ApiService {
       data: body,
       options: Options(headers: _dio.options.headers),
     );
-    return response.data; 
+    return response.data;
   }
-  
 }

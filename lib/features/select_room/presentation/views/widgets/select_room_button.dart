@@ -5,8 +5,9 @@ import 'package:flutter/material.dart';
 class SelectRoomButton extends StatelessWidget {
   const SelectRoomButton({
     super.key,
+    this.onPressed,
   });
-
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -14,10 +15,10 @@ class SelectRoomButton extends StatelessWidget {
       child: Align(
         alignment: Alignment.centerRight,
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: onPressed,
           style: ButtonStyle(
-            padding: const MaterialStatePropertyAll(EdgeInsets.all(10)),
-            backgroundColor: MaterialStateProperty.all(kPrimaryColor),
+            padding: const WidgetStatePropertyAll(EdgeInsets.all(10)),
+            backgroundColor: WidgetStateProperty.all(kPrimaryColor),
           ),
           child: Text(
             "Select room",
