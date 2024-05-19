@@ -18,7 +18,7 @@ class AddressWidget extends StatelessWidget {
           size: size ?? 20,
           color: color,
         ),
-        SizedBox(width: 5),
+        const SizedBox(width: 5),
         Text(
           "French Polynesia",
           style: TextStyle(

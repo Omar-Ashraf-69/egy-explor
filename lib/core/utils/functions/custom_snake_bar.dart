@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
-void CustomSnakeBar(context, String url) {
+void customSnakeBar(
+    {required BuildContext context,
+    required String message,
+    TextStyle? style}) {
   ScaffoldMessenger.of(context).showSnackBar(
-    SnackBar(content: Text('Can not launch $url')),
+    SnackBar(
+        content: Text(
+      message,
+      style: style,
+    )),
   );
 }

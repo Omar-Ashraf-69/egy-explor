@@ -1,6 +1,6 @@
-import 'package:egy_exlpor/core/constants/dimension_constants.dart';
-import 'package:egy_exlpor/core/constants/textstyle_ext.dart';
+import 'package:egy_exlpor/core/utils/spaces.dart';
 import 'package:egy_exlpor/core/utils/image_helper.dart';
+import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class BookingOptionsWidget extends StatelessWidget {
@@ -24,10 +24,10 @@ class BookingOptionsWidget extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(kDefaultPadding),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(kTopPadding),
+          borderRadius: BorderRadius.circular(14),
           color: Colors.white,
         ),
-        margin: const EdgeInsets.only(bottom: kMediumPadding),
+        margin: const EdgeInsets.only(bottom: 16),
         child: Row(
           children: [
             ImageHelper.loadFromAsset(
@@ -41,14 +41,14 @@ class BookingOptionsWidget extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: TextStyles.defaultStyle.fontCaption,
+                  style: Styles.textStyle18.copyWith(color: Colors.black),
                 ),
                 const SizedBox(
-                  height: kMinPadding,
+                  height: 4,
                 ),
                 Text(
                   value,
-                  style: TextStyles.defaultStyle.bold,
+                  style: Styles.textStyle14.copyWith(color: Colors.black),
                 ),
               ],
             )

@@ -7,7 +7,7 @@ import 'package:egy_exlpor/features/explore/features/hotel_booking/presentation/
 import 'package:egy_exlpor/features/explore/features/hotel_booking/presentation/views/widgets/select_date_view.dart';
 import 'package:egy_exlpor/features/search_result/presentation/views/search_result_view.dart';
 import 'package:flutter/material.dart';
-import 'package:egy_exlpor/core/extensions/date_ext.dart';
+import 'package:egy_exlpor/features/explore/features/hotel_booking/presentation/views/widgets/date_ext.dart';
 
 class HotelBookingView extends StatefulWidget {
   const HotelBookingView({super.key, this.destination});
@@ -28,7 +28,7 @@ class _HotelBookingViewState extends State<HotelBookingView> {
     return Scaffold(
       appBar: customAppBar(title: 'Hotel Booking'),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 24),
         child: Column(
           children: [
             BookingOptionsWidget(
@@ -65,6 +65,9 @@ class _HotelBookingViewState extends State<HotelBookingView> {
                   });
                 }
               },
+            ),
+            const SizedBox(
+              height: 16,
             ),
             CustomButtonWidget(
               label: Text(

@@ -1,4 +1,4 @@
-import 'package:egy_exlpor/core/constants/dimension_constants.dart';
+import 'package:egy_exlpor/core/utils/spaces.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/image_helper.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
@@ -54,7 +54,7 @@ class ChangeGuestAndRoomState extends State<ChangeGuestAndRoom> {
               ),
               Text(
                 widget.value,
-                style: Styles.textStyle18,
+                style: Styles.textStyle18.copyWith(color: Colors.black),
               ),
               const Spacer(),
               GestureDetector(
@@ -100,6 +100,8 @@ class ChangeGuestAndRoomState extends State<ChangeGuestAndRoom> {
                       bottom: 18,
                     ),
                   ),
+                  style: Styles.textStyle16.copyWith(
+                      fontWeight: FontWeight.w600, color: Colors.black),
                   onChanged: (value) {},
                   onSubmitted: (String submitValue) {},
                 ),

@@ -1,6 +1,7 @@
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/custom_appBar.dart';
 import 'package:egy_exlpor/core/utils/custom_button_widget.dart';
+import 'package:egy_exlpor/core/utils/functions/custom_snake_bar.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
@@ -53,10 +54,9 @@ class SelectDateView extends StatelessWidget {
                 if (rangeStartDate != null && rangeEndDate != null) {
                   Navigator.of(context).pop([rangeStartDate, rangeEndDate]);
                 } else {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      content: Text("Please select a valid data"),
-                    ),
+                  customSnakeBar(
+                    context: context,
+                    message: "Please select a valid data",
                   );
                 }
               },
