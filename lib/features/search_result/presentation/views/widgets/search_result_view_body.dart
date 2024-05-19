@@ -1,6 +1,7 @@
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/custom_icon_button.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
+import 'package:egy_exlpor/features/explore/features/hotel_booking/presentation/views/hotel_booking_view.dart';
 import 'package:egy_exlpor/features/search_result/data/models/hotelcard_item_model.dart';
 import 'package:egy_exlpor/features/search_result/presentation/views/widgets/hotelcard_item_widget.dart';
 import 'package:flutter/material.dart';
@@ -135,10 +136,16 @@ class SearchResultViewBody extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
-                  IconlyBroken.edit,
-                  size: 22,
-                  color: kPrimaryColor,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacementNamed(
+                        context, HotelBookingView.routeName);
+                  },
+                  child: Icon(
+                    IconlyBroken.edit,
+                    size: 22,
+                    color: kPrimaryColor,
+                  ),
                 ),
                 Text(
                   "Edit",

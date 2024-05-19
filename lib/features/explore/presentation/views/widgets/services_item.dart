@@ -1,9 +1,6 @@
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
-import 'package:egy_exlpor/features/explore/features/hotel/presentation/views/hotel_booking_view.dart';
-import 'package:egy_exlpor/features/explore/features/hotel/presentation/views/hotel_view.dart';
-import 'package:egy_exlpor/features/hotel/presentation/views/hotel_view.dart';
-import 'package:egy_exlpor/features/search_result/presentation/views/search_result_view.dart';
+import 'package:egy_exlpor/features/explore/features/hotel_booking/presentation/views/hotel_booking_view.dart';
 import 'package:flutter/material.dart';
 
 class ServicesItemWidget extends StatelessWidget {
@@ -24,7 +21,7 @@ class ServicesItemWidget extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 10),
         onPressed: () {
           if (title == 'Hotel') {
-            Navigator.pushNamed(context, SearchResultView.routeName);
+            Navigator.pushNamed(context, HotelBookingView.routeName);
           }
           if (title == 'Restaurant') {
             Navigator.pushNamed(context, HotelBookingView.routeName);

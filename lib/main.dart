@@ -53,12 +53,13 @@ class MyApp extends StatelessWidget {
             themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
             routes: routes,
             onGenerateRoute: generateRoutes,
-            home: Builder(
-              builder: (context) {
-                SizeConfig.init(context);
-                return const SplashView();
-              },
-            ),
+            home: const SplashView(),
+            // home: Builder(
+            //   builder: (context) {
+            //     SizeConfig.init(context);
+            //     return const SplashView();
+            //   },
+            // ),
             localizationsDelegates: const [
               S.delegate,
               GlobalMaterialLocalizations.delegate,

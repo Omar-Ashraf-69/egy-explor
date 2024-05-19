@@ -13,7 +13,7 @@ import '../../../../../core/managers/get_user_cubit/user_details_cubit.dart';
 PreferredSizeWidget exploreViewAppBar(BuildContext context) {
   return AppBar(
     automaticallyImplyLeading: false,
-    elevation: 0, // Remove shadow
+    elevation: 0,
     surfaceTintColor: Colors.transparent,
     title: Row(
       mainAxisSize: MainAxisSize.min,
@@ -61,8 +61,8 @@ PreferredSizeWidget exploreViewAppBar(BuildContext context) {
         ),
       ],
     ),
-    actions: [
-      const Padding(
+    actions: const [
+      Padding(
         padding: EdgeInsets.symmetric(horizontal: 14, vertical: 8),
         child: CustomIconButton(
           icon: Icon(

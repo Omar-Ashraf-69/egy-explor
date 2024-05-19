@@ -1,10 +1,11 @@
 import 'package:egy_exlpor/core/helpers/asset_helper.dart';
-import 'package:egy_exlpor/features/explore/features/hotel/presentation/views/hotel_view.dart';
-import 'package:egy_exlpor/features/explore/features/hotel/presentation/views/widgets/app_bar_container.dart';
-import 'package:egy_exlpor/features/explore/features/hotel/presentation/views/widgets/gest_and_room_view.dart';
-import 'package:egy_exlpor/features/explore/features/hotel/presentation/views/widgets/item_options_booking_widget.dart';
-import 'package:egy_exlpor/features/explore/features/select_date/presentation/views/select_date_view.dart';
-import 'package:egy_exlpor/features/explore/features/select_date/presentation/views/widgets/item_button_widget.dart';
+import 'package:egy_exlpor/core/utils/custom_appBar.dart';
+import 'package:egy_exlpor/core/utils/custom_button_widget.dart';
+import 'package:egy_exlpor/core/utils/styles.dart';
+import 'package:egy_exlpor/features/explore/features/hotel_booking/presentation/views/widgets/gest_and_room_view.dart';
+import 'package:egy_exlpor/features/explore/features/hotel_booking/presentation/views/widgets/booking_options_widget.dart';
+import 'package:egy_exlpor/features/explore/features/hotel_booking/presentation/views/widgets/select_date_view.dart';
+import 'package:egy_exlpor/features/search_result/presentation/views/search_result_view.dart';
 import 'package:flutter/material.dart';
 import 'package:egy_exlpor/core/extensions/date_ext.dart';
 
@@ -24,29 +25,23 @@ class _HotelBookingViewState extends State<HotelBookingView> {
 
   @override
   Widget build(BuildContext context) {
-    return AppBarContainer(
-      titleString: 'Hotel Booking',
-      child: SingleChildScrollView(
+    return Scaffold(
+      appBar: customAppBar(title: 'Hotel Booking'),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
         child: Column(
           children: [
-            const SizedBox(
-              height: 24 * 2,
-            ),
-            ItemOptionsBookingWidget(
+            BookingOptionsWidget(
               title: 'Destination',
-              value: widget.destination ?? 'Viet Nam',
+              value: widget.destination ?? 'Select Destination',
               icon: AssetHelper.icoLocation,
               onTap: () {},
             ),
-            ItemOptionsBookingWidget(
+            BookingOptionsWidget(
               title: 'Select Date',
               value: selectDate ?? 'Select date',
               icon: AssetHelper.icoCalendal,
               onTap: () async {
-                // final result =
-                //     await Navigator.of(context).push(MaterialPageRoute(
-                //   builder: (context) => SelectDateView(),
-                // ));
                 final result = await Navigator.of(context)
                     .pushNamed(SelectDateView.routeName);
                 if (result is List<DateTime?>) {
@@ -57,7 +52,7 @@ class _HotelBookingViewState extends State<HotelBookingView> {
                 }
               },
             ),
-            ItemOptionsBookingWidget(
+            BookingOptionsWidget(
               title: 'Guest and Room',
               value: guestAndRoom ?? 'Guest and Room',
               icon: AssetHelper.icoBed,
@@ -71,10 +66,14 @@ class _HotelBookingViewState extends State<HotelBookingView> {
                 }
               },
             ),
-            ItemButtonWidget(
-              data: 'Search',
+            CustomButtonWidget(
+              label: Text(
+                "Search",
+                style: Styles.textStyle18.copyWith(color: Colors.white),
+              ),
               onTap: () {
-                Navigator.of(context).pushNamed(HotelView.routeName);
+                Navigator.of(context)
+                    .pushReplacementNamed(SearchResultView.routeName);
               },
             ),
           ],
