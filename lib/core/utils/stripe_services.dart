@@ -16,6 +16,10 @@ class StripeServices {
     Map<String, dynamic> response = await apiService.post(
       url: '${baseUrl}payment_intents',
       body: payment.toJson(),
+      headers: {
+        'Authorization': 'Bearer ${ApiKeys.secertKey}',
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
       token: ApiKeys.secertKey,
     );
     return PaymentIntentModel.fromJson(response);
@@ -59,6 +63,10 @@ class StripeServices {
       url: '${baseUrl}customers',
       body: {
         'customer': 'cus_Q7ki8LMHjORSSw',
+      },
+      headers: {
+        'Authorization': 'Bearer ${ApiKeys.secertKey}',
+        'Content-Type': 'application/x-www-form-urlencoded',
       },
       token: ApiKeys.secertKey,
     );
