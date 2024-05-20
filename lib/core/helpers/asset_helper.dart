@@ -42,4 +42,5 @@ mixin AssetHelper {
   static const String dubai = 'assets/images/dubai.png';
   static const String masterCard = 'assets/images/master_card.svg';
   static const String paypal = 'assets/images/paypal.svg';
+  static const String gpt = 'assets/images/gpt.png';
 }

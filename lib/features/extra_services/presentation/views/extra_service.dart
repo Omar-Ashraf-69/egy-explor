@@ -1,5 +1,7 @@
+import 'package:egy_exlpor/core/helpers/asset_helper.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
+import 'package:egy_exlpor/features/extra_services/presentation/views/widgets/gpt_view/gpt_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -12,6 +14,10 @@ class ExtraServiceView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<CardItem> items = [
+      const CardItem(
+        label: ('GPT'),
+        icon: IconlyBold.chat,
+      ),
       CardItem(
         label: S.of(context).map,
         icon: IconlyBold.location,
@@ -53,9 +59,14 @@ class ExtraServiceView extends StatelessWidget {
             mainAxisSpacing: 9,
           ),
           itemBuilder: (context, index) {
-            return CardItem(
-              label: items[index].label,
-              icon: items[index].icon,
+            return GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, GptView.routeName);
+              },
+              child: CardItem(
+                label: items[index].label,
+                icon: items[index].icon,
+              ),
             );
           },
         ),
@@ -65,11 +76,7 @@ class ExtraServiceView extends StatelessWidget {
 }
 
 class CardItem extends StatelessWidget {
-  const CardItem({
-    super.key,
-    required this.label,
-    required this.icon,
-  });
+  const CardItem({super.key, required this.label, required this.icon});
   final String label;
   final IconData icon;
   @override

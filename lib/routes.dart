@@ -1,6 +1,7 @@
 import 'package:egy_exlpor/features/explore/features/hotel_booking/presentation/views/hotel_booking_view.dart';
 import 'package:egy_exlpor/features/explore/features/hotel_booking/presentation/views/widgets/gest_and_room_view.dart';
 import 'package:egy_exlpor/features/explore/features/hotel_booking/presentation/views/widgets/select_date_view.dart';
+import 'package:egy_exlpor/features/extra_services/presentation/views/widgets/gpt_view/gpt_view.dart';
 import 'package:egy_exlpor/features/favorites/presentation/views/favorites_view.dart';
 import 'package:egy_exlpor/features/hotel/presentation/views/hotel_view.dart';
 import 'package:egy_exlpor/features/layout/presentation/views/layout_view.dart';
@@ -29,6 +30,7 @@ final Map<String, WidgetBuilder> routes = {
   HotelDetailsView.routeName: (context) => const HotelDetailsView(),
   SpotView.routeName: (context) => const SpotView(),
   SearchResultView.routeName: (context) => const SearchResultView(),
+  GptView.routeName: (context) => const GptView(),
 };
 
 MaterialPageRoute<dynamic>? generateRoutes(RouteSettings settings) {
