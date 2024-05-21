@@ -1,7 +1,8 @@
-import 'package:egy_exlpor/core/helpers/asset_helper.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
-import 'package:egy_exlpor/features/extra_services/presentation/views/widgets/gpt_view/gpt_view.dart';
+import 'package:egy_exlpor/features/extra_services/currecny/ui/convert_currecny.dart';
+import 'package:egy_exlpor/features/extra_services/currecny/ui/exchange_currecny.dart';
+import 'package:egy_exlpor/features/extra_services/gpt_view/gpt_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -61,7 +62,14 @@ class ExtraServiceView extends StatelessWidget {
           itemBuilder: (context, index) {
             return GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, GptView.routeName);
+                if (items[index].label == S.of(context).currenyConverter) {
+                  Navigator.pushNamed(context, CurrencyConverter.routeName);
+                } else if (items[index].label ==
+                    S.of(context).exchangeCurrency) {
+                  Navigator.pushNamed(context, ExchangeCurrecny.routeName);
+                } else if (items[index].label == 'GPT') {
+                  Navigator.pushNamed(context, GptView.routeName);
+                }
               },
               child: CardItem(
                 label: items[index].label,

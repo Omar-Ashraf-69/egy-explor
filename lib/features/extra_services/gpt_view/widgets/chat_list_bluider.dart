@@ -1,5 +1,5 @@
-import 'package:egy_exlpor/features/extra_services/presentation/views/widgets/gpt_view/widgets/chat_bubble.dart';
-import 'package:egy_exlpor/features/extra_services/presentation/views/widgets/gpt_view/widgets/chat_bubble_for_a_friend.dart';
+import 'package:egy_exlpor/features/extra_services/gpt_view/widgets/chat_bubble.dart';
+import 'package:egy_exlpor/features/extra_services/gpt_view/widgets/chat_bubble_for_a_friend.dart';
 import 'package:flutter/material.dart';
 
 class ChatListBuilder extends StatelessWidget {

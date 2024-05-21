@@ -32,6 +32,7 @@ dependencies:
   card_swiper: ^3.0.1
   cloud_firestore: ^4.16.0
   connectivity_plus: ^5.0.2
+  country_currency_pickers: ^3.0.0
   country_pickers: ^2.0.0
   cupertino_icons: ^1.0.6
   dartz: ^0.10.1
@@ -48,6 +49,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_login_facebook: ^1.9.0
+  flutter_paypal_payment: ^1.0.6
   flutter_stripe: ^10.1.1
   flutter_svg: ^2.0.10+1
   font_awesome_flutter: ^10.7.0
@@ -55,10 +57,12 @@ dependencies:
   go_router: ^13.2.2
   google_fonts: ^6.2.1
   google_sign_in: ^6.2.1
+  http: ^1.2.1
   image_picker: ^1.0.7
   image_stack: ^2.1.1
   intl: null
   ionicons: ^0.2.2
+  modal_progress_hud_nsn: ^0.5.1
   provider: ^6.1.2
   readmore: ^3.0.0
   shared_preferences: ^2.2.2
@@ -67,8 +71,6 @@ dependencies:
   syncfusion_flutter_datepicker: ^25.1.38
   url_launcher: ^6.2.5
   uuid: ^4.3.3
-  flutter_paypal_payment: ^1.0.6
-  modal_progress_hud_nsn: ^0.5.1
 
 dev_dependencies:
   flutter_lints: ^3.0.0

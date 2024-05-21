@@ -4,9 +4,9 @@ import 'package:dio/dio.dart';
 import 'package:egy_exlpor/core/utils/api_keys.dart';
 import 'package:egy_exlpor/core/utils/api_service.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
-import 'package:egy_exlpor/features/extra_services/presentation/views/widgets/gpt_view/models/gpt_response/gpt_response.dart';
-import 'package:egy_exlpor/features/extra_services/presentation/views/widgets/gpt_view/widgets/chat_custom_appbar.dart';
-import 'package:egy_exlpor/features/extra_services/presentation/views/widgets/gpt_view/widgets/chat_list_bluider.dart';
+import 'package:egy_exlpor/features/extra_services/gpt_view/models/gpt_response/gpt_response.dart';
+import 'package:egy_exlpor/features/extra_services/gpt_view/widgets/chat_custom_appbar.dart';
+import 'package:egy_exlpor/features/extra_services/gpt_view/widgets/chat_list_bluider.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
