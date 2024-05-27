@@ -3,6 +3,7 @@ import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/extra_services/currecny/ui/convert_currecny.dart';
 import 'package:egy_exlpor/features/extra_services/currecny/ui/exchange_currecny.dart';
 import 'package:egy_exlpor/features/extra_services/gpt_view/gpt_view.dart';
+import 'package:egy_exlpor/features/extra_services/language_translation/translation_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -69,6 +70,9 @@ class ExtraServiceView extends StatelessWidget {
                   Navigator.pushNamed(context, ExchangeCurrecny.routeName);
                 } else if (items[index].label == 'GPT') {
                   Navigator.pushNamed(context, GptView.routeName);
+                } else if (items[index].label ==
+                    S.of(context).languageTranslator) {
+                  Navigator.pushNamed(context, TranslationView.routeName);
                 }
               },
               child: CardItem(

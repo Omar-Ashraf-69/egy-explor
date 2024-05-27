@@ -69,6 +69,7 @@ dependencies:
   shimmer: ^3.0.0
   smooth_page_indicator: ^1.1.0
   syncfusion_flutter_datepicker: ^25.1.38
+  translator: ^1.0.0
   url_launcher: ^6.2.5
   uuid: ^4.3.3
 

@@ -4,6 +4,7 @@ import 'package:egy_exlpor/features/explore/features/hotel_booking/presentation/
 import 'package:egy_exlpor/features/extra_services/currecny/ui/convert_currecny.dart';
 import 'package:egy_exlpor/features/extra_services/currecny/ui/exchange_currecny.dart';
 import 'package:egy_exlpor/features/extra_services/gpt_view/gpt_view.dart';
+import 'package:egy_exlpor/features/extra_services/language_translation/translation_view.dart';
 import 'package:egy_exlpor/features/favorites/presentation/views/favorites_view.dart';
 import 'package:egy_exlpor/features/hotel/presentation/views/hotel_view.dart';
 import 'package:egy_exlpor/features/layout/presentation/views/layout_view.dart';
@@ -35,6 +36,7 @@ final Map<String, WidgetBuilder> routes = {
   GptView.routeName: (context) => const GptView(),
   CurrencyConverter.routeName: (context) => const CurrencyConverter(),
   ExchangeCurrecny.routeName: (context) => const ExchangeCurrecny(),
+  TranslationView.routeName: (context) => const TranslationView(),
 };
 
 MaterialPageRoute<dynamic>? generateRoutes(RouteSettings settings) {
