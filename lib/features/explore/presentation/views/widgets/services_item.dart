@@ -1,6 +1,8 @@
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/explore/features/hotel_booking/presentation/views/hotel_booking_view.dart';
+import 'package:egy_exlpor/features/explore/features/restaurant/restaurnat.dart';
+import 'package:egy_exlpor/features/explore/features/uber/uber_view.dart';
 import 'package:flutter/material.dart';
 
 class ServicesItemWidget extends StatelessWidget {
@@ -24,7 +26,20 @@ class ServicesItemWidget extends StatelessWidget {
             Navigator.pushNamed(context, HotelBookingView.routeName);
           }
           if (title == 'Restaurant') {
-            Navigator.pushNamed(context, HotelBookingView.routeName);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const RestaurnatView(),
+              ),
+            );
+          }
+          if (title == 'Uber') {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const UberView(),
+              ),
+            );
           }
         },
         color: kWhiteColor,

@@ -26,8 +26,8 @@ class ExploreViewBody extends StatelessWidget {
             child: Column(
               children: [
                 SearchBar(
-                  elevation: const MaterialStatePropertyAll(0),
-                  backgroundColor: MaterialStatePropertyAll(kWhiteColor),
+                  elevation: const WidgetStatePropertyAll(0),
+                  backgroundColor: WidgetStatePropertyAll(kWhiteColor),
                   leading: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12.0),
                     child: Icon(
@@ -37,13 +37,13 @@ class ExploreViewBody extends StatelessWidget {
                   ),
                   keyboardType: TextInputType.text,
                   hintText: 'Search',
-                  hintStyle: MaterialStatePropertyAll(
+                  hintStyle: WidgetStatePropertyAll(
                     Styles.textStyle16.copyWith(
                       fontWeight: FontWeight.w600,
                       color: kGreyColor,
                     ),
                   ),
-                  textStyle: MaterialStatePropertyAll(TextStyle(
+                  textStyle: const WidgetStatePropertyAll(TextStyle(
                     color: kBlackColor,
                   )),
                 ),
