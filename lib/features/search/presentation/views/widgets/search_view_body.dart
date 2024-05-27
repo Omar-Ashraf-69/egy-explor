@@ -3,6 +3,7 @@ import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/search/presentation/views/widgets/recommendation_grid_view.dart';
 import 'package:egy_exlpor/features/search/presentation/views/widgets/search_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
@@ -29,29 +30,29 @@ class SearchViewBody extends StatelessWidget {
             ),
           ),
         ),
-        body: const Padding(
-          padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 6),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 6),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SearchTextField(
+                controller: TextEditingController(),
                 hintText: 'Search for recommendations',
               ),
-              SizedBox(height: 15),
-              Padding(
+              const SizedBox(height: 15),
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10.0),
                 child: Text(
                   'Best for you',
                   style: Styles.textStyle18,
                 ),
               ),
-              SizedBox(height: 15),
-              RecommendationGridView(),
+              const SizedBox(height: 15),
+              const RecommendationGridView(),
             ],
           ),
         ),
       ),
     );
   }
-  
 }
