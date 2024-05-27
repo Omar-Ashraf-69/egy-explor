@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
+import 'package:egy_exlpor/core/managers/speech_cubit/speech_cubit.dart';
 import 'package:egy_exlpor/core/utils/api_keys.dart';
 import 'package:egy_exlpor/core/utils/api_service.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
@@ -8,6 +9,7 @@ import 'package:egy_exlpor/features/extra_services/gpt_view/models/gpt_response/
 import 'package:egy_exlpor/features/extra_services/gpt_view/widgets/chat_custom_appbar.dart';
 import 'package:egy_exlpor/features/extra_services/gpt_view/widgets/chat_list_bluider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 class GptViewBody extends StatefulWidget {
@@ -39,45 +41,84 @@ class _GptViewBodyState extends State<GptViewBody> {
                   messages: messHistory,
                 ),
               ),
-              TextField(
-                maxLines: null,
-                keyboardType: TextInputType.text,
-                controller: controller,
-                focusNode: focusNode,
-                style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
-                ),
-                decoration: InputDecoration(
-                  hintText: 'Enter a message',
-                  hintStyle: const TextStyle(
-                    fontSize: 16,
-                  ),
-                  focusedBorder: customedBorder(),
-                  enabledBorder: customedBorder(),
-                  prefixIconColor: Colors.white,
-                  suffixIcon: IconButton(
-                    onPressed: () async {
-                      isLoading = true;
-                      message = controller.text;
-                      messHistory.add({
-                        'role': 'USER',
-                        'message': message,
-                      });
-                      setState(() {});
-                      controller.clear();
-                      focusNode.unfocus();
-                      await getResponse();
-                      isLoading = false;
-                      setState(() {});
-                    },
-                    icon: const Icon(
-                      Icons.send,
-                      color: kPrimaryColor,
+              BlocBuilder<SpeechCubit, SpeechState>(
+                builder: (context, state) {
+                  if (state is SpeechListening) {
+                    controller.text = state.recognizedWords;
+                  } else if (state is SpeechError) {
+                    controller.text = state.message;
+                  }
+
+                  return TextField(
+                    maxLines: null,
+                    keyboardType: TextInputType.text,
+                    controller: controller,
+                    focusNode: focusNode,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
                     ),
-                  ),
-                  suffixIconColor: Colors.white,
-                ),
+                    decoration: InputDecoration(
+                      hintText: 'Enter a message',
+                      hintStyle: const TextStyle(
+                        fontSize: 16,
+                      ),
+                      focusedBorder: customedBorder(),
+                      enabledBorder: customedBorder(),
+                      prefixIconColor: Colors.white,
+                      suffixIcon: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          BlocBuilder<SpeechCubit, SpeechState>(
+                            builder: (context, state) {
+                              final speechCubit = context.read<SpeechCubit>();
+                              return IconButton(
+                                onPressed: () {
+                                  if (speechCubit.isListening) {
+                                    speechCubit.stopListening();
+                                  } else {
+                                    speechCubit.startListening();
+                                  }
+                                },
+                                tooltip: 'Listen',
+                                icon: Icon(
+                                  speechCubit.isListening
+                                      ? Icons.mic
+                                      : Icons.mic_off,
+                                  color: kPrimaryColor,
+                                ),
+                              );
+                            },
+                          ),
+                          IconButton(
+                            onPressed: () async {
+                              isLoading = true;
+                              message = controller.text;
+                              context.read<SpeechCubit>().deleteMessage();
+                              controller.clear();
+                              // controller.text = '';
+                              messHistory.add({
+                                'role': 'USER',
+                                'message': message,
+                              });
+                              setState(() {});
+                              controller.clear();
+                              focusNode.unfocus();
+                              await getResponse();
+                              isLoading = false;
+                              setState(() {});
+                            },
+                            icon: const Icon(
+                              Icons.send,
+                              color: kPrimaryColor,
+                            ),
+                          ),
+                        ],
+                      ),
+                      suffixIconColor: Colors.white,
+                    ),
+                  );
+                },
               ),
             ],
           ),
