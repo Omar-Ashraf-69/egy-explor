@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:country_currency_pickers/country.dart';
 import 'package:country_currency_pickers/country_pickers.dart';
 import 'package:egy_exlpor/core/utils/custom_appBar.dart';
@@ -155,6 +157,8 @@ class _ExchangeCurrecnyState extends State<ExchangeCurrecny> {
                                   .getExchange(_selectedBaseCurrency,
                                       _selectedTargetCurrency)
                                   .then((result) {
+                                log(result[0].value.toString());
+                                log(result.toString());
                                 isVisible = true;
                                 double value = double.parse(
                                     _textController.text.toString());

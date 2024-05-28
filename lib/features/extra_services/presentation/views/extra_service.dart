@@ -4,6 +4,10 @@ import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/extra_services/currecny/ui/convert_currecny.dart';
 import 'package:egy_exlpor/features/extra_services/currecny/ui/exchange_currecny.dart';
 import 'package:egy_exlpor/features/extra_services/gpt_view/gpt_view.dart';
+import 'package:egy_exlpor/features/extra_services/language_translation/translation_view.dart';
+import 'package:egy_exlpor/features/extra_services/weather/presentation/managers/weather_cubit/weather_cubit.dart';
+import 'package:egy_exlpor/features/extra_services/weather/presentation/managers/weather_cubit/weather_states.dart';
+import 'package:egy_exlpor/features/extra_services/weather/presentation/views/weather_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
@@ -21,10 +25,10 @@ class ExtraServiceView extends StatelessWidget {
         label: ('GPT'),
         icon: IconlyBold.chat,
       ),
-      CardItem(
-        label: S.of(context).map,
-        icon: IconlyBold.location,
-      ),
+      // CardItem(
+      //   label: S.of(context).map,
+      //   icon: IconlyBold.location,
+      // ),
       CardItem(
         label: S.of(context).weatherForcast,
         icon: FontAwesomeIcons.cloud,
@@ -64,7 +68,15 @@ class ExtraServiceView extends StatelessWidget {
           itemBuilder: (context, index) {
             return GestureDetector(
               onTap: () {
-                if (items[index].label == S.of(context).currenyConverter) {
+                if (items[index].label == S.of(context).weatherForcast) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const WeatherView(),
+                    ),
+                  );
+                } else if (items[index].label ==
+                    S.of(context).currenyConverter) {
                   Navigator.pushNamed(context, CurrencyConverter.routeName);
                 } else if (items[index].label ==
                     S.of(context).exchangeCurrency) {
@@ -79,7 +91,9 @@ class ExtraServiceView extends StatelessWidget {
                         ),
                       ));
                 } else if (items[index].label ==
-                    S.of(context).languageTranslator) {}
+                    S.of(context).languageTranslator) {
+                  Navigator.pushNamed(context, TranslationView.routeName);
+                }
               },
               child: CardItem(
                 label: items[index].label,
