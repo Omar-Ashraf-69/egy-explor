@@ -1,5 +1,7 @@
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
+import 'package:egy_exlpor/features/explore/features/flight_booking_inapp_webview/flight_booking_inapp_webview.dart';
+import 'package:egy_exlpor/features/explore/features/hotel_booking/hotel_booking_inapp_webview.dart';
 import 'package:egy_exlpor/features/explore/features/hotel_booking/presentation/views/hotel_booking_view.dart';
 import 'package:egy_exlpor/features/explore/features/restaurant/restaurnat.dart';
 import 'package:egy_exlpor/features/explore/features/uber/uber_view.dart';
@@ -22,8 +24,23 @@ class ServicesItemWidget extends StatelessWidget {
         elevation: 0.1,
         padding: const EdgeInsets.symmetric(horizontal: 10),
         onPressed: () {
+          if (title == 'Airplane') {
+            // Navigator.pushNamed(context, HotelBookingView.routeName);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const FlightBookingInappWebview(),
+              ),
+            );
+          }
           if (title == 'Hotel') {
-            Navigator.pushNamed(context, HotelBookingView.routeName);
+            // Navigator.pushNamed(context, HotelBookingView.routeName);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const HotelBookingInappWebview(),
+              ),
+            );
           }
           if (title == 'Restaurant') {
             Navigator.push(
