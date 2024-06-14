@@ -1,19 +1,28 @@
 import 'package:egy_exlpor/features/extra_services/weather/presentation/managers/weather_cubit/weather_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ionicons/ionicons.dart';
 
+// ignore: must_be_immutable
 class SearchWidget extends StatelessWidget {
   SearchWidget({super.key});
   String cityName = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purpleAccent,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        foregroundColor: Colors.white,
+        backgroundColor: Colors.purpleAccent,
+        leading: GestureDetector(
+            onTap: () => Navigator.pop(context),
+            child: const Icon(
+              Ionicons.arrow_back,
+              color: Colors.white,
+            )),
         title: const Text(
           'Search a City',
           style: TextStyle(
+            color: Colors.white,
             fontWeight: FontWeight.w500,
           ),
         ),
@@ -28,6 +37,7 @@ class SearchWidget extends StatelessWidget {
             onSubmitted: (value) async {
               await BlocProvider.of<WeatherCubit>(context)
                   .getWeatherCubit(value);
+              // ignore: use_build_context_synchronously
               Navigator.pop(context);
             },
             keyboardType: TextInputType.name,
@@ -42,7 +52,7 @@ class SearchWidget extends StatelessWidget {
               fillColor: Colors.amber,
               focusColor: Colors.amber,
               hintText: 'Enter city name',
-              hintStyle: TextStyle(color: Colors.grey),
+              hintStyle: const TextStyle(color: Colors.grey),
               labelText: 'Search',
               labelStyle: const TextStyle(
                 color: Colors.white,
@@ -51,9 +61,10 @@ class SearchWidget extends StatelessWidget {
                 onTap: () async {
                   await BlocProvider.of<WeatherCubit>(context)
                       .getWeatherCubit(cityName);
+                  // ignore: use_build_context_synchronously
                   Navigator.pop(context);
                 },
-                child: Icon(
+                child: const Icon(
                   Icons.search,
                   color: Colors.white,
                 ),

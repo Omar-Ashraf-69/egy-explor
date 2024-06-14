@@ -19,6 +19,7 @@ class OverViewWidget extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.w500,
               fontSize: 20,
+              color: Colors.white,
             ),
           ),
           Divider(

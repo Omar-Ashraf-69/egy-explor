@@ -49,13 +49,12 @@ class _LayoutViewBodyState extends State<LayoutViewBody> {
       ),
       bottomNavigationBar: NavigationBarTheme(
         data: NavigationBarThemeData(
-          labelTextStyle: MaterialStateProperty.resolveWith<TextStyle>(
-            (Set<MaterialState> states) =>
-                states.contains(MaterialState.selected)
-                    ? const TextStyle(
-                        color: kPrimaryColor,
-                      )
-                    : const TextStyle(),
+          labelTextStyle: WidgetStateProperty.resolveWith<TextStyle>(
+            (Set<WidgetState> states) => states.contains(WidgetState.selected)
+                ? const TextStyle(
+                    color: kPrimaryColor,
+                  )
+                : const TextStyle(),
           ),
         ),
         child: NavigationBar(

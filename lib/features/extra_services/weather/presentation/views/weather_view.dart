@@ -50,7 +50,10 @@ class WeatherView extends StatelessWidget {
                       children: [
                         GestureDetector(
                             onTap: () => Navigator.pop(context),
-                            child: const Icon(Ionicons.arrow_back)),
+                            child: const Icon(
+                              Ionicons.arrow_back,
+                              color: Colors.white,
+                            )),
                         const SizedBox(
                           width: 12,
                         ),
@@ -64,6 +67,7 @@ class WeatherView extends StatelessWidget {
                               style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 23,
+                                color: Colors.white,
                               ),
                             ),
                             Text(
@@ -74,13 +78,17 @@ class WeatherView extends StatelessWidget {
                               style: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w500,
+                                color: Colors.white,
                               ),
                             ),
                           ],
                         ),
                         const Spacer(),
                         IconButton(
-                            icon: const Icon(Icons.search),
+                            icon: const Icon(
+                              Icons.search,
+                              color: Colors.white,
+                            ),
                             onPressed: () {
                               Navigator.push(
                                 context,

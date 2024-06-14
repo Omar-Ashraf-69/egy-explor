@@ -3,7 +3,6 @@ import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/search/presentation/views/widgets/recommendation_grid_view.dart';
 import 'package:egy_exlpor/features/search/presentation/views/widgets/search_text_field.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});

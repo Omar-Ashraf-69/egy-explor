@@ -5,8 +5,6 @@ import 'package:egy_exlpor/features/extra_services/currecny/ui/convert_currecny.
 import 'package:egy_exlpor/features/extra_services/currecny/ui/exchange_currecny.dart';
 import 'package:egy_exlpor/features/extra_services/gpt_view/gpt_view.dart';
 import 'package:egy_exlpor/features/extra_services/language_translation/translation_view.dart';
-import 'package:egy_exlpor/features/extra_services/weather/presentation/managers/weather_cubit/weather_cubit.dart';
-import 'package:egy_exlpor/features/extra_services/weather/presentation/managers/weather_cubit/weather_states.dart';
 import 'package:egy_exlpor/features/extra_services/weather/presentation/views/weather_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

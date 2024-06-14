@@ -24,6 +24,7 @@ class SunRiseSetWidget extends StatelessWidget {
                 'Sunrise',
                 style: TextStyle(
                   fontSize: 18,
+                  color: Colors.white,
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -35,6 +36,7 @@ class SunRiseSetWidget extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
+                  color: Colors.white,
                 ),
               ),
             ],
@@ -46,6 +48,7 @@ class SunRiseSetWidget extends StatelessWidget {
               const Text(
                 'Sunset',
                 style: TextStyle(
+                  color: Colors.white,
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                 ),
@@ -57,6 +60,7 @@ class SunRiseSetWidget extends StatelessWidget {
                     .sunSet,
                 style: const TextStyle(
                   fontSize: 18,
+                  color: Colors.white,
                   fontWeight: FontWeight.w500,
                 ),
               ),

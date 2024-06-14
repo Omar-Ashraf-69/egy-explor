@@ -46,10 +46,10 @@ class RecommendationCardItem extends StatelessWidget {
                 const SizedBox(
                   height: 3,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const PriceWidget(),
+                    PriceWidget(),
                     RateWidget(),
                   ],
                 ),

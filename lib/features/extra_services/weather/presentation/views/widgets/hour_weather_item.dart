@@ -28,6 +28,7 @@ class HourItem extends StatelessWidget {
                 ? 'Now'
                 : DateFormat('j').format(hour.time),
             style: const TextStyle(
+              color: Colors.white,
               fontSize: 17,
             ),
           ),
@@ -39,7 +40,10 @@ class HourItem extends StatelessWidget {
           ),
           Text(
             '${hour.temp.round()}°',
-            style: const TextStyle(fontSize: 17),
+            style: const TextStyle(
+              fontSize: 17,
+              color: Colors.white,
+            ),
           ),
         ]),
       ),

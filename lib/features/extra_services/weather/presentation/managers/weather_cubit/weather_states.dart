@@ -1,5 +1,3 @@
-import 'package:egy_exlpor/features/extra_services/weather/data/models/weather_model.dart';
-
 abstract class WeatherStates {}
 
 class InitialWeatherState extends WeatherStates {}

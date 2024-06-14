@@ -34,13 +34,13 @@ class SearchResultViewBody extends StatelessWidget {
             ),
           ),
           body: Padding(
-            padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 6),
+            padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 6),
             child: Column(
               children: [
                 _buildRowprice(context),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 _buildRowicbaseline(context),
-                SizedBox(height: 24),
+                const SizedBox(height: 24),
                 _buildHotelcard(context)
               ],
             ),
@@ -53,7 +53,7 @@ class SearchResultViewBody extends StatelessWidget {
   /// Section Widget
   Widget _buildRowprice(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         horizontal: 12,
         vertical: 12,
       ),
@@ -121,11 +121,11 @@ class SearchResultViewBody extends StatelessWidget {
             ],
           ),
           Container(
-            margin: EdgeInsets.only(
+            margin: const EdgeInsets.only(
               top: 3,
               bottom: 4,
             ),
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               horizontal: 7,
               vertical: 2,
             ),
@@ -141,7 +141,7 @@ class SearchResultViewBody extends StatelessWidget {
                     Navigator.pushReplacementNamed(
                         context, HotelBookingView.routeName);
                   },
-                  child: Icon(
+                  child: const Icon(
                     IconlyBroken.edit,
                     size: 22,
                     color: kPrimaryColor,
@@ -167,8 +167,8 @@ class SearchResultViewBody extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        Icon(Icons.sort),
-        SizedBox(width: 4),
+        const Icon(Icons.sort),
+        const SizedBox(width: 4),
         Text(
           "Sort by",
           style: Styles.textStyle16.copyWith(
@@ -176,7 +176,7 @@ class SearchResultViewBody extends StatelessWidget {
             color: kGreyColor,
           ),
         ),
-        Spacer(),
+        const Spacer(),
         Text(
           "Price (Low to High)",
           style: Styles.textStyle14.copyWith(

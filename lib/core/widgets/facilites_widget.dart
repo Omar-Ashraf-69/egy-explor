@@ -1,4 +1,3 @@
-
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -13,14 +12,14 @@ class FacilitiesWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:const EdgeInsets.symmetric(horizontal: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 6),
       child: Row(
         children: [
           Icon(
             icon,
             size: 18,
           ),
-          SizedBox(width: 6),
+          const SizedBox(width: 6),
           Text(
             text,
             style: Styles.textStyle14,

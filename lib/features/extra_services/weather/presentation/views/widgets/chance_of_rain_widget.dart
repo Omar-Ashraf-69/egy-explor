@@ -34,6 +34,7 @@ class ChanceOfRain extends StatelessWidget {
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w500,
+                color: Colors.white,
               ),
             ),
             const Spacer(),
@@ -41,6 +42,7 @@ class ChanceOfRain extends StatelessWidget {
               '${BlocProvider.of<WeatherCubit>(context).weatherModel!.days[BlocProvider.of<WeatherCubit>(context).index].hours[BlocProvider.of<WeatherCubit>(context).weatherModel!.localTime.hour].chanceOfRaining}%',
               style: const TextStyle(
                 fontSize: 18,
+                color: Colors.white,
                 fontWeight: FontWeight.w500,
               ),
             ),

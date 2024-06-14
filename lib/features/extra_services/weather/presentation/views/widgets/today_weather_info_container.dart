@@ -30,6 +30,7 @@ class TodayInfoContanier extends StatelessWidget {
                         .date),
                 style: const TextStyle(
                   fontSize: 24,
+                  color: Colors.white,
                   fontWeight: FontWeight.w600,
                 ),
               ),
@@ -42,6 +43,7 @@ class TodayInfoContanier extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 60,
                       fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
                   ),
 
@@ -62,6 +64,7 @@ class TodayInfoContanier extends StatelessWidget {
                     : 'Feels like ${weather.days[index].feelsLike.round()}°',
                 style: const TextStyle(
                   fontWeight: FontWeight.w400,
+                  color: Colors.white,
                 ),
               ),
               Row(
@@ -69,6 +72,7 @@ class TodayInfoContanier extends StatelessWidget {
                   Text(
                     '⬆️ ${weather.days[index].maxTemp.round()}°',
                     style: const TextStyle(
+                      color: Colors.white,
                       fontWeight: FontWeight.w400,
                     ),
                   ),
@@ -78,6 +82,7 @@ class TodayInfoContanier extends StatelessWidget {
                   Text(
                     '⬇️ ${weather.days[index].minTemp.round()}°',
                     style: const TextStyle(
+                      color: Colors.white,
                       fontWeight: FontWeight.w400,
                     ),
                   ),
@@ -95,6 +100,7 @@ class TodayInfoContanier extends StatelessWidget {
               Text(
                 weather.days[index].condition,
                 style: const TextStyle(
+                  color: Colors.white,
                   fontWeight: FontWeight.w600,
                   fontSize: 15,
                 ),
@@ -106,12 +112,14 @@ class TodayInfoContanier extends StatelessWidget {
                 "Humidity: ${weather.days[index].humidity}",
                 style: const TextStyle(
                   fontWeight: FontWeight.w400,
+                  color: Colors.white,
                 ),
               ),
               Text(
                 "Wind: ${weather.days[index].wind.round()} km/m",
                 style: const TextStyle(
                   fontWeight: FontWeight.w400,
+                  color: Colors.white,
                 ),
               ),
               const Spacer(

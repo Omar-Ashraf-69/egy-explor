@@ -21,7 +21,7 @@ class HotelcardItemWidget extends StatelessWidget {
       height: 138,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(14), color: kWhiteColor),
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         right: 12,
       ),
       child: Row(
@@ -55,10 +55,9 @@ class HotelcardItemWidget extends StatelessWidget {
                         // style: theme.textTheme.titleSmall,
                       ),
                     ),
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(top: 12.0, right: 4, left: 4),
-                      child: const LoveIconWidget(
+                    const Padding(
+                      padding: EdgeInsets.only(top: 12.0, right: 4, left: 4),
+                      child: LoveIconWidget(
                         iconSize: 26,
                       ),
                     ),
@@ -85,7 +84,7 @@ class HotelcardItemWidget extends StatelessWidget {
                     )
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8.0),
                   child: Row(
@@ -116,8 +115,8 @@ class HotelcardItemWidget extends StatelessWidget {
                         child: ElevatedButton(
                           style: const ButtonStyle(
                             backgroundColor:
-                                MaterialStatePropertyAll(kPrimaryColor),
-                            padding: MaterialStatePropertyAll(
+                                WidgetStatePropertyAll(kPrimaryColor),
+                            padding: WidgetStatePropertyAll(
                               EdgeInsets.symmetric(vertical: 2, horizontal: 8),
                             ),
                           ),

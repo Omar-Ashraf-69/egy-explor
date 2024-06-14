@@ -1,8 +1,6 @@
 import 'package:egy_exlpor/core/utils/assets.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class NotificationItem extends StatelessWidget {
   const NotificationItem({super.key});

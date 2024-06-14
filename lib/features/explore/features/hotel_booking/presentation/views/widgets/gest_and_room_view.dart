@@ -28,7 +28,7 @@ class _GuestAndRoomViewState extends State<GuestAndRoomView> {
         padding: const EdgeInsets.symmetric(horizontal: 18.0),
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 24,
             ),
             ChangeGuestAndRoom(

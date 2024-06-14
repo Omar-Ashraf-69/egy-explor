@@ -20,13 +20,13 @@ class FavoritesViewBody extends StatelessWidget {
             ),
           ),
         ),
-        body: Padding(
+        body: const Padding(
           padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 6),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 10),
-              const FavoritesGridView(),
+              FavoritesGridView(),
             ],
           ),
         ),
