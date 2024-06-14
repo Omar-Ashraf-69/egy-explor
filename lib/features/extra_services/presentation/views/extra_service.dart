@@ -1,8 +1,11 @@
 import 'package:egy_exlpor/core/managers/speech_cubit/speech_cubit.dart';
+import 'package:egy_exlpor/core/utils/assets.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/extra_services/currecny/ui/convert_currecny.dart';
 import 'package:egy_exlpor/features/extra_services/currecny/ui/exchange_currecny.dart';
+import 'package:egy_exlpor/features/extra_services/egy_bot/features/home/presentation/managers/cubit/gemini_cubit_cubit.dart';
+import 'package:egy_exlpor/features/extra_services/egy_bot/features/home/presentation/views/egybot_view.dart';
 import 'package:egy_exlpor/features/extra_services/gpt_view/gpt_view.dart';
 import 'package:egy_exlpor/features/extra_services/language_translation/translation_view.dart';
 import 'package:egy_exlpor/features/extra_services/weather/presentation/views/weather_view.dart';
@@ -100,6 +103,22 @@ class ExtraServiceView extends StatelessWidget {
             );
           },
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => MultiBlocProvider(
+                      providers: [
+                        BlocProvider(create: (context) => GeminiCubit()),
+                        BlocProvider(create: (context) => SpeechCubit()),
+                      ],
+                      child: const EgyptBotView(),
+                    )),
+          );
+        },
+        child: Image.asset(AssetsData.egyBotIcon),
       ),
     );
   }

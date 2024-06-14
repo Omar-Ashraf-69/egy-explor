@@ -1,19 +1,17 @@
 class AssetsData {
 //icons
 
-    static const String iconMountain = 'assets/icons/mountains.png';
-    static const String iconLake = 'assets/icons/lake.png';
-    static const String iconCamp = 'assets/icons/camp.png';
-    static const String iconBeach= 'assets/icons/beach.png';
+  static const String iconMountain = 'assets/icons/mountains.png';
+  static const String iconLake = 'assets/icons/lake.png';
+  static const String iconCamp = 'assets/icons/camp.png';
+  static const String iconBeach = 'assets/icons/beach.png';
 
-    static const String iconSafari= 'assets/icons/safari.png';
-    static const String iconCar= 'assets/icons/carIcon.png';
-    static const String iconHotel= 'assets/icons/hotelIcon.png';
-    static const String iconAirplane= 'assets/icons/airplaneIcon.png';
-    static const String iconFood= 'assets/icons/food.png';
-
-
-
+  static const String iconSafari = 'assets/icons/safari.png';
+  static const String iconCar = 'assets/icons/carIcon.png';
+  static const String iconHotel = 'assets/icons/hotelIcon.png';
+  static const String iconAirplane = 'assets/icons/airplaneIcon.png';
+  static const String iconFood = 'assets/icons/food.png';
+  static const String egyBotIcon = 'assets/icons/egy_bot_logo.png';
 
 //images
 
@@ -37,5 +35,4 @@ class AssetsData {
   static const String imgRectangle113 = 'assets/images/img_rectangle_113.png';
   static const String imgSubtract = 'assets/images/img_subtract.png';
   static const String profilePic = 'assets/images/profile.png';
-
 }
