@@ -20,7 +20,7 @@ class ExtraServiceView extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<CardItem> items = [
       const CardItem(
-        label: ('GPT'),
+        label: ('IdeaMate'),
         icon: IconlyBold.chat,
       ),
       // CardItem(
@@ -79,7 +79,7 @@ class ExtraServiceView extends StatelessWidget {
                 } else if (items[index].label ==
                     S.of(context).exchangeCurrency) {
                   Navigator.pushNamed(context, ExchangeCurrecny.routeName);
-                } else if (items[index].label == 'GPT') {
+                } else if (items[index].label == 'IdeaMate') {
                   Navigator.push(
                       context,
                       MaterialPageRoute(

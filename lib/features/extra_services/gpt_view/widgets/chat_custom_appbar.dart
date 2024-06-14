@@ -17,7 +17,7 @@ AppBar chatCustomAppBar(context) {
     ),
     centerTitle: true,
     title: const Text(
-      "GPT",
+      "IdeaMate",
       style: TextStyle(
         fontWeight: FontWeight.bold,
         fontFamily: "Cera Pro",
