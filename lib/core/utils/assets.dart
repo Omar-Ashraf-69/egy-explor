@@ -35,4 +35,6 @@ class AssetsData {
   static const String imgRectangle113 = 'assets/images/img_rectangle_113.png';
   static const String imgSubtract = 'assets/images/img_subtract.png';
   static const String profilePic = 'assets/images/profile.png';
+  static const String visaChecker = 'assets/images/visa_check.jpeg';
+  static const String visaCheckerBackground = 'assets/images/tot.png';
 }

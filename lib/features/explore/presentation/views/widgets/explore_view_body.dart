@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart';
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_state.dart';
 import 'package:egy_exlpor/core/utils/assets.dart';
@@ -8,7 +7,7 @@ import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/core/widgets/inapp_webview.dart';
 import 'package:egy_exlpor/core/widgets/section_header.dart';
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/appbar.dart';
-import 'package:egy_exlpor/features/explore/presentation/views/widgets/category_item.dart';
+import 'package:egy_exlpor/features/explore/presentation/views/widgets/check_visa.dart';
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/fantastic__tours_item.dart';
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/popular_spot_item.dart';
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/services_item.dart';
@@ -79,32 +78,32 @@ class ExploreViewBody extends StatelessWidget {
                         child: SingleChildScrollView(
                           child: Column(
                             children: [
+                              // const SizedBox(
+                              //   height: 12,
+                              // ),
+                              // const SectionHeader(title: "Categories"),
+                              // const SizedBox(
+                              //   height: 12,
+                              // ),
+                              // SizedBox(
+                              //   height: 80,
+                              //   child: ListView.builder(
+                              //     scrollDirection: Axis.horizontal,
+                              //     physics: const BouncingScrollPhysics(),
+                              //     itemBuilder: (context, index) => CategoryItem(
+                              //       iconImage: categoryItems[index]
+                              //           ['iconImage']!,
+                              //       title: categoryItems[index]['title']!,
+                              //     ),
+                              //     itemCount: categoryItems.length,
+                              //   ),
+                              // ),
                               const SizedBox(
-                                height: 12,
-                              ),
-                              const SectionHeader(title: "Categories"),
-                              const SizedBox(
-                                height: 12,
-                              ),
-                              SizedBox(
-                                height: 80,
-                                child: ListView.builder(
-                                  scrollDirection: Axis.horizontal,
-                                  physics: const BouncingScrollPhysics(),
-                                  itemBuilder: (context, index) => CategoryItem(
-                                    iconImage: categoryItems[index]
-                                        ['iconImage']!,
-                                    title: categoryItems[index]['title']!,
-                                  ),
-                                  itemCount: categoryItems.length,
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 12,
+                                height: 16,
                               ),
                               const SectionHeader(title: "Popular Spots"),
                               const SizedBox(
-                                height: 12,
+                                height: 16,
                               ),
                               SizedBox(
                                 height: 170,
@@ -117,11 +116,12 @@ class ExploreViewBody extends StatelessWidget {
                                 ),
                               ),
                               const SizedBox(
-                                height: 12,
+                                height: 24,
                               ),
+
                               const SectionHeader(title: 'Services'),
                               const SizedBox(
-                                height: 12,
+                                height: 16,
                               ),
                               SizedBox(
                                 height: 35,
@@ -137,11 +137,15 @@ class ExploreViewBody extends StatelessWidget {
                                 ),
                               ),
                               const SizedBox(
-                                height: 12,
+                                height: 16,
+                              ),
+                              const CheckVisaWidget(),
+                              const SizedBox(
+                                height: 16,
                               ),
                               const SectionHeader(title: 'Fantastic Tours'),
                               const SizedBox(
-                                height: 12,
+                                height: 16,
                               ),
                               SizedBox(
                                 height: 120,
