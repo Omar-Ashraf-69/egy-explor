@@ -1,8 +1,11 @@
+import 'dart:developer';
+
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart';
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_state.dart';
 import 'package:egy_exlpor/core/utils/assets.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
+import 'package:egy_exlpor/core/widgets/inapp_webview.dart';
 import 'package:egy_exlpor/core/widgets/section_header.dart';
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/appbar.dart';
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/category_item.dart';
@@ -15,8 +18,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 
 class ExploreViewBody extends StatelessWidget {
-  const ExploreViewBody({super.key});
-
+  const ExploreViewBody({super.key, required this.controller});
+  final TextEditingController controller;
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<UserCubit, UserState>(
@@ -34,6 +37,21 @@ class ExploreViewBody extends StatelessWidget {
                   child: Column(
                     children: [
                       SearchBar(
+                        controller: controller,
+                        onSubmitted: (value) {
+                          log(
+                            'https://www.google.com/search?q=$value&hl=${Localizations.localeOf(context).languageCode}',
+                          );
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => CustomInAppWebView(
+                                  url:
+                                      'https://www.google.com/search?q=$value&hl=${Localizations.localeOf(context).languageCode}',
+                                ),
+                              ));
+                          controller.clear();
+                        },
                         elevation: const WidgetStatePropertyAll(0),
                         backgroundColor: WidgetStatePropertyAll(kWhiteColor),
                         leading: Padding(
@@ -51,9 +69,11 @@ class ExploreViewBody extends StatelessWidget {
                             color: kGreyColor,
                           ),
                         ),
-                        textStyle: const WidgetStatePropertyAll(TextStyle(
-                          color: kBlackColor,
-                        )),
+                        textStyle: const WidgetStatePropertyAll(
+                          TextStyle(
+                            color: kBlackColor,
+                          ),
+                        ),
                       ),
                       Expanded(
                         child: SingleChildScrollView(

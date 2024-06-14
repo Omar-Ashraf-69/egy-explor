@@ -138,20 +138,20 @@ class ProfileViewBody extends StatelessWidget {
                             endIndent: 35,
                             indent: 20,
                           ),
-                          CustomListTile(
-                            icon: IconlyLight.calendar,
-                            text: S.of(context).previousTrip,
-                            function: () async {
-                              // await Navigator.pushNamed(
-                              //   context,
-                              //   WishlistScreen.routName,
-                              // );
-                            },
-                          ),
-                          const Divider(
-                            endIndent: 35,
-                            indent: 20,
-                          ),
+                          // CustomListTile(
+                          //   icon: IconlyLight.calendar,
+                          //   text: S.of(context).previousTrip,
+                          //   function: () async {
+                          //     // await Navigator.pushNamed(
+                          //     //   context,
+                          //     //   WishlistScreen.routName,
+                          //     // );
+                          //   },
+                          // ),
+                          // const Divider(
+                          //   endIndent: 35,
+                          //   indent: 20,
+                          // ),
                           CustomListTile(
                             icon: IconlyLight.setting,
                             text: S.of(context).settings,
@@ -194,7 +194,7 @@ class ProfileViewBody extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 30,
                     ),
                     Center(
                       child: ElevatedButton.icon(
