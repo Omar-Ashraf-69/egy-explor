@@ -8,6 +8,7 @@ import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/profile/features/edit_user/presentation/views/edit_user_view.dart';
 import 'package:egy_exlpor/features/extra_services/presentation/views/extra_service.dart';
+import 'package:egy_exlpor/features/profile/presentation/views/widgets/contact_us_view.dart';
 import 'package:egy_exlpor/features/profile/presentation/views/widgets/custom_list_title_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -164,7 +165,14 @@ class ProfileViewBody extends StatelessWidget {
                           CustomListTile(
                             icon: IconlyLight.message,
                             text: S.of(context).contactUs,
-                            function: () {},
+                            function: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const ContactUsView(),
+                                ),
+                              );
+                            },
                           ),
                           const Divider(
                             endIndent: 35,
