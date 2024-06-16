@@ -37,4 +37,14 @@ class AssetsData {
   static const String profilePic = 'assets/images/profile.png';
   static const String visaChecker = 'assets/images/visa_check.jpeg';
   static const String visaCheckerBackground = 'assets/images/tot.png';
+
+  //images
+  static const String alexandriaCity = 'assets/cities/alexandria.jpg';
+  static const String aswanCity = 'assets/cities/aswan.jpg';
+  static const String cairoCity = 'assets/cities/cairo.jpg';
+  static const String dahabCity = 'assets/cities/dahab.jpg';
+  static const String hurghadaCity = 'assets/cities/hurghada.jpg';
+  static const String luxorCity = 'assets/cities/luxor.jpg';
+  static const String marsaAlamCity = 'assets/cities/marsaalem.jpeg';
+  static const String sharmElSheikhCity = 'assets/cities/sharm_el_sheikh.jpg';
 }

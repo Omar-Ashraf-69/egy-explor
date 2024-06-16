@@ -26,10 +26,10 @@ class HomeViewBody extends StatelessWidget {
                 children: [
                   HomeViewAppBar(),
                   SizedBox(height: 10),
-                  SectionHeader(title: "Recommendation"),
-                  RecommendedPlaces(),
+                  SectionHeader(title: "Hidden Gems"),
+                  HiddenGems(),
                   SizedBox(height: 5),
-                  SectionHeader(title: "Best Destinations"),
+                  SectionHeader(title: "Hot Spots"),
                   SizedBox(height: 5),
                   BestDestinationsWidget(),
                 ],

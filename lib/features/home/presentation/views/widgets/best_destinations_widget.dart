@@ -20,7 +20,7 @@ class BestDestinationsWidget extends StatelessWidget {
           separatorBuilder: (context, index) => const Padding(
                 padding: EdgeInsets.only(right: 10),
               ),
-          itemCount: recommendedPlaces.length),
+          itemCount: hiddenGems.length),
     );
   }
 }

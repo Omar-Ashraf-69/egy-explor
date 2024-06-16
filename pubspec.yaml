@@ -94,6 +94,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/places/
+    - assets/cities/
 
   # assets:
   #   - images/a_dot_burr.jpeg

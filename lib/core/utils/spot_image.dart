@@ -22,7 +22,7 @@ class SpotImage extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(12),
           child: Image.asset(
-            recommendedPlaces[index].image,
+            hiddenGems[index].image,
             width: double.maxFinite,
             fit: BoxFit.cover,
             height: height,

@@ -1,11 +1,11 @@
 import 'package:egy_exlpor/core/utils/styles.dart';
+import 'package:egy_exlpor/core/widgets/inapp_webview.dart';
 import 'package:egy_exlpor/features/home/data/models/recommended_places_model.dart';
-import 'package:egy_exlpor/features/reveal_monuments/destination_feature/presentation/views/destination_view.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
-class RecommendedPlaces extends StatelessWidget {
-  const RecommendedPlaces({super.key});
+class HiddenGems extends StatelessWidget {
+  const HiddenGems({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,14 +27,16 @@ class RecommendedPlaces extends StatelessWidget {
                 child: InkWell(
                   borderRadius: BorderRadius.circular(12),
                   onTap: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //       builder: (context) => TouristDetailsView(
-                    //         image: recommendedPlaces[index].image,
-                    //       ),
-                    //     ));
-                    Navigator.pushNamed(context, DestinationView.routeName);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CustomInAppWebView(
+                              url: hiddenGems[index].bookingUrl),
+                          // builder: (context) => TouristDetailsView(
+                          //   image: recommendedPlaces[index].image,
+                          // ),
+                        ));
+                    // Navigator.pushNamed(context, DestinationView.routeName);
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(10),
@@ -43,7 +45,7 @@ class RecommendedPlaces extends StatelessWidget {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(12),
                           child: Image.asset(
-                            recommendedPlaces[index].image,
+                            hiddenGems[index].image,
                             width: double.maxFinite,
                             fit: BoxFit.cover,
                             height: MediaQuery.of(context).size.height * 0.185,
@@ -53,7 +55,7 @@ class RecommendedPlaces extends StatelessWidget {
                         Row(
                           children: [
                             Text(
-                              "St Regis Bora Bora",
+                              hiddenGems[index].cityName,
                               overflow: TextOverflow.ellipsis,
                               style: Styles.textStyle16.copyWith(
                                 fontWeight: FontWeight.w700,
@@ -66,9 +68,9 @@ class RecommendedPlaces extends StatelessWidget {
                               color: Colors.yellow.shade700,
                               size: 15,
                             ),
-                            const Text(
-                              "4.4",
-                              style: TextStyle(
+                            Text(
+                              hiddenGems[index].rating.toString(),
+                              style: const TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -76,16 +78,16 @@ class RecommendedPlaces extends StatelessWidget {
                           ],
                         ),
                         const SizedBox(height: 5),
-                        const Row(
+                        Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Ionicons.location_outline,
                               size: 20,
                             ),
-                            SizedBox(width: 5),
+                            const SizedBox(width: 5),
                             Text(
-                              "French Polynesia",
-                              style: TextStyle(
+                              hiddenGems[index].location,
+                              style: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -102,7 +104,7 @@ class RecommendedPlaces extends StatelessWidget {
           separatorBuilder: (context, index) => const Padding(
                 padding: EdgeInsets.only(right: 10),
               ),
-          itemCount: recommendedPlaces.length),
+          itemCount: hiddenGems.length),
     );
   }
 }
