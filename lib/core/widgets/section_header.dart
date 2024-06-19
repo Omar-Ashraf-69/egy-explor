@@ -1,4 +1,3 @@
-
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -6,10 +5,13 @@ import 'package:flutter/material.dart';
 class SectionHeader extends StatelessWidget {
   const SectionHeader({
     super.key,
-    required this.title,  this.subtitle = "View All",
+    required this.title,
+    this.subtitle = "View All",
+    this.isViewAll = true,
   });
   final String title;
-  final String subtitle ;
+  final String subtitle;
+  final bool isViewAll;
 
   @override
   Widget build(BuildContext context) {
@@ -22,16 +24,17 @@ class SectionHeader extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        GestureDetector(
-          onTap: () {},
-          child: Text(
-            subtitle,
-            style: Styles.textStyle16.copyWith(
-              color: kPrimaryColor,
-              fontWeight: FontWeight.w700,
+        if (isViewAll)
+          GestureDetector(
+            onTap: () {},
+            child: Text(
+              subtitle,
+              style: Styles.textStyle16.copyWith(
+                color: kPrimaryColor,
+                fontWeight: FontWeight.w700,
+              ),
             ),
           ),
-        ),
       ],
     );
   }
