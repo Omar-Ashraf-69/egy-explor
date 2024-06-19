@@ -8,9 +8,8 @@ import 'package:egy_exlpor/core/widgets/inapp_webview.dart';
 import 'package:egy_exlpor/core/widgets/section_header.dart';
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/appbar.dart';
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/check_visa.dart';
-import 'package:egy_exlpor/features/explore/presentation/views/widgets/fantastic__tours_item.dart';
-import 'package:egy_exlpor/features/explore/presentation/views/widgets/popular_spot_item.dart';
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/services_item.dart';
+import 'package:egy_exlpor/features/home/presentation/views/widgets/best_destinations_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -98,33 +97,37 @@ class ExploreViewBody extends StatelessWidget {
                               //     itemCount: categoryItems.length,
                               //   ),
                               // ),
+                              // const SizedBox(
+                              //   height: 16,
+                              // ),
+                              // const SectionHeader(title: "Popular Spots"),
+                              // const SizedBox(
+                              //   height: 16,
+                              // ),
+                              // SizedBox(
+                              //   height: 170,
+                              //   child: ListView.builder(
+                              //     scrollDirection: Axis.horizontal,
+                              //     physics: const BouncingScrollPhysics(),
+                              //     itemBuilder: (context, index) =>
+                              //         const PopularSpotWidget(),
+                              //     itemCount: 5,
+                              //   ),
+                              // ),
                               const SizedBox(
                                 height: 16,
-                              ),
-                              const SectionHeader(title: "Popular Spots"),
-                              const SizedBox(
-                                height: 16,
-                              ),
-                              SizedBox(
-                                height: 170,
-                                child: ListView.builder(
-                                  scrollDirection: Axis.horizontal,
-                                  physics: const BouncingScrollPhysics(),
-                                  itemBuilder: (context, index) =>
-                                      const PopularSpotWidget(),
-                                  itemCount: 5,
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 24,
                               ),
 
-                              const SectionHeader(title: 'Services'),
+                              const SectionHeader(
+                                title: 'Services',
+                                isViewAll: false,
+                              ),
                               const SizedBox(
                                 height: 16,
                               ),
                               SizedBox(
-                                height: 35,
+                                height:
+                                    MediaQuery.sizeOf(context).height * 0.06,
                                 child: ListView.builder(
                                   scrollDirection: Axis.horizontal,
                                   itemCount: servicesItems.length,
@@ -141,22 +144,26 @@ class ExploreViewBody extends StatelessWidget {
                               ),
                               const CheckVisaWidget(),
                               const SizedBox(
-                                height: 16,
+                                height: 24,
                               ),
-                              const SectionHeader(title: 'Fantastic Tours'),
+                              const SectionHeader(
+                                title: 'Season Tours',
+                                isViewAll: false,
+                              ),
                               const SizedBox(
                                 height: 16,
                               ),
-                              SizedBox(
-                                height: 120,
-                                child: ListView.builder(
-                                  itemCount: 4,
-                                  physics: const BouncingScrollPhysics(),
-                                  scrollDirection: Axis.horizontal,
-                                  itemBuilder: (context, index) =>
-                                      const FantasticTourWidget(),
-                                ),
-                              ),
+                              const BestDestinationsWidget(),
+                              // SizedBox(
+                              //   height: 120,
+                              //   child: ListView.builder(
+                              //     itemCount: 4,
+                              //     physics: const BouncingScrollPhysics(),
+                              //     scrollDirection: Axis.horizontal,
+                              //     itemBuilder: (context, index) =>
+                              //         const FantasticTourWidget(),
+                              //   ),
+                              // ),
                             ],
                           ),
                         ),

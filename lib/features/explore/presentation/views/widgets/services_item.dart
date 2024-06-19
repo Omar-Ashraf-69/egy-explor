@@ -21,7 +21,7 @@ class ServicesItemWidget extends StatelessWidget {
       padding: const EdgeInsets.only(right: 14.0, bottom: 1.5),
       child: MaterialButton(
         elevation: 0.1,
-        padding: const EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 18),
         onPressed: () {
           if (title == 'Airplane') {
             // Navigator.pushNamed(context, HotelBookingView.routeName);
@@ -68,13 +68,13 @@ class ServicesItemWidget extends StatelessWidget {
           children: [
             Image.asset(
               iconImage,
-              height: 18,
+              height: 24,
               fit: BoxFit.cover,
             ),
-            const SizedBox(width: 5),
+            const SizedBox(width: 12),
             Text(
               title,
-              style: Styles.textStyle14.copyWith(
+              style: Styles.textStyle18.copyWith(
                 fontWeight: FontWeight.w800,
                 color: kBlackColor,
               ),
