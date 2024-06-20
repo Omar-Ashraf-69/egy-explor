@@ -1,11 +1,11 @@
 import 'package:egy_exlpor/core/utils/styles.dart';
-import 'package:egy_exlpor/features/reveal_monuments/destination_feature/presentation/views/widgets/destination_rate_and_price_row.dart';
 import 'package:egy_exlpor/features/reveal_monuments/destination_feature/presentation/views/widgets/details_section_divider.dart';
 import 'package:flutter/material.dart';
 
 class DestinationBasicInfoWidget extends StatelessWidget {
-  const DestinationBasicInfoWidget({super.key});
-
+  const DestinationBasicInfoWidget({super.key, this.title, this.location});
+  final String? title;
+  final String? location;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -13,10 +13,10 @@ class DestinationBasicInfoWidget extends StatelessWidget {
       children: [
         const DetailsSectionDividerWidget(),
         const SizedBox(height: 12),
-        const Padding(
-          padding: EdgeInsets.only(left: 5),
+        Padding(
+          padding: const EdgeInsets.only(left: 5),
           child: Text(
-            "Dahab",
+            title ?? "",
             style: Styles.textStyle30,
           ),
         ),
@@ -24,7 +24,7 @@ class DestinationBasicInfoWidget extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 5),
           child: Text(
-            "South Sinai, Egypt",
+            location ?? "",
             style: Styles.textStyle14.copyWith(
               color: Colors.grey,
               fontWeight: FontWeight.w500,
@@ -32,8 +32,8 @@ class DestinationBasicInfoWidget extends StatelessWidget {
             // style: .text.bodyMedium,
           ),
         ),
-        const SizedBox(height: 24),
-        const DestinationRateAndPriceRow(),
+        // const SizedBox(height: 24),
+        // const DestinationRateAndPriceRow(),
       ],
     );
   }

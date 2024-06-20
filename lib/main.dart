@@ -4,6 +4,7 @@ import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart'
 import 'package:egy_exlpor/core/utils/pref_utils.dart';
 import 'package:egy_exlpor/core/utils/themes.dart';
 import 'package:egy_exlpor/features/extra_services/weather/presentation/managers/weather_cubit/weather_cubit.dart';
+import 'package:egy_exlpor/features/reveal_monuments/presentation/views/image_cubit/image_cubit.dart';
 import 'package:egy_exlpor/features/splash/presentation/views/splash_screen.dart';
 import 'package:egy_exlpor/firebase_options.dart';
 import 'package:egy_exlpor/generated/l10n.dart';
@@ -46,6 +47,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => ThemeCubit(),
+        ),
+        BlocProvider(
+          create: (context) => ImageCubit(),
         ),
         BlocProvider(create: (context) => WeatherCubit()..getWeatherCubit()),
       ],

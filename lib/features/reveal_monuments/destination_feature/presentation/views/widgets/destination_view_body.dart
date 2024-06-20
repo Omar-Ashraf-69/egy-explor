@@ -3,11 +3,12 @@ import 'package:egy_exlpor/features/reveal_monuments/destination_feature/present
 import 'package:flutter/material.dart';
 
 class DestinationViewBody extends StatelessWidget {
-  const DestinationViewBody({super.key});
-
+  const DestinationViewBody({
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
-    return const  SafeArea(
+    return const SafeArea(
       child: Scaffold(
         body: Stack(
           children: [

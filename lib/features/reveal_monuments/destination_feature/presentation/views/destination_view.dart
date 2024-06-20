@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class DestinationView extends StatelessWidget {
   const DestinationView({super.key});
-      static const String routeName = '/destination_view';
+  static const String routeName = '/destination_view';
   @override
   Widget build(BuildContext context) {
     return const Scaffold(

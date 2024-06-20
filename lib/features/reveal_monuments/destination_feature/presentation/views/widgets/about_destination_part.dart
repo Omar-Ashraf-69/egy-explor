@@ -1,6 +1,8 @@
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
+import 'package:egy_exlpor/features/reveal_monuments/presentation/views/image_cubit/image_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:readmore/readmore.dart';
 
 class AboutDestinationPart extends StatelessWidget {
@@ -14,7 +16,7 @@ class AboutDestinationPart extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 5),
           child: Text(
-            "About Destination",
+            "About Image",
             style: Styles.textStyle24.copyWith(),
           ),
         ),
@@ -22,8 +24,8 @@ class AboutDestinationPart extends StatelessWidget {
         SizedBox(
           width: double.infinity,
           child: ReadMoreText(
-            "You_will_get_a_comjor parts. Masbat, which includes the Bedouin village of Asalah, is in the north. South of Masbat is Mashraba, which is more touristic and has considerably more hotels. In the southwest is Medina which includes the Laguna area, famous for its excellent shallow-water kite- and windsurfing.!!!!! into three major parts. Masbat, which includes the Bedouin village of Asalah, is in the north. South of Masbat is Mashraba, which is more touristic and has considerably more hotels. In the southwest is Medina which includes the Laguna area, famous for its excellent shallow-water kite- and windsurfing.ahab can be divided into three major parts. Masbat, which includsurfing. ",
-            trimLines: 5,
+            BlocProvider.of<ImageCubit>(context).description!,
+            trimLines: 6,
             colorClickableText: kPrimaryColor,
             trimMode: TrimMode.Line,
             trimCollapsedText: " Read More",

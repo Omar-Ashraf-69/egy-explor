@@ -1,6 +1,7 @@
 import 'package:egy_exlpor/core/utils/assets.dart';
-import 'package:egy_exlpor/core/utils/functions/pick_image.dart';
+import 'package:egy_exlpor/features/reveal_monuments/presentation/views/image_cubit/image_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class RevealViewBody extends StatelessWidget {
   const RevealViewBody({super.key});
@@ -18,9 +19,7 @@ class RevealViewBody extends StatelessWidget {
             child: IconButton(
               padding: EdgeInsets.zero,
               onPressed: () {
-                pickImage(
-                  openCamera: false,
-                );
+                BlocProvider.of<ImageCubit>(context).pickImage(false, context);
               },
               icon: Image.asset(
                 AssetsData.addImageIcon,
@@ -37,10 +36,8 @@ class RevealViewBody extends StatelessWidget {
             height: 100,
           ),
           GestureDetector(
-            onTap: () {
-              pickImage(
-                openCamera: true,
-              );
+            onTap: () async {
+              BlocProvider.of<ImageCubit>(context).pickImage(true, context);
             },
             child: Image.asset(
               AssetsData.imageFram,
