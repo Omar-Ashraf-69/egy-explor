@@ -10,7 +10,6 @@ import 'package:egy_exlpor/features/explore/presentation/views/widgets/appbar.da
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/check_visa.dart';
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/explore_best_tours.dart';
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/services_item.dart';
-import 'package:egy_exlpor/features/home/presentation/views/widgets/best_destinations_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

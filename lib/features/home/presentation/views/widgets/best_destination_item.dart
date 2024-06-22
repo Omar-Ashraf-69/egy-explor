@@ -82,7 +82,7 @@ class CardItem extends StatelessWidget {
                       size: 22,
                     ),
                     Text(
-                      place.rating.toString() ?? "4.4",
+                      place.rating.toString(),
                       style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -99,7 +99,9 @@ class CardItem extends StatelessWidget {
                       location: place.locationString!,
                     ),
                     const Spacer(),
-                    LoveIconWidget(),
+                    LoveIconWidget(
+                      place: place,
+                    ),
                   ],
                 ),
               )

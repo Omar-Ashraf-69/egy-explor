@@ -1,5 +1,6 @@
 import 'package:egy_exlpor/core/helpers/size_config.dart';
 import 'package:egy_exlpor/core/managers/app_them_cubit/app_them_cubit.dart';
+import 'package:egy_exlpor/core/managers/favorites_cubit/cubit/favorities_cubit.dart';
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart';
 import 'package:egy_exlpor/core/utils/pref_utils.dart';
 import 'package:egy_exlpor/core/utils/themes.dart';
@@ -14,7 +15,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_stripe/flutter_stripe.dart';
 
 var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
 
@@ -23,8 +23,6 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  Stripe.publishableKey =
-      'pk_test_51PFQuMP5JEiIcvkamGVB5Lw5Msu7XSAlFfrLMmWEtGQn6CmnIiRmNXfQAVAwgXUsKswrVt2ZHQOX0duW1MpDTNrN00GhKLbkkZ';
 
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
       .then((_) {
@@ -52,6 +50,7 @@ class MyApp extends StatelessWidget {
           create: (context) => ImageCubit(),
         ),
         BlocProvider(create: (context) => WeatherCubit()..getWeatherCubit()),
+        BlocProvider(create: (context) => FavoritesCubit()),
       ],
       child: BlocBuilder<ThemeCubit, bool>(
         builder: (context, isDark) {

@@ -13,7 +13,6 @@ class BestDestinationsWidget extends StatefulWidget {
 
 class _BestDestinationsWidgetState extends State<BestDestinationsWidget> {
   static List<TopPlaces>? cachedPlaces;
-  static List<TopPlaces>? cachedPlacesReversed;
   bool isLoading = false;
 
   @override
@@ -24,7 +23,6 @@ class _BestDestinationsWidgetState extends State<BestDestinationsWidget> {
 
   @override
   Widget build(BuildContext context) {
-    cachedPlacesReversed = cachedPlaces?.reversed.toList();
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.395,
       child: isLoading

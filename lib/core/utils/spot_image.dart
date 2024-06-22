@@ -1,5 +1,4 @@
 import 'package:egy_exlpor/features/favorites/presentation/views/widgets/favorites_icon.dart';
-import 'package:egy_exlpor/features/home/data/models/recommended_places_model.dart';
 import 'package:egy_exlpor/features/home/presentation/views/widgets/love_icon_widget.dart';
 import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
