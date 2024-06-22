@@ -6,9 +6,11 @@ class AddressWidget extends StatelessWidget {
     super.key,
     this.color,
     this.size,
+    this.location,
   });
   final double? size;
   final Color? color;
+  final String? location;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -20,7 +22,9 @@ class AddressWidget extends StatelessWidget {
         ),
         const SizedBox(width: 5),
         Text(
-          "French Polynesia",
+          location?.split(',').first ?? "French Polynesia",
+          overflow: TextOverflow.ellipsis,
+          maxLines: 2,
           style: TextStyle(
             fontSize: size ?? 12,
             fontWeight: FontWeight.w700,

@@ -1,12 +1,12 @@
 import 'package:egy_exlpor/core/utils/custom_icon_button.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
+import 'package:egy_exlpor/features/search/data/models/recommended_places/recommended_places.dart';
 import 'package:egy_exlpor/features/search/presentation/views/widgets/recommendation_grid_view.dart';
-import 'package:egy_exlpor/features/search/presentation/views/widgets/search_text_field.dart';
 import 'package:flutter/material.dart';
 
-class SearchViewBody extends StatelessWidget {
-  const SearchViewBody({super.key});
-
+class SearchRecommendationsResultViewBody extends StatelessWidget {
+  const SearchRecommendationsResultViewBody({super.key, required this.places});
+  final List<RecommendedPlaces> places;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -34,11 +34,11 @@ class SearchViewBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SearchTextField(
-                controller: TextEditingController(),
-                hintText: 'Search for recommendations',
-              ),
-              const SizedBox(height: 15),
+              // SearchTextField(
+              //   controller: TextEditingController(),
+              //   hintText: 'Search for recommendations',
+              // ),
+              // const SizedBox(height: 15),
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10.0),
                 child: Text(
@@ -47,7 +47,9 @@ class SearchViewBody extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 15),
-              const RecommendationGridView(),
+              RecommendationGridView(
+                places: places,
+              ),
             ],
           ),
         ),

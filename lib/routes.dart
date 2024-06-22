@@ -12,9 +12,9 @@ import 'package:egy_exlpor/features/notification/presentation/view/notification_
 import 'package:egy_exlpor/features/onboarding/presentation/views/on_boarding_view.dart';
 import 'package:egy_exlpor/features/reveal_monuments/destination_feature/presentation/views/destination_view.dart';
 import 'package:egy_exlpor/features/reveal_monuments/presentation/views/reveal_view.dart';
+import 'package:egy_exlpor/features/search/presentation/views/search_recommendations.dart';
 import 'package:egy_exlpor/features/search_result/presentation/views/search_result_view.dart';
 import 'package:egy_exlpor/features/select_room/presentation/views/select_room_view.dart';
-import 'package:egy_exlpor/features/search/presentation/views/search_view.dart';
 import 'package:egy_exlpor/features/spot/presentation/views/spot_view.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +25,8 @@ final Map<String, WidgetBuilder> routes = {
   GuestAndRoomView.routeName: (context) => const GuestAndRoomView(),
   HotelBookingView.routeName: (context) => const HotelBookingView(),
   NotificationView.routeName: (context) => const NotificationView(),
-  SearchView.routeName: (context) => const SearchView(),
+  SearchRecommendationsView.routeName: (context) =>
+      const SearchRecommendationsView(),
   FavoritesView.routeName: (context) => const FavoritesView(),
   RevealView.routeName: (context) => const RevealView(),
   DestinationView.routeName: (context) => const DestinationView(),
