@@ -29,6 +29,8 @@ class FavoritesCardItem extends StatelessWidget {
               children: [
                 const SpotImage(
                   isFavoritesView: true,
+                  imageUrl:
+                      'https://media-cdn.tripadvisor.com/media/photo-o/01/79/a3/1f/kairo.jpg',
                 ),
                 const SizedBox(height: 5),
                 Text(

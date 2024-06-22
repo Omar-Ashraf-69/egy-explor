@@ -5,15 +5,16 @@ import 'package:egy_exlpor/features/home/presentation/views/widgets/recommender_
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class BestDestinationsWidget extends StatefulWidget {
-  const BestDestinationsWidget({super.key});
+class ExploreBestDestinationsWidget extends StatefulWidget {
+  const ExploreBestDestinationsWidget({super.key});
   @override
-  State<BestDestinationsWidget> createState() => _BestDestinationsWidgetState();
+  State<ExploreBestDestinationsWidget> createState() =>
+      _BestDestinationsWidgetState();
 }
 
-class _BestDestinationsWidgetState extends State<BestDestinationsWidget> {
+class _BestDestinationsWidgetState
+    extends State<ExploreBestDestinationsWidget> {
   static List<TopPlaces>? cachedPlaces;
-  static List<TopPlaces>? cachedPlacesReversed;
   bool isLoading = false;
 
   @override
@@ -24,7 +25,6 @@ class _BestDestinationsWidgetState extends State<BestDestinationsWidget> {
 
   @override
   Widget build(BuildContext context) {
-    cachedPlacesReversed = cachedPlaces?.reversed.toList();
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.395,
       child: isLoading
@@ -57,7 +57,7 @@ class _BestDestinationsWidgetState extends State<BestDestinationsWidget> {
     Dio dio = Dio();
     List<dynamic> response = await RecommenderApiService(dio).post(
       url: 'http://10.0.2.2:5001/recommend',
-      body: {"user_id": "U1"},
+      body: {"user_id": "U3"},
     );
 
     if (response.isNotEmpty) {

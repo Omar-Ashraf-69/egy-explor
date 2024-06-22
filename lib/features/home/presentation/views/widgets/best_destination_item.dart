@@ -1,22 +1,25 @@
 import 'package:egy_exlpor/core/widgets/address_widget.dart';
 import 'package:egy_exlpor/core/utils/spot_image.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
+import 'package:egy_exlpor/core/widgets/inapp_webview.dart';
+import 'package:egy_exlpor/features/home/data/models/top_places.dart';
 import 'package:egy_exlpor/features/home/presentation/views/widgets/love_icon_widget.dart';
-import 'package:egy_exlpor/features/spot/presentation/views/spot_view.dart';
 import 'package:flutter/material.dart';
 
 class BestDestinationItem extends StatelessWidget {
   const BestDestinationItem({
     super.key,
-    required this.index,
+    required this.place,
   });
-  final int index;
+  final TopPlaces place;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: 280,
-      child: CardItem(index: index),
+      child: CardItem(
+        place: place,
+      ),
     );
   }
 }
@@ -24,11 +27,10 @@ class BestDestinationItem extends StatelessWidget {
 class CardItem extends StatelessWidget {
   const CardItem({
     super.key,
-    required this.index,
+    required this.place,
   });
 
-  final int index;
-
+  final TopPlaces place;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -41,7 +43,13 @@ class CardItem extends StatelessWidget {
       child: InkWell(
         borderRadius: BorderRadius.circular(12),
         onTap: () {
-          Navigator.pushNamed(context, SpotView.routeName);
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => CustomInAppWebView(
+                      url:
+                          'https://www.google.com/search?q=${place.name}&hl=${Localizations.localeOf(context).languageCode}')));
+          // Navigator.pushNamed(context, SpotView.routeName);
         },
         child: Padding(
           padding: const EdgeInsets.all(10),
@@ -49,17 +57,22 @@ class CardItem extends StatelessWidget {
             children: [
               SpotImage(
                 notHomeScreen: false,
-                index: index,
+                imageUrl: place.image!,
                 height: MediaQuery.of(context).size.height * 0.28,
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 5.0),
                 child: Row(
                   children: [
-                    Text(
-                      "St Regis Bora Bora",
-                      style: Styles.textStyle16.copyWith(
-                        fontWeight: FontWeight.w800,
+                    SizedBox(
+                      width: 190,
+                      child: Text(
+                        place.name!,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: Styles.textStyle16.copyWith(
+                          fontWeight: FontWeight.w800,
+                        ),
                       ),
                     ),
                     const Spacer(),
@@ -68,9 +81,9 @@ class CardItem extends StatelessWidget {
                       color: Colors.yellow.shade700,
                       size: 22,
                     ),
-                    const Text(
-                      "4.4",
-                      style: TextStyle(
+                    Text(
+                      place.rating.toString() ?? "4.4",
+                      style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
@@ -78,12 +91,14 @@ class CardItem extends StatelessWidget {
                   ],
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.only(top: 4.0),
+              Padding(
+                padding: const EdgeInsets.only(top: 4.0),
                 child: Row(
                   children: [
-                    AddressWidget(),
-                    Spacer(),
+                    AddressWidget(
+                      location: place.locationString!,
+                    ),
+                    const Spacer(),
                     LoveIconWidget(),
                   ],
                 ),

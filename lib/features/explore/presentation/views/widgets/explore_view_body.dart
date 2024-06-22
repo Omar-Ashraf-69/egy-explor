@@ -8,6 +8,7 @@ import 'package:egy_exlpor/core/widgets/inapp_webview.dart';
 import 'package:egy_exlpor/core/widgets/section_header.dart';
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/appbar.dart';
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/check_visa.dart';
+import 'package:egy_exlpor/features/explore/presentation/views/widgets/explore_best_tours.dart';
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/services_item.dart';
 import 'package:egy_exlpor/features/home/presentation/views/widgets/best_destinations_widget.dart';
 import 'package:flutter/cupertino.dart';
@@ -147,13 +148,13 @@ class ExploreViewBody extends StatelessWidget {
                                 height: 24,
                               ),
                               const SectionHeader(
-                                title: 'Season Tours',
+                                title: 'Next Explore',
                                 isViewAll: false,
                               ),
                               const SizedBox(
                                 height: 16,
                               ),
-                              const BestDestinationsWidget(),
+                              const ExploreBestDestinationsWidget(),
                               // SizedBox(
                               //   height: 120,
                               //   child: ListView.builder(
