@@ -40,11 +40,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "en": MessageLookupByLibrary.simpleMessage("English"),
         "exchangeCurrency":
             MessageLookupByLibrary.simpleMessage("Exchange Currency"),
+        "explore": MessageLookupByLibrary.simpleMessage("Explore"),
         "extraServices": MessageLookupByLibrary.simpleMessage("Extra Services"),
+        "favorite": MessageLookupByLibrary.simpleMessage("Favorite"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("Forget Password?"),
         "getStared": MessageLookupByLibrary.simpleMessage("Get Started"),
+        "goodMorning": MessageLookupByLibrary.simpleMessage("Good Morning, "),
+        "hiddenGems": MessageLookupByLibrary.simpleMessage("Hidden Gems"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "hotSpots": MessageLookupByLibrary.simpleMessage("Hot Spots"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "languageTranslator":
             MessageLookupByLibrary.simpleMessage("language Translator"),
@@ -71,6 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Profile Details"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "registerNow": MessageLookupByLibrary.simpleMessage("Register Now"),
+        "reveal": MessageLookupByLibrary.simpleMessage("Reveal"),
         "selectLanguage":
             MessageLookupByLibrary.simpleMessage("Select Language"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),

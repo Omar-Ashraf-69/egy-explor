@@ -76,34 +76,34 @@ class _LayoutViewBodyState extends State<LayoutViewBody> {
                 color: kPrimaryColor,
               ),
             ),
-            const NavigationDestination(
-              label: "Explore",
-              icon: Icon(
+            NavigationDestination(
+              label: S.of(context).explore,
+              icon: const Icon(
                 Icons.explore_outlined,
               ),
-              selectedIcon: Icon(
+              selectedIcon: const Icon(
                 Icons.explore,
                 color: kPrimaryColor,
               ),
             ),
-            const NavigationDestination(
-              label: "Reveal",
-              icon: Icon(
+            NavigationDestination(
+              label: S.of(context).reveal,
+              icon: const Icon(
                 Icons.camera,
                 size: 40,
               ),
-              selectedIcon: Icon(
+              selectedIcon: const Icon(
                 Icons.camera,
                 size: 40,
                 color: kPrimaryColor,
               ),
             ),
-            const NavigationDestination(
-              label: "Favorites",
-              icon: Icon(
+            NavigationDestination(
+              label: S.of(context).favorite,
+              icon: const Icon(
                 Ionicons.heart_outline,
               ),
-              selectedIcon: Icon(
+              selectedIcon: const Icon(
                 Ionicons.heart_outline,
                 color: kPrimaryColor,
               ),

@@ -45,6 +45,12 @@
   "weatherForcast":"Weather Forcast",
   "exchangeCurrency":"Exchange Currency",
   "languageTranslator":"language Translator",
-  "currenyConverter":"Curreny Converter"
+  "currenyConverter":"Curreny Converter",
+  "explore":"Explore",
+  "reveal":"Reveal",
+  "favorite":"Favorite",
+  "hiddenGems":"Hidden Gems",
+  "hotSpots":"Hot Spots",
+  "goodMorning":"Good Morning, "
 
 }

@@ -41,11 +41,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "en": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "exchangeCurrency":
             MessageLookupByLibrary.simpleMessage("تحويل العملات"),
+        "explore": MessageLookupByLibrary.simpleMessage("استكشاف"),
         "extraServices": MessageLookupByLibrary.simpleMessage("خدمات إضافية"),
+        "favorite": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟ "),
         "getStared": MessageLookupByLibrary.simpleMessage("البدء"),
+        "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير، "),
+        "hiddenGems": MessageLookupByLibrary.simpleMessage("جواهر خفية"),
         "home": MessageLookupByLibrary.simpleMessage("الصفحة الرئيسية"),
+        "hotSpots": MessageLookupByLibrary.simpleMessage("نقاط ساخنة"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "languageTranslator":
             MessageLookupByLibrary.simpleMessage("مترجم اللغة"),
@@ -72,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تفاصيل الملف الشخصي"),
         "register": MessageLookupByLibrary.simpleMessage("تسجيل الحساب"),
         "registerNow": MessageLookupByLibrary.simpleMessage("سجّل الآن"),
+        "reveal": MessageLookupByLibrary.simpleMessage("كشف"),
         "selectLanguage": MessageLookupByLibrary.simpleMessage("اختر اللغة"),
         "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطى"),

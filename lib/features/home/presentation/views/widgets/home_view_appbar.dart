@@ -3,6 +3,7 @@ import 'package:egy_exlpor/core/utils/custom_icon_button.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/notification/presentation/view/notification_view.dart';
 import 'package:egy_exlpor/features/search/presentation/views/search_recommendations.dart';
+import 'package:egy_exlpor/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ionicons/ionicons.dart';
@@ -15,14 +16,14 @@ class HomeViewAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 50,
+      height: 51.5,
       width: double.infinity,
       child: Row(children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              "Good Morning,",
+            Text(
+              S.of(context).goodMorning,
               style: Styles.textStyle16,
             ),
             Text(

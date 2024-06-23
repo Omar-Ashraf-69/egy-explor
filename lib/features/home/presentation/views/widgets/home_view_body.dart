@@ -4,6 +4,7 @@ import 'package:egy_exlpor/features/home/presentation/views/widgets/best_destina
 import 'package:egy_exlpor/features/home/presentation/views/widgets/home_view_appbar.dart';
 import 'package:egy_exlpor/features/home/presentation/views/widgets/recommended_places.dart';
 import 'package:egy_exlpor/core/widgets/section_header.dart';
+import 'package:egy_exlpor/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -14,7 +15,7 @@ class HomeViewBody extends StatelessWidget {
     return BlocBuilder<UserCubit, UserState>(
       builder: (context, state) {
         if (state is UserLoaded) {
-          return const Scaffold(
+          return Scaffold(
             body: Padding(
               padding: EdgeInsets.only(
                 top: 59.0,
@@ -26,11 +27,14 @@ class HomeViewBody extends StatelessWidget {
                 children: [
                   HomeViewAppBar(),
                   SizedBox(height: 10),
-                  SectionHeader(title: "Hidden Gems", isViewAll: false),
+                  SectionHeader(
+                    title: S.of(context).hiddenGems,
+                    isViewAll: false,
+                  ),
                   HiddenGems(),
                   SizedBox(height: 5),
                   SectionHeader(
-                    title: "Hot Spots",
+                    title: S.of(context).hotSpots,
                     isViewAll: false,
                   ),
                   SizedBox(height: 5),

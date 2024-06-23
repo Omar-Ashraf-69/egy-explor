@@ -45,5 +45,11 @@
   "weatherForcast": "توقعات الطقس",
   "exchangeCurrency": "تحويل العملات",
   "languageTranslator": "مترجم اللغة",
-  "currenyConverter": "محول العملات"
+  "currenyConverter": "محول العملات",
+  "explore": "استكشاف",
+  "reveal": "كشف",
+  "favorite": "المفضلة",
+  "hiddenGems": "جواهر خفية",
+  "hotSpots": "نقاط ساخنة",
+  "goodMorning": "صباح الخير، "
 }
