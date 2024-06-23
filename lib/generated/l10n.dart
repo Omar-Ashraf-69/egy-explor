@@ -579,6 +579,116 @@ class S {
       args: [],
     );
   }
+
+  /// `Search`
+  String get search {
+    return Intl.message(
+      'Search',
+      name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Services`
+  String get services {
+    return Intl.message(
+      'Services',
+      name: 'services',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Airplane`
+  String get airplane {
+    return Intl.message(
+      'Airplane',
+      name: 'airplane',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hotel`
+  String get hotel {
+    return Intl.message(
+      'Hotel',
+      name: 'hotel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Restaurant`
+  String get restaurant {
+    return Intl.message(
+      'Restaurant',
+      name: 'restaurant',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Uber`
+  String get uber {
+    return Intl.message(
+      'Uber',
+      name: 'uber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next Explore`
+  String get nextExplore {
+    return Intl.message(
+      'Next Explore',
+      name: 'nextExplore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check Visa`
+  String get checkVisa {
+    return Intl.message(
+      'Check Visa',
+      name: 'checkVisa',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Visa Checker`
+  String get visaChecker {
+    return Intl.message(
+      'Visa Checker',
+      name: 'visaChecker',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose your nationality`
+  String get chooseYourNationality {
+    return Intl.message(
+      'Choose your nationality',
+      name: 'chooseYourNationality',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select your country code`
+  String get selectYourCountryCode {
+    return Intl.message(
+      'Select your country code',
+      name: 'selectYourCountryCode',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

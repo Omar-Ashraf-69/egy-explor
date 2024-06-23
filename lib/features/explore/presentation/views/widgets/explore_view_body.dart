@@ -10,6 +10,7 @@ import 'package:egy_exlpor/features/explore/presentation/views/widgets/appbar.da
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/check_visa.dart';
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/explore_best_tours.dart';
 import 'package:egy_exlpor/features/explore/presentation/views/widgets/services_item.dart';
+import 'package:egy_exlpor/generated/l10n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,6 +21,12 @@ class ExploreViewBody extends StatelessWidget {
   final TextEditingController controller;
   @override
   Widget build(BuildContext context) {
+    List<Map<String, String>> servicesItems = [
+      {'title': S.of(context).airplane, 'iconImage': AssetsData.iconAirplane},
+      {'title': S.of(context).hotel, 'iconImage': AssetsData.iconHotel},
+      {'title': S.of(context).uber, 'iconImage': AssetsData.iconCar},
+      {'title': S.of(context).restaurant, 'iconImage': AssetsData.iconFood},
+    ];
     return BlocBuilder<UserCubit, UserState>(
       builder: (context, state) {
         if (state is UserLoaded) {
@@ -60,7 +67,7 @@ class ExploreViewBody extends StatelessWidget {
                           ),
                         ),
                         keyboardType: TextInputType.text,
-                        hintText: 'Search',
+                        hintText: S.of(context).search,
                         hintStyle: WidgetStatePropertyAll(
                           Styles.textStyle16.copyWith(
                             fontWeight: FontWeight.w600,
@@ -118,8 +125,8 @@ class ExploreViewBody extends StatelessWidget {
                                 height: 16,
                               ),
 
-                              const SectionHeader(
-                                title: 'Services',
+                              SectionHeader(
+                                title: S.of(context).services,
                                 isViewAll: false,
                               ),
                               const SizedBox(
@@ -146,8 +153,8 @@ class ExploreViewBody extends StatelessWidget {
                               const SizedBox(
                                 height: 24,
                               ),
-                              const SectionHeader(
-                                title: 'Next Explore',
+                              SectionHeader(
+                                title: S.of(context).nextExplore,
                                 isViewAll: false,
                               ),
                               const SizedBox(
@@ -184,17 +191,11 @@ class ExploreViewBody extends StatelessWidget {
   }
 }
 
-final List<Map<String, String>> servicesItems = [
-  {'title': 'Airplane', 'iconImage': AssetsData.iconAirplane},
-  {'title': 'Hotel', 'iconImage': AssetsData.iconHotel},
-  {'title': 'Uber', 'iconImage': AssetsData.iconCar},
-  {'title': 'Restaurant', 'iconImage': AssetsData.iconFood},
-];
 
-final List<Map<String, String>> categoryItems = [
-  {'title': 'Safari', 'iconImage': AssetsData.iconSafari},
-  {'title': 'Camp', 'iconImage': AssetsData.iconCamp},
-  {'title': 'Beach', 'iconImage': AssetsData.iconBeach},
-  {'title': 'Mountains', 'iconImage': AssetsData.iconMountain},
-  {'title': 'Lake', 'iconImage': AssetsData.iconLake},
-];
+// final List<Map<String, String>> categoryItems = [
+//   {'title': 'Safari', 'iconImage': AssetsData.iconSafari},
+//   {'title': 'Camp', 'iconImage': AssetsData.iconCamp},
+//   {'title': 'Beach', 'iconImage': AssetsData.iconBeach},
+//   {'title': 'Mountains', 'iconImage': AssetsData.iconMountain},
+//   {'title': 'Lake', 'iconImage': AssetsData.iconLake},
+// ];

@@ -51,5 +51,16 @@
   "favorite": "المفضلة",
   "hiddenGems": "جواهر خفية",
   "hotSpots": "نقاط ساخنة",
-  "goodMorning": "صباح الخير، "
+  "goodMorning": "صباح الخير، ",
+  "search": "بحث",
+  "services": "خدمات",
+  "airplane": "حجز الطيران",
+  "hotel": "فنادق",
+  "restaurant": "مطاعم",
+  "uber": "أوبر",
+  "nextExplore": "استكشاف القادم",
+  "checkVisa": "تحقق من التأشيرة",
+  "visaChecker": "مدقق التأشيرة",
+  "chooseYourNationality": "اختر جنسيتك",
+  "selectYourCountryCode": "اختر رمز بلدك"
 }

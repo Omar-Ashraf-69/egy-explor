@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "aboutUs": MessageLookupByLibrary.simpleMessage("عنا"),
+        "airplane": MessageLookupByLibrary.simpleMessage("حجز الطيران"),
         "alreadyHaveAccount":
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟ "),
         "ar": MessageLookupByLibrary.simpleMessage("العربية"),
@@ -30,6 +31,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لا يمكن أن يكون فارغًا."),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
+        "checkVisa": MessageLookupByLibrary.simpleMessage("تحقق من التأشيرة"),
+        "chooseYourNationality":
+            MessageLookupByLibrary.simpleMessage("اختر جنسيتك"),
         "contactUs": MessageLookupByLibrary.simpleMessage("اتصل بنا"),
         "currenyConverter":
             MessageLookupByLibrary.simpleMessage("محول العملات"),
@@ -51,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hiddenGems": MessageLookupByLibrary.simpleMessage("جواهر خفية"),
         "home": MessageLookupByLibrary.simpleMessage("الصفحة الرئيسية"),
         "hotSpots": MessageLookupByLibrary.simpleMessage("نقاط ساخنة"),
+        "hotel": MessageLookupByLibrary.simpleMessage("فنادق"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "languageTranslator":
             MessageLookupByLibrary.simpleMessage("مترجم اللغة"),
@@ -59,6 +64,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
         "map": MessageLookupByLibrary.simpleMessage("الخريطة"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
+        "nextExplore": MessageLookupByLibrary.simpleMessage("استكشاف القادم"),
         "onBoardingPage1Suffix": MessageLookupByLibrary.simpleMessage("واسع"),
         "onBoardingPage1Title":
             MessageLookupByLibrary.simpleMessage("الحياة قصيرة والعالم "),
@@ -77,17 +83,24 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تفاصيل الملف الشخصي"),
         "register": MessageLookupByLibrary.simpleMessage("تسجيل الحساب"),
         "registerNow": MessageLookupByLibrary.simpleMessage("سجّل الآن"),
+        "restaurant": MessageLookupByLibrary.simpleMessage("مطاعم"),
         "reveal": MessageLookupByLibrary.simpleMessage("كشف"),
+        "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "selectLanguage": MessageLookupByLibrary.simpleMessage("اختر اللغة"),
+        "selectYourCountryCode":
+            MessageLookupByLibrary.simpleMessage("اختر رمز بلدك"),
+        "services": MessageLookupByLibrary.simpleMessage("خدمات"),
         "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطى"),
         "splashTitle": MessageLookupByLibrary.simpleMessage("استكشف مصر"),
         "termsOfService": MessageLookupByLibrary.simpleMessage("شروط الخدمة"),
         "title": MessageLookupByLibrary.simpleMessage("الترجمة في فلاتر"),
+        "uber": MessageLookupByLibrary.simpleMessage("أوبر"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("تحديث الملف الشخصي"),
         "userName": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "version": MessageLookupByLibrary.simpleMessage("الإصدار"),
+        "visaChecker": MessageLookupByLibrary.simpleMessage("مدقق التأشيرة"),
         "weatherForcast": MessageLookupByLibrary.simpleMessage("توقعات الطقس"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحبًا, ")
       };

@@ -1,6 +1,7 @@
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/explore/features/visa_checher/visa_checker_view.dart';
+import 'package:egy_exlpor/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -42,7 +43,7 @@ class CheckVisaWidget extends StatelessWidget {
             ),
             const SizedBox(width: 10),
             Text(
-              "Check Visa",
+              S.of(context).checkVisa,
               style: Styles.textStyle18.copyWith(color: kBlackColor),
             ),
           ],

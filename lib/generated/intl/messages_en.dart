@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "aboutUs": MessageLookupByLibrary.simpleMessage("About Us"),
+        "airplane": MessageLookupByLibrary.simpleMessage("Airplane"),
         "alreadyHaveAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account? "),
         "ar": MessageLookupByLibrary.simpleMessage("Arabic"),
@@ -30,6 +31,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(" can\'t be empty."),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Change Password"),
+        "checkVisa": MessageLookupByLibrary.simpleMessage("Check Visa"),
+        "chooseYourNationality":
+            MessageLookupByLibrary.simpleMessage("Choose your nationality"),
         "contactUs": MessageLookupByLibrary.simpleMessage("Contact Us"),
         "currenyConverter":
             MessageLookupByLibrary.simpleMessage("Curreny Converter"),
@@ -50,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hiddenGems": MessageLookupByLibrary.simpleMessage("Hidden Gems"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "hotSpots": MessageLookupByLibrary.simpleMessage("Hot Spots"),
+        "hotel": MessageLookupByLibrary.simpleMessage("Hotel"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "languageTranslator":
             MessageLookupByLibrary.simpleMessage("language Translator"),
@@ -58,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logout": MessageLookupByLibrary.simpleMessage("logout"),
         "map": MessageLookupByLibrary.simpleMessage("Map"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "nextExplore": MessageLookupByLibrary.simpleMessage("Next Explore"),
         "onBoardingPage1Suffix": MessageLookupByLibrary.simpleMessage("Wide"),
         "onBoardingPage1Title": MessageLookupByLibrary.simpleMessage(
             "Life is Short and The world is "),
@@ -76,18 +82,25 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Profile Details"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "registerNow": MessageLookupByLibrary.simpleMessage("Register Now"),
+        "restaurant": MessageLookupByLibrary.simpleMessage("Restaurant"),
         "reveal": MessageLookupByLibrary.simpleMessage("Reveal"),
+        "search": MessageLookupByLibrary.simpleMessage("Search"),
         "selectLanguage":
             MessageLookupByLibrary.simpleMessage("Select Language"),
+        "selectYourCountryCode":
+            MessageLookupByLibrary.simpleMessage("Select your country code"),
+        "services": MessageLookupByLibrary.simpleMessage("Services"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "splashTitle": MessageLookupByLibrary.simpleMessage("Egy Exlpor"),
         "termsOfService":
             MessageLookupByLibrary.simpleMessage("Terms of Service"),
         "title": MessageLookupByLibrary.simpleMessage("Flutter localization"),
+        "uber": MessageLookupByLibrary.simpleMessage("Uber"),
         "updateProfile": MessageLookupByLibrary.simpleMessage("Update Profile"),
         "userName": MessageLookupByLibrary.simpleMessage("UserName"),
         "version": MessageLookupByLibrary.simpleMessage("Version"),
+        "visaChecker": MessageLookupByLibrary.simpleMessage("Visa Checker"),
         "weatherForcast":
             MessageLookupByLibrary.simpleMessage("Weather Forcast"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome, ")

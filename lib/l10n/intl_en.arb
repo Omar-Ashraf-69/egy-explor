@@ -51,6 +51,16 @@
   "favorite":"Favorite",
   "hiddenGems":"Hidden Gems",
   "hotSpots":"Hot Spots",
-  "goodMorning":"Good Morning, "
-
+  "goodMorning":"Good Morning, ",
+  "search":"Search",
+  "services":"Services",
+  "airplane":"Airplane",
+  "hotel":"Hotel",
+  "restaurant":"Restaurant",
+  "uber":"Uber",
+  "nextExplore":"Next Explore",
+  "checkVisa":"Check Visa",
+  "visaChecker":"Visa Checker",
+  "chooseYourNationality":"Choose your nationality",
+  "selectYourCountryCode":"Select your country code"
 }
