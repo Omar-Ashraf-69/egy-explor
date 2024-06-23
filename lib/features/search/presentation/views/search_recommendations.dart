@@ -6,6 +6,7 @@ import 'package:egy_exlpor/features/search/presentation/views/search_recommendat
 import 'package:egy_exlpor/features/search/presentation/views/widgets/build_dots.dart';
 import 'package:egy_exlpor/features/search/presentation/views/widgets/custom_question_container.dart';
 import 'package:egy_exlpor/features/search/presentation/views/widgets/recommender_api_service.dart';
+import 'package:egy_exlpor/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class SearchRecommendationsView extends StatefulWidget {
@@ -72,12 +73,7 @@ class _SearchRecommendationsViewState extends State<SearchRecommendationsView> {
     'assets/images/location.jpg',
     'assets/images/activities.jpg',
   ];
-  List<String> title = [
-    'Select Your age range',
-    'Select Your Interests',
-    'Select Your Location',
-    'Select Your Activities',
-  ];
+
   Future<void> _makeApiRequest() async {
     Dio dio = Dio();
     try {
@@ -110,8 +106,58 @@ class _SearchRecommendationsViewState extends State<SearchRecommendationsView> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> cities = [
+      S.of(context).cairo,
+      S.of(context).alexandria,
+      S.of(context).luxor,
+      S.of(context).aswan,
+      S.of(context).giza
+    ];
+    List<String> activities = [
+      S.of(context).guidedTours,
+      S.of(context).culturalExperiences,
+      S.of(context).outdoorActivities,
+      S.of(context).architecturalTours,
+      S.of(context).artExhibitions,
+      S.of(context).desertSafaris,
+    ];
+    List<String> interests = [
+      S.of(context).history,
+      S.of(context).religious,
+      S.of(context).museums,
+      S.of(context).adventure,
+      S.of(context).nature,
+      S.of(context).architecture,
+      S.of(context).art,
+    ];
+    List<String> title = [
+      S.of(context).selectYourAgeRange,
+      S.of(context).selectYourInterests,
+      S.of(context).selectYourLocation,
+      S.of(context).selectYourActivities,
+    ];
+    void _goToNextPage() async {
+      if (currentIndex != title.length - 1) {
+        _controller.animateToPage(
+          currentIndex + 1,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeInOut,
+        );
+      } else {
+        if (selectedCities.isNotEmpty &&
+            selectedInterests.isNotEmpty &&
+            selectedActivities.isNotEmpty &&
+            selectedAge.isNotEmpty) {
+          // _makeApiRequest();
+          await _makeApiRequest();
+
+          log("done");
+        }
+      }
+    }
+
     return Scaffold(
-      appBar: customAppBar(title: "Search Recommendations"),
+      appBar: customAppBar(title: S.of(context).searchRecommendations),
       body: Column(
         children: [
           Expanded(
@@ -212,26 +258,6 @@ class _SearchRecommendationsViewState extends State<SearchRecommendationsView> {
     );
   }
 
-  void _goToNextPage() async {
-    if (currentIndex != title.length - 1) {
-      _controller.animateToPage(
-        currentIndex + 1,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeInOut,
-      );
-    } else {
-      if (selectedCities.isNotEmpty &&
-          selectedInterests.isNotEmpty &&
-          selectedActivities.isNotEmpty &&
-          selectedAge.isNotEmpty) {
-        // _makeApiRequest();
-        await _makeApiRequest();
-
-        log("done");
-      }
-    }
-  }
-
   void _goToPreviousPage() {
     if (currentIndex != 0) {
       _controller.animateToPage(
@@ -292,7 +318,6 @@ class _SearchRecommendationsViewState extends State<SearchRecommendationsView> {
     return middleAge;
   }
 
-  final List<String> cities = ["Cairo", "Alexandria", "Luxor", "Aswan", "Giza"];
   final List<String> ages = [
     "18 - 25",
     "25 - 35",
@@ -300,23 +325,7 @@ class _SearchRecommendationsViewState extends State<SearchRecommendationsView> {
     "45 - 50",
     "50 - up"
   ];
-  final List<String> interests = [
-    "History",
-    "Religious",
-    "Museums",
-    "Adventure",
-    "Nature",
-    "Architecture",
-    "Art"
-  ];
-  final List<String> activities = [
-    "Guided Tours",
-    "Cultural Experiences",
-    "Outdoor Activities",
-    "Architectural Tours",
-    "Art Exhibitions",
-    "Desert Safaris"
-  ];
+
   String selectedAge = '';
   final List<String> selectedCities = [];
   final List<String> selectedInterests = [];

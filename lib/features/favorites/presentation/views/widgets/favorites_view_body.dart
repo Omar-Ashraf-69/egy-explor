@@ -2,6 +2,7 @@ import 'package:egy_exlpor/core/managers/favorites_cubit/cubit/favorities_cubit.
 import 'package:egy_exlpor/core/managers/favorites_cubit/cubit/favorities_state.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/favorites/presentation/views/widgets/favorites_grid_view.dart';
+import 'package:egy_exlpor/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ionicons/ionicons.dart';
@@ -18,7 +19,7 @@ class FavoritesViewBody extends StatelessWidget {
             surfaceTintColor: Colors.transparent,
             centerTitle: true,
             title: Text(
-              'Favorites',
+              S.of(context).favorite,
               style: Styles.textStyle20.copyWith(
                 fontWeight: FontWeight.w600,
               ),
@@ -31,15 +32,15 @@ class FavoritesViewBody extends StatelessWidget {
                 return const Center(child: CircularProgressIndicator());
               } else if (state is FavoritesLoaded) {
                 if (state.favorites.isEmpty) {
-                  return const Center(
+                  return Center(
                       child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "No favorites.",
+                        S.of(context).noFavorites,
                         style: Styles.textStyle24,
                       ),
-                      Icon(Ionicons.sad_outline),
+                      const Icon(Ionicons.sad_outline),
                     ],
                   ));
                 }
@@ -57,9 +58,9 @@ class FavoritesViewBody extends StatelessWidget {
                   ),
                 );
               } else {
-                return const Center(
+                return Center(
                     child: Text(
-                  "Get Some Favorites First.",
+                  S.of(context).getSomeFavoritesFirst,
                   style: Styles.textStyle24,
                 ));
               }

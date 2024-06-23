@@ -1,5 +1,6 @@
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
+import 'package:egy_exlpor/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -16,8 +17,8 @@ class ContactUsView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text(
-          "Contact Us",
+        title: Text(
+          S.of(context).contactUs,
           style: Styles.textStyle18,
         ),
       ),
@@ -26,17 +27,17 @@ class ContactUsView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              "Get in Touch",
+            Text(
+              S.of(context).getInTouch,
               style: Styles.textStyle30,
             ),
             const SizedBox(
               height: 20,
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.symmetric(horizontal: 26.0),
               child: Text(
-                "If you have any questions, please feel free to contact us. We will be happy to help you.",
+                S.of(context).haveQuestion,
                 style: Styles.textStyle16,
               ),
             ),
@@ -62,18 +63,18 @@ class ContactUsView extends StatelessWidget {
               },
             ),
             const SizedBox(
-              height: 50,
+              height: 38,
             ),
-            const Text(
-              'Social Media',
+            Text(
+              S.of(context).socialMedia,
               style: Styles.textStyle26,
             ),
             const SizedBox(
-              height: 30,
+              height: 24,
             ),
             CustomSocialMediaButton(
               icon: Ionicons.logo_facebook,
-              text: "Facebook",
+              text: S.of(context).facebook,
               onTap: () {
                 launchUrl(Uri.parse("https://www.facebook.com/omar.elqala.1"));
               },
@@ -83,7 +84,7 @@ class ContactUsView extends StatelessWidget {
             ),
             CustomSocialMediaButton(
               icon: Ionicons.logo_whatsapp,
-              text: "Whatsapp",
+              text: S.of(context).whatsapp,
               onTap: () {
                 launchWhatsapp(phone: "+201150913198", message: "hello");
               },
@@ -92,10 +93,21 @@ class ContactUsView extends StatelessWidget {
               height: 18,
             ),
             CustomSocialMediaButton(
-              icon: Icons.telegram_outlined,
-              text: "Telegram",
+              icon: Ionicons.logo_linkedin,
+              text: S.of(context).linkedin,
               onTap: () {
-                launchUrl(Uri.parse("https://t.me/bondoah"));
+                launchUrl(Uri.parse(
+                    "https://www.linkedin.com/in/omar-ashraf-a129bb1b5/"));
+              },
+            ),
+            const SizedBox(
+              height: 18,
+            ),
+            CustomSocialMediaButton(
+              icon: Ionicons.logo_github,
+              text: S.of(context).github,
+              onTap: () {
+                launchUrl(Uri.parse("https://github.com/Omar-Ashraf-69"));
               },
             ),
           ],

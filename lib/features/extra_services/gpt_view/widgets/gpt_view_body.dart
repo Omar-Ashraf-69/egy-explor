@@ -8,6 +8,7 @@ import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/features/extra_services/gpt_view/models/gpt_response/gpt_response.dart';
 import 'package:egy_exlpor/features/extra_services/gpt_view/widgets/chat_custom_appbar.dart';
 import 'package:egy_exlpor/features/extra_services/gpt_view/widgets/chat_list_bluider.dart';
+import 'package:egy_exlpor/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -59,7 +60,7 @@ class _GptViewBodyState extends State<GptViewBody> {
                       fontWeight: FontWeight.w500,
                     ),
                     decoration: InputDecoration(
-                      hintText: 'Enter a message',
+                      hintText: S.of(context).enterMessage,
                       hintStyle: const TextStyle(
                         fontSize: 16,
                       ),

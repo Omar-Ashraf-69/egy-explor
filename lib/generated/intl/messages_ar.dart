@@ -23,10 +23,22 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "aboutUs": MessageLookupByLibrary.simpleMessage("عنا"),
+        "adventure": MessageLookupByLibrary.simpleMessage("مغامرة"),
         "airplane": MessageLookupByLibrary.simpleMessage("حجز الطيران"),
+        "alexandria": MessageLookupByLibrary.simpleMessage("الإسكندرية"),
         "alreadyHaveAccount":
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟ "),
         "ar": MessageLookupByLibrary.simpleMessage("العربية"),
+        "architecturalTours":
+            MessageLookupByLibrary.simpleMessage("جولات معمارية"),
+        "architecture": MessageLookupByLibrary.simpleMessage("عمارة"),
+        "art": MessageLookupByLibrary.simpleMessage("فن"),
+        "artExhibitions": MessageLookupByLibrary.simpleMessage("معارض فنية"),
+        "aswan": MessageLookupByLibrary.simpleMessage("أسوان"),
+        "bestForYou": MessageLookupByLibrary.simpleMessage("أفضل لك"),
+        "bestRecommendations":
+            MessageLookupByLibrary.simpleMessage("أفضل التوصيات"),
+        "cairo": MessageLookupByLibrary.simpleMessage("القاهرة"),
         "cantBeEmpty":
             MessageLookupByLibrary.simpleMessage("لا يمكن أن يكون فارغًا."),
         "changePassword":
@@ -35,36 +47,60 @@ class MessageLookup extends MessageLookupByLibrary {
         "chooseYourNationality":
             MessageLookupByLibrary.simpleMessage("اختر جنسيتك"),
         "contactUs": MessageLookupByLibrary.simpleMessage("اتصل بنا"),
+        "culturalExperiences":
+            MessageLookupByLibrary.simpleMessage("تجارب ثقافية"),
         "currenyConverter":
             MessageLookupByLibrary.simpleMessage("محول العملات"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("الوضع الداكن"),
+        "desertSafaris":
+            MessageLookupByLibrary.simpleMessage("رحلات سفاري صحراوية"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟ "),
         "editProfile":
             MessageLookupByLibrary.simpleMessage("تعديل الملف الشخصي"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "en": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
+        "enterMessage": MessageLookupByLibrary.simpleMessage("أدخل رسالة"),
         "exchangeCurrency":
             MessageLookupByLibrary.simpleMessage("تحويل العملات"),
         "explore": MessageLookupByLibrary.simpleMessage("استكشاف"),
         "extraServices": MessageLookupByLibrary.simpleMessage("خدمات إضافية"),
+        "facebook": MessageLookupByLibrary.simpleMessage("فيسبوك"),
         "favorite": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟ "),
+        "getInTouch": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
+        "getSomeFavoritesFirst": MessageLookupByLibrary.simpleMessage(
+            "احصل على بعض المفضلات أولاً."),
         "getStared": MessageLookupByLibrary.simpleMessage("البدء"),
+        "github": MessageLookupByLibrary.simpleMessage("جيت هاب"),
+        "giza": MessageLookupByLibrary.simpleMessage("الجيزة"),
         "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير، "),
+        "guidedTours":
+            MessageLookupByLibrary.simpleMessage("الجولات الإرشادية"),
+        "haveQuestion": MessageLookupByLibrary.simpleMessage(
+            "إذا كان لديك أي أسئلة، فلا تتردد في الاتصال بنا. سنكون سعداء بمساعدتك."),
         "hiddenGems": MessageLookupByLibrary.simpleMessage("جواهر خفية"),
-        "home": MessageLookupByLibrary.simpleMessage("الصفحة الرئيسية"),
+        "history": MessageLookupByLibrary.simpleMessage("تاريخ"),
+        "home": MessageLookupByLibrary.simpleMessage("صفحة الرئيسية"),
         "hotSpots": MessageLookupByLibrary.simpleMessage("نقاط ساخنة"),
         "hotel": MessageLookupByLibrary.simpleMessage("فنادق"),
+        "ideaMate": MessageLookupByLibrary.simpleMessage("رفيق"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "languageTranslator":
             MessageLookupByLibrary.simpleMessage("مترجم اللغة"),
+        "lightMode": MessageLookupByLibrary.simpleMessage("الوضع الفاتح"),
+        "linkedin": MessageLookupByLibrary.simpleMessage("لينكدإن"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginNow": MessageLookupByLibrary.simpleMessage("تسجيل الدخول الآن"),
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
+        "luxor": MessageLookupByLibrary.simpleMessage("الأقصر"),
         "map": MessageLookupByLibrary.simpleMessage("الخريطة"),
+        "museums": MessageLookupByLibrary.simpleMessage("متاحف"),
+        "nature": MessageLookupByLibrary.simpleMessage("طبيعة"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "nextExplore": MessageLookupByLibrary.simpleMessage("استكشاف القادم"),
+        "noFavorites": MessageLookupByLibrary.simpleMessage("لا توجد مفضلات"),
         "onBoardingPage1Suffix": MessageLookupByLibrary.simpleMessage("واسع"),
         "onBoardingPage1Title":
             MessageLookupByLibrary.simpleMessage("الحياة قصيرة والعالم "),
@@ -75,6 +111,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "الناس لا يقومون برحلات الرحلات تأخذ "),
         "onBoardingPage2subTitle": MessageLookupByLibrary.simpleMessage(
             "للحصول على أفضل مغامرتك، ما عليك سوى ترك المكان والذهاب حيث تحب، نحن ننتظرك"),
+        "outdoorActivities":
+            MessageLookupByLibrary.simpleMessage("أنشطة خارجية"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "previousTrip": MessageLookupByLibrary.simpleMessage("رحلة سابقة"),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
@@ -83,15 +121,28 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تفاصيل الملف الشخصي"),
         "register": MessageLookupByLibrary.simpleMessage("تسجيل الحساب"),
         "registerNow": MessageLookupByLibrary.simpleMessage("سجّل الآن"),
+        "religious": MessageLookupByLibrary.simpleMessage("ديني"),
         "restaurant": MessageLookupByLibrary.simpleMessage("مطاعم"),
         "reveal": MessageLookupByLibrary.simpleMessage("كشف"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
+        "searchRecommendations":
+            MessageLookupByLibrary.simpleMessage("توصيات البحث"),
         "selectLanguage": MessageLookupByLibrary.simpleMessage("اختر اللغة"),
+        "selectYourActivities":
+            MessageLookupByLibrary.simpleMessage("اختر أنشطتك"),
+        "selectYourAgeRange":
+            MessageLookupByLibrary.simpleMessage("اختر فئتك العمرية"),
         "selectYourCountryCode":
             MessageLookupByLibrary.simpleMessage("اختر رمز بلدك"),
+        "selectYourInterests":
+            MessageLookupByLibrary.simpleMessage("اختر اهتماماتك"),
+        "selectYourLocation":
+            MessageLookupByLibrary.simpleMessage("اختر موقعك"),
         "services": MessageLookupByLibrary.simpleMessage("خدمات"),
         "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطى"),
+        "socialMedia":
+            MessageLookupByLibrary.simpleMessage("وسائل التواصل الاجتماعي"),
         "splashTitle": MessageLookupByLibrary.simpleMessage("استكشف مصر"),
         "termsOfService": MessageLookupByLibrary.simpleMessage("شروط الخدمة"),
         "title": MessageLookupByLibrary.simpleMessage("الترجمة في فلاتر"),
@@ -102,6 +153,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "version": MessageLookupByLibrary.simpleMessage("الإصدار"),
         "visaChecker": MessageLookupByLibrary.simpleMessage("مدقق التأشيرة"),
         "weatherForcast": MessageLookupByLibrary.simpleMessage("توقعات الطقس"),
-        "welcome": MessageLookupByLibrary.simpleMessage("مرحبًا, ")
+        "welcome": MessageLookupByLibrary.simpleMessage("مرحبًا, "),
+        "whatsapp": MessageLookupByLibrary.simpleMessage("واتساب")
       };
 }

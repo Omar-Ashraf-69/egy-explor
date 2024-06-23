@@ -689,6 +689,386 @@ class S {
       args: [],
     );
   }
+
+  /// `No Favorites`
+  String get noFavorites {
+    return Intl.message(
+      'No Favorites',
+      name: 'noFavorites',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get some favorites first.`
+  String get getSomeFavoritesFirst {
+    return Intl.message(
+      'Get some favorites first.',
+      name: 'getSomeFavoritesFirst',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark mode`
+  String get darkMode {
+    return Intl.message(
+      'Dark mode',
+      name: 'darkMode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Light mode`
+  String get lightMode {
+    return Intl.message(
+      'Light mode',
+      name: 'lightMode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter a message`
+  String get enterMessage {
+    return Intl.message(
+      'Enter a message',
+      name: 'enterMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `IdeaMate`
+  String get ideaMate {
+    return Intl.message(
+      'IdeaMate',
+      name: 'ideaMate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get in Touch`
+  String get getInTouch {
+    return Intl.message(
+      'Get in Touch',
+      name: 'getInTouch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If you have any questions, please feel free to contact us. We will be happy to help you.`
+  String get haveQuestion {
+    return Intl.message(
+      'If you have any questions, please feel free to contact us. We will be happy to help you.',
+      name: 'haveQuestion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Social Media`
+  String get socialMedia {
+    return Intl.message(
+      'Social Media',
+      name: 'socialMedia',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Facebook`
+  String get facebook {
+    return Intl.message(
+      'Facebook',
+      name: 'facebook',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Whatsapp`
+  String get whatsapp {
+    return Intl.message(
+      'Whatsapp',
+      name: 'whatsapp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Linkedin`
+  String get linkedin {
+    return Intl.message(
+      'Linkedin',
+      name: 'linkedin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Github  `
+  String get github {
+    return Intl.message(
+      'Github  ',
+      name: 'github',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Best Recommendations`
+  String get bestRecommendations {
+    return Intl.message(
+      'Best Recommendations',
+      name: 'bestRecommendations',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Best For You`
+  String get bestForYou {
+    return Intl.message(
+      'Best For You',
+      name: 'bestForYou',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search Recommendations`
+  String get searchRecommendations {
+    return Intl.message(
+      'Search Recommendations',
+      name: 'searchRecommendations',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cairo`
+  String get cairo {
+    return Intl.message(
+      'Cairo',
+      name: 'cairo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Luxor`
+  String get luxor {
+    return Intl.message(
+      'Luxor',
+      name: 'luxor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Aswan`
+  String get aswan {
+    return Intl.message(
+      'Aswan',
+      name: 'aswan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Alexandria`
+  String get alexandria {
+    return Intl.message(
+      'Alexandria',
+      name: 'alexandria',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Giza`
+  String get giza {
+    return Intl.message(
+      'Giza',
+      name: 'giza',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Guided Tours`
+  String get guidedTours {
+    return Intl.message(
+      'Guided Tours',
+      name: 'guidedTours',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cultural Experiences`
+  String get culturalExperiences {
+    return Intl.message(
+      'Cultural Experiences',
+      name: 'culturalExperiences',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Outdoor Activities`
+  String get outdoorActivities {
+    return Intl.message(
+      'Outdoor Activities',
+      name: 'outdoorActivities',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Architectural tours`
+  String get architecturalTours {
+    return Intl.message(
+      'Architectural tours',
+      name: 'architecturalTours',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Art Exhibitions`
+  String get artExhibitions {
+    return Intl.message(
+      'Art Exhibitions',
+      name: 'artExhibitions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Desert Safaris`
+  String get desertSafaris {
+    return Intl.message(
+      'Desert Safaris',
+      name: 'desertSafaris',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `History`
+  String get history {
+    return Intl.message(
+      'History',
+      name: 'history',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Religious`
+  String get religious {
+    return Intl.message(
+      'Religious',
+      name: 'religious',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Museums`
+  String get museums {
+    return Intl.message(
+      'Museums',
+      name: 'museums',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Adventure`
+  String get adventure {
+    return Intl.message(
+      'Adventure',
+      name: 'adventure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nature`
+  String get nature {
+    return Intl.message(
+      'Nature',
+      name: 'nature',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Architecture`
+  String get architecture {
+    return Intl.message(
+      'Architecture',
+      name: 'architecture',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Art`
+  String get art {
+    return Intl.message(
+      'Art',
+      name: 'art',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Your age range`
+  String get selectYourAgeRange {
+    return Intl.message(
+      'Select Your age range',
+      name: 'selectYourAgeRange',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Your Interests`
+  String get selectYourInterests {
+    return Intl.message(
+      'Select Your Interests',
+      name: 'selectYourInterests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Your Location`
+  String get selectYourLocation {
+    return Intl.message(
+      'Select Your Location',
+      name: 'selectYourLocation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Your Activities`
+  String get selectYourActivities {
+    return Intl.message(
+      'Select Your Activities',
+      name: 'selectYourActivities',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

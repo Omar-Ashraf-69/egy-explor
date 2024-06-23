@@ -189,8 +189,8 @@ class ProfileViewBody extends StatelessWidget {
                                   height: 30,
                                 ),
                                 title: Text(themeProvider.getIsDarkTheme
-                                    ? "Dark mode"
-                                    : "Light mode"),
+                                    ? S.of(context).darkMode
+                                    : S.of(context).lightMode),
                                 value: themeProvider.getIsDarkTheme,
                                 onChanged: (value) {
                                   themeProvider.setDarkTheme(themeValue: value);

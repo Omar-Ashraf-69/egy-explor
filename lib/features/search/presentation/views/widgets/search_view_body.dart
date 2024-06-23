@@ -2,6 +2,7 @@ import 'package:egy_exlpor/core/utils/custom_icon_button.dart';
 import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/search/data/models/recommended_places/recommended_places.dart';
 import 'package:egy_exlpor/features/search/presentation/views/widgets/recommendation_grid_view.dart';
+import 'package:egy_exlpor/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class SearchRecommendationsResultViewBody extends StatelessWidget {
@@ -23,7 +24,7 @@ class SearchRecommendationsResultViewBody extends StatelessWidget {
           ),
           centerTitle: true,
           title: Text(
-            'Best Recommendations',
+            S.of(context).bestRecommendations,
             style: Styles.textStyle20.copyWith(
               fontWeight: FontWeight.w600,
             ),
@@ -39,10 +40,10 @@ class SearchRecommendationsResultViewBody extends StatelessWidget {
               //   hintText: 'Search for recommendations',
               // ),
               // const SizedBox(height: 15),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10.0),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: Text(
-                  'Best for you',
+                  S.of(context).bestForYou,
                   style: Styles.textStyle18,
                 ),
               ),

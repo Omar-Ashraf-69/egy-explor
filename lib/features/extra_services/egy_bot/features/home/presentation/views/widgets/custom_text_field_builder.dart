@@ -2,6 +2,7 @@ import 'package:egy_exlpor/core/managers/speech_cubit/speech_cubit.dart';
 import 'package:egy_exlpor/core/utils/colors.dart';
 import 'package:egy_exlpor/features/extra_services/egy_bot/features/home/presentation/managers/cubit/gemini_cubit_cubit.dart';
 import 'package:egy_exlpor/features/extra_services/egy_bot/features/home/presentation/views/widgets/custom_suffix_icon_builder.dart';
+import 'package:egy_exlpor/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -27,7 +28,7 @@ class CustomTextFieldBuilder extends StatelessWidget {
             fontWeight: FontWeight.w500,
           ),
           decoration: InputDecoration(
-            hintText: 'Enter a message',
+            hintText: S.of(context).enterMessage,
             hintStyle: const TextStyle(
               fontSize: 16,
             ),

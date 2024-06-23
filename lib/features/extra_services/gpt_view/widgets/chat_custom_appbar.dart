@@ -1,3 +1,4 @@
+import 'package:egy_exlpor/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 AppBar chatCustomAppBar(context) {
@@ -16,9 +17,9 @@ AppBar chatCustomAppBar(context) {
       ),
     ),
     centerTitle: true,
-    title: const Text(
-      "IdeaMate",
-      style: TextStyle(
+    title: Text(
+      S.of(context).ideaMate,
+      style: const TextStyle(
         fontWeight: FontWeight.bold,
         fontFamily: "Cera Pro",
         fontSize: 25,
