@@ -59,6 +59,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "editProfile": MessageLookupByLibrary.simpleMessage("Editar perfil"),
         "email": MessageLookupByLibrary.simpleMessage("E-mail"),
         "en": MessageLookupByLibrary.simpleMessage("Inglês"),
+        "enterEmailtosendpasswordresetlink":
+            MessageLookupByLibrary.simpleMessage(
+                "Digite o e-mail para enviar o link de redefinição de senha"),
         "enterMessage":
             MessageLookupByLibrary.simpleMessage("Digite uma mensagem"),
         "exchangeCurrency":
@@ -125,6 +128,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("Registrar"),
         "registerNow": MessageLookupByLibrary.simpleMessage("Registrar agora"),
         "religious": MessageLookupByLibrary.simpleMessage("Religioso"),
+        "resetPassword":
+            MessageLookupByLibrary.simpleMessage("Redefinir senha"),
         "restaurant": MessageLookupByLibrary.simpleMessage("Restaurante"),
         "reveal": MessageLookupByLibrary.simpleMessage("Revelar"),
         "search": MessageLookupByLibrary.simpleMessage("Buscar"),
@@ -142,6 +147,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Selecione seus interesses"),
         "selectYourLocation":
             MessageLookupByLibrary.simpleMessage("Selecione sua localização"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage("Enviar e-mail"),
         "services": MessageLookupByLibrary.simpleMessage("Serviços"),
         "settings": MessageLookupByLibrary.simpleMessage("Configurações"),
         "skip": MessageLookupByLibrary.simpleMessage("Pular"),

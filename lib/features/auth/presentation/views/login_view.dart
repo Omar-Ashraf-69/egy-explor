@@ -1,5 +1,8 @@
 import 'package:egy_exlpor/core/services/auth.dart';
+import 'package:egy_exlpor/core/utils/colors.dart';
+import 'package:egy_exlpor/core/utils/styles.dart';
 import 'package:egy_exlpor/features/auth/presentation/views/register_view.dart';
+import 'package:egy_exlpor/features/auth/presentation/views/reset_password_view.dart';
 import 'package:egy_exlpor/features/auth/presentation/views/widgets/app_name_widget.dart';
 import 'package:egy_exlpor/core/utils/custom_button_widget.dart';
 import 'package:egy_exlpor/features/auth/presentation/views/widgets/custom_check_having_email_widget.dart';
@@ -72,7 +75,31 @@ class _LoginViewState extends State<LoginView> {
                       },
                     ),
                     const SizedBox(
-                      height: 25,
+                      height: 4,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 6.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const ResetPasswordView()));
+                              },
+                              child: Text(
+                                S.of(context).forgetPassword,
+                                style: Styles.textStyle16
+                                    .copyWith(color: kPrimaryColor),
+                              )),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 16,
                     ),
                     CustomButtonWidget(
                       label: isLoading
@@ -81,9 +108,9 @@ class _LoginViewState extends State<LoginView> {
                                 color: Colors.white,
                               ),
                             )
-                          :  Text(
+                          : Text(
                               S.of(context).login.toUpperCase(),
-                              style:const TextStyle(
+                              style: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
                               ),
@@ -132,7 +159,7 @@ class _LoginViewState extends State<LoginView> {
                     ),
                     CustomCheckHavingEmailWidget(
                       checkingMessage: S.of(context).dontHaveAccount,
-                      actionMessage:S.of(context).registerNow ,
+                      actionMessage: S.of(context).registerNow,
                       onTap: () {
                         //(context).go(AppRouter.kRegisterView);
                         Navigator.pushAndRemoveUntil(

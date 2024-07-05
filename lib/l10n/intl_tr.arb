@@ -100,6 +100,9 @@
     "selectYourAgeRange":"Yaş Aralığınızı Seçin",
     "selectYourInterests":"İlgilerinizi Seçin",
     "selectYourLocation":"Konumunuzu Seçin",
-    "selectYourActivities":"Aktivitelerinizi Seçin"
+    "selectYourActivities":"Aktivitelerinizi Seçin",
+    "resetPassword": "Şifreyi Sıfırla",
+    "enterEmailtosendpasswordresetlink": "Şifre sıfırlama bağlantısı göndermek için e-posta girin",
+    "sendEmail": "E-posta Gönder"
   }
   

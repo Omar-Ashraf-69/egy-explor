@@ -61,6 +61,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Редактировать профиль"),
         "email": MessageLookupByLibrary.simpleMessage("Электронная почта"),
         "en": MessageLookupByLibrary.simpleMessage("Английский"),
+        "enterEmailtosendpasswordresetlink": MessageLookupByLibrary.simpleMessage(
+            "Введите адрес электронной почты для отправки ссылки на сброс пароля"),
         "enterMessage":
             MessageLookupByLibrary.simpleMessage("Введите сообщение"),
         "exchangeCurrency":
@@ -129,6 +131,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "registerNow":
             MessageLookupByLibrary.simpleMessage("Зарегистрироваться сейчас"),
         "religious": MessageLookupByLibrary.simpleMessage("Религиозные"),
+        "resetPassword":
+            MessageLookupByLibrary.simpleMessage("Сбросить пароль"),
         "restaurant": MessageLookupByLibrary.simpleMessage("Ресторан"),
         "reveal": MessageLookupByLibrary.simpleMessage("Раскрыть"),
         "search": MessageLookupByLibrary.simpleMessage("Поиск"),
@@ -145,6 +149,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Выберите ваши интересы"),
         "selectYourLocation": MessageLookupByLibrary.simpleMessage(
             "Выберите ваше местоположение"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage(
+            "Отправить электронное письмо"),
         "services": MessageLookupByLibrary.simpleMessage("Услуги"),
         "settings": MessageLookupByLibrary.simpleMessage("Настройки"),
         "skip": MessageLookupByLibrary.simpleMessage("Пропустить"),

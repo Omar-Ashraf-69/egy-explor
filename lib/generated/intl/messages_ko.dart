@@ -51,6 +51,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "editProfile": MessageLookupByLibrary.simpleMessage("프로필 수정"),
         "email": MessageLookupByLibrary.simpleMessage("이메일"),
         "en": MessageLookupByLibrary.simpleMessage("영어"),
+        "enterEmailtosendpasswordresetlink":
+            MessageLookupByLibrary.simpleMessage(
+                "비밀번호 재설정 링크를 보내려면 이메일을 입력하세요"),
         "enterMessage": MessageLookupByLibrary.simpleMessage("메시지 입력"),
         "exchangeCurrency": MessageLookupByLibrary.simpleMessage("환율 계산"),
         "explore": MessageLookupByLibrary.simpleMessage("탐색"),
@@ -108,6 +111,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("등록"),
         "registerNow": MessageLookupByLibrary.simpleMessage("지금 등록하기"),
         "religious": MessageLookupByLibrary.simpleMessage("종교"),
+        "resetPassword": MessageLookupByLibrary.simpleMessage("비밀번호 재설정"),
         "restaurant": MessageLookupByLibrary.simpleMessage("레스토랑"),
         "reveal": MessageLookupByLibrary.simpleMessage("공개"),
         "search": MessageLookupByLibrary.simpleMessage("검색"),
@@ -119,6 +123,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("국가 코드 선택"),
         "selectYourInterests": MessageLookupByLibrary.simpleMessage("관심사 선택"),
         "selectYourLocation": MessageLookupByLibrary.simpleMessage("위치 선택"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage("이메일 보내기"),
         "services": MessageLookupByLibrary.simpleMessage("서비스"),
         "settings": MessageLookupByLibrary.simpleMessage("설정"),
         "skip": MessageLookupByLibrary.simpleMessage("건너뛰기"),

@@ -100,6 +100,9 @@
     "selectYourAgeRange": "选择您的年龄段",
     "selectYourInterests": "选择您的兴趣",
     "selectYourLocation": "选择您的位置",
-    "selectYourActivities": "选择您的活动"
+    "selectYourActivities": "选择您的活动",
+    "resetPassword": "重置密码",
+    "enterEmailtosendpasswordresetlink": "请输入电子邮件地址发送密码重置链接",
+    "sendEmail": "发送电子邮件"
   }
   

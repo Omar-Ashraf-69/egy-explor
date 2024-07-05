@@ -60,6 +60,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تعديل الملف الشخصي"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "en": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
+        "enterEmailtosendpasswordresetlink":
+            MessageLookupByLibrary.simpleMessage(
+                "أدخل البريد الإلكتروني لإرسال رابط إعادة تعيين كلمة المرور"),
         "enterMessage": MessageLookupByLibrary.simpleMessage("أدخل رسالة"),
         "exchangeCurrency":
             MessageLookupByLibrary.simpleMessage("تحويل العملات"),
@@ -122,6 +125,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("تسجيل الحساب"),
         "registerNow": MessageLookupByLibrary.simpleMessage("سجّل الآن"),
         "religious": MessageLookupByLibrary.simpleMessage("ديني"),
+        "resetPassword":
+            MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
         "restaurant": MessageLookupByLibrary.simpleMessage("مطاعم"),
         "reveal": MessageLookupByLibrary.simpleMessage("كشف"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
@@ -138,6 +143,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("اختر اهتماماتك"),
         "selectYourLocation":
             MessageLookupByLibrary.simpleMessage("اختر موقعك"),
+        "sendEmail":
+            MessageLookupByLibrary.simpleMessage("إرسال البريد الإلكتروني"),
         "services": MessageLookupByLibrary.simpleMessage("خدمات"),
         "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطى"),

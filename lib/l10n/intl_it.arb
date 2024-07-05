@@ -100,6 +100,10 @@
     "selectYourAgeRange":"Seleziona la tua fascia d'età",
     "selectYourInterests":"Seleziona i tuoi interessi",
     "selectYourLocation":"Seleziona la tua posizione",
-    "selectYourActivities":"Seleziona le tue attività"
-  }
+    "selectYourActivities":"Seleziona le tue attività",
+    "resetPassword": "Reimposta la password",
+    "enterEmailtosendpasswordresetlink": "Inserisci l'email per inviare il link di reimpostazione della password",
+    "sendEmail": "Invia email"
+}
+  
   

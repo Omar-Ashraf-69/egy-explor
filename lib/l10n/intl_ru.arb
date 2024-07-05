@@ -100,6 +100,9 @@
     "selectYourAgeRange":"Выберите свой возрастной диапазон",
     "selectYourInterests":"Выберите ваши интересы",
     "selectYourLocation":"Выберите ваше местоположение",
-    "selectYourActivities":"Выберите ваши активности"
+    "selectYourActivities":"Выберите ваши активности",
+    "resetPassword": "Сбросить пароль",
+    "enterEmailtosendpasswordresetlink": "Введите адрес электронной почты для отправки ссылки на сброс пароля",
+    "sendEmail": "Отправить электронное письмо"
   }
   

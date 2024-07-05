@@ -100,6 +100,9 @@
     "selectYourAgeRange":"年齢層を選択",
     "selectYourInterests":"興味を選択",
     "selectYourLocation":"位置を選択",
-    "selectYourActivities":"アクティビティを選択"
+    "selectYourActivities":"アクティビティを選択",
+    "resetPassword": "パスワードをリセットする",
+    "enterEmailtosendpasswordresetlink": "パスワードリセットリンクを送信するためのメールアドレスを入力してください",
+    "sendEmail": "メールを送信する"
   }
   

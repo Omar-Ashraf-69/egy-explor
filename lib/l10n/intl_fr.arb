@@ -100,6 +100,9 @@
     "selectYourAgeRange":"Sélectionnez votre tranche d'âge",
     "selectYourInterests":"Sélectionnez vos centres d'intérêt",
     "selectYourLocation":"Sélectionnez votre emplacement",
-    "selectYourActivities":"Sélectionnez vos activités"
+    "selectYourActivities":"Sélectionnez vos activités",
+    "resetPassword": "Réinitialiser le mot de passe",
+    "enterEmailtosendpasswordresetlink": "Entrez l'e-mail pour envoyer le lien de réinitialisation du mot de passe",
+    "sendEmail": "Envoyer l'e-mail"
   }
   

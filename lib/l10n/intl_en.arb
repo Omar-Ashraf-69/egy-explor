@@ -100,6 +100,8 @@
     "selectYourAgeRange":"Select Your age range",
     "selectYourInterests":"Select Your Interests",
     "selectYourLocation":"Select Your Location",
-    "selectYourActivities":"Select Your Activities"
-
+    "selectYourActivities":"Select Your Activities",
+    "resetPassword":"Reset Password",
+    "enterEmailtosendpasswordresetlink":"Enter email to send password reset link",
+    "sendEmail": "Send email"
 }

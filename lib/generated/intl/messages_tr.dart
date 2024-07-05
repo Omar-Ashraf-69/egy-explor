@@ -58,6 +58,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "editProfile": MessageLookupByLibrary.simpleMessage("Profili Düzenle"),
         "email": MessageLookupByLibrary.simpleMessage("E-posta"),
         "en": MessageLookupByLibrary.simpleMessage("İngilizce"),
+        "enterEmailtosendpasswordresetlink":
+            MessageLookupByLibrary.simpleMessage(
+                "Şifre sıfırlama bağlantısı göndermek için e-posta girin"),
         "enterMessage":
             MessageLookupByLibrary.simpleMessage("Mesajınızı girin"),
         "exchangeCurrency":
@@ -123,6 +126,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("Kayıt ol"),
         "registerNow": MessageLookupByLibrary.simpleMessage("Şimdi Kayıt Ol"),
         "religious": MessageLookupByLibrary.simpleMessage("Dini"),
+        "resetPassword":
+            MessageLookupByLibrary.simpleMessage("Şifreyi Sıfırla"),
         "restaurant": MessageLookupByLibrary.simpleMessage("Restoran"),
         "reveal": MessageLookupByLibrary.simpleMessage("Açığa çıkar"),
         "search": MessageLookupByLibrary.simpleMessage("Ara"),
@@ -139,6 +144,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("İlgilerinizi Seçin"),
         "selectYourLocation":
             MessageLookupByLibrary.simpleMessage("Konumunuzu Seçin"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage("E-posta Gönder"),
         "services": MessageLookupByLibrary.simpleMessage("Hizmetler"),
         "settings": MessageLookupByLibrary.simpleMessage("Ayarlar"),
         "skip": MessageLookupByLibrary.simpleMessage("Atla"),

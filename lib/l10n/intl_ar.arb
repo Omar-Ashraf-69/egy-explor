@@ -100,5 +100,8 @@
   "selectYourAgeRange": "اختر فئتك العمرية",
   "selectYourInterests": "اختر اهتماماتك",
   "selectYourLocation": "اختر موقعك",
-  "selectYourActivities": "اختر أنشطتك"
+  "selectYourActivities": "اختر أنشطتك",
+  "resetPassword": "إعادة تعيين كلمة المرور",
+  "enterEmailtosendpasswordresetlink": "أدخل البريد الإلكتروني لإرسال رابط إعادة تعيين كلمة المرور",
+  "sendEmail": "إرسال البريد الإلكتروني"
 }

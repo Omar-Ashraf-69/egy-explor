@@ -100,6 +100,9 @@
     "selectYourAgeRange":"Wähle dein Altersbereich",
     "selectYourInterests":"Wähle deine Interessen",
     "selectYourLocation":"Wähle deinen Standort",
-    "selectYourActivities":"Wähle deine Aktivitäten"
+    "selectYourActivities":"Wähle deine Aktivitäten",
+    "resetPassword": "Passwort zurücksetzen",
+    "enterEmailtosendpasswordresetlink": "E-Mail eingeben, um den Link zum Zurücksetzen des Passworts zu senden",
+    "sendEmail": "E-Mail senden"
   }
   

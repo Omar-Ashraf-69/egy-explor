@@ -100,6 +100,9 @@
     "selectYourAgeRange":"나이 범위 선택",
     "selectYourInterests":"관심사 선택",
     "selectYourLocation":"위치 선택",
-    "selectYourActivities":"활동 선택"
+    "selectYourActivities":"활동 선택",
+    "resetPassword": "비밀번호 재설정",
+    "enterEmailtosendpasswordresetlink": "비밀번호 재설정 링크를 보내려면 이메일을 입력하세요",
+    "sendEmail": "이메일 보내기"
   }
   

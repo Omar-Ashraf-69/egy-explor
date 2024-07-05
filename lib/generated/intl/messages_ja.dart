@@ -51,6 +51,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "editProfile": MessageLookupByLibrary.simpleMessage("プロフィールを編集"),
         "email": MessageLookupByLibrary.simpleMessage("メール"),
         "en": MessageLookupByLibrary.simpleMessage("英語"),
+        "enterEmailtosendpasswordresetlink":
+            MessageLookupByLibrary.simpleMessage(
+                "パスワードリセットリンクを送信するためのメールアドレスを入力してください"),
         "enterMessage": MessageLookupByLibrary.simpleMessage("メッセージを入力"),
         "exchangeCurrency": MessageLookupByLibrary.simpleMessage("通貨の交換"),
         "explore": MessageLookupByLibrary.simpleMessage("探索"),
@@ -108,6 +111,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("登録"),
         "registerNow": MessageLookupByLibrary.simpleMessage("今すぐ登録"),
         "religious": MessageLookupByLibrary.simpleMessage("宗教"),
+        "resetPassword": MessageLookupByLibrary.simpleMessage("パスワードをリセットする"),
         "restaurant": MessageLookupByLibrary.simpleMessage("レストラン"),
         "reveal": MessageLookupByLibrary.simpleMessage("明らかにする"),
         "search": MessageLookupByLibrary.simpleMessage("検索"),
@@ -121,6 +125,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("国コードを選択"),
         "selectYourInterests": MessageLookupByLibrary.simpleMessage("興味を選択"),
         "selectYourLocation": MessageLookupByLibrary.simpleMessage("位置を選択"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage("メールを送信する"),
         "services": MessageLookupByLibrary.simpleMessage("サービス"),
         "settings": MessageLookupByLibrary.simpleMessage("設定"),
         "skip": MessageLookupByLibrary.simpleMessage("スキップ"),
