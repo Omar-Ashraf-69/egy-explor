@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
+import 'package:egy_exlpor/core/utils/api_keys.dart';
 import 'package:egy_exlpor/features/extra_services/weather/data/models/location_weather_model.dart';
 import 'package:egy_exlpor/features/extra_services/weather/data/models/weather_model.dart';
 import 'package:http/http.dart' as http;
@@ -8,13 +9,12 @@ class WeatherService {
   // https://api.weatherapi.com/v1/forecast.json?key=dcf2e86dce8e4ede80d11030242503&q=cairo&days=7
   // https://api.weatherapi.com/v1/forecast.json?key=dcf2e86dce8e4ede80d11030242503&q=cairo&days=7&aqi=no&alerts=no
   final String baseUrl = 'https://api.weatherapi.com/v1';
-  final String apiKey = '97bf195409b34adaaa303800242805';
 
   WeatherService();
 
   Future<WeatherModel> getWeather({required String cityName}) async {
-    Uri url =
-        Uri.parse('$baseUrl/forecast.json?key=$apiKey&q=$cityName&days=7');
+    Uri url = Uri.parse(
+        '$baseUrl/forecast.json?key=${ApiKeys.weatherApiKey}&q=$cityName&days=7');
     http.Response response = await http.get(url);
 
     if (response.statusCode == 400) {
@@ -49,8 +49,8 @@ class WeatherService {
     List<LocationWeatherModel> locationWeatherModel = [];
     try {
       for (var city in cities) {
-        Uri url =
-            Uri.parse('$baseUrl/forecast.json?key=$apiKey&q=$city&days=1');
+        Uri url = Uri.parse(
+            '$baseUrl/forecast.json?key=${ApiKeys.weatherApiKey}&q=$city&days=1');
         http.Response response = await http.get(url);
 
         locationWeatherModel

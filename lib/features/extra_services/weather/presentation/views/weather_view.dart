@@ -9,7 +9,6 @@ import 'package:egy_exlpor/features/extra_services/weather/presentation/views/wi
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
-import 'package:ionicons/ionicons.dart';
 
 class WeatherView extends StatelessWidget {
   const WeatherView({
@@ -39,7 +38,7 @@ class WeatherView extends StatelessWidget {
                   .days[BlocProvider.of<WeatherCubit>(context).index]
                   .condition,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -48,12 +47,15 @@ class WeatherView extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        GestureDetector(
-                            onTap: () => Navigator.pop(context),
-                            child: const Icon(
-                              Ionicons.arrow_back,
-                              color: Colors.white,
-                            )),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 8.0, left: 4),
+                          child: GestureDetector(
+                              onTap: () => Navigator.pop(context),
+                              child: const Icon(
+                                Icons.chevron_left_sharp,
+                                color: Colors.white,
+                              )),
+                        ),
                         const SizedBox(
                           width: 12,
                         ),
