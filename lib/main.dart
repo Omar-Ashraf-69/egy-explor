@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => ImageCubit(),
         ),
-        BlocProvider(create: (context) => WeatherCubit()..getWeatherCubit()),
+        BlocProvider(create: (context) => WeatherCubit()),
         BlocProvider(create: (context) => FavoritesCubit()),
       ],
       child: BlocBuilder<ThemeCubit, bool>(

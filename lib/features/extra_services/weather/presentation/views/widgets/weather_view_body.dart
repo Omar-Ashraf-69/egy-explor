@@ -14,6 +14,7 @@ class WeatherViewBody extends StatelessWidget {
   const WeatherViewBody({super.key});
   @override
   Widget build(BuildContext context) {
+    BlocProvider.of<WeatherCubit>(context).getWeatherCubit();
     return BlocBuilder<WeatherCubit, WeatherStates>(
       builder: (context, state) {
         if (state is InitialWeatherState || state is LoadingWeatherState) {
@@ -95,7 +96,8 @@ class WeatherViewBody extends StatelessWidget {
                               color: Colors.white,
                             ),
                             onPressed: () {
-                              Navigator.pushNamed(context, SearchWidget.routeName);
+                              Navigator.pushNamed(
+                                  context, SearchWidget.routeName);
                             }),
                       ],
                     ),
@@ -131,8 +133,7 @@ class WeatherViewBody extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => SearchWidget(
-                            ),
+                            builder: (context) => SearchWidget(),
                           ),
                         );
                       },
