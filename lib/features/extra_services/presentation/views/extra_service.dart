@@ -18,7 +18,7 @@ import '../../../../generated/l10n.dart';
 
 class ExtraServiceView extends StatelessWidget {
   const ExtraServiceView({super.key});
-
+  static const String routeName = '/extraServiceView';
   @override
   Widget build(BuildContext context) {
     final List<CardItem> items = [
@@ -70,12 +70,8 @@ class ExtraServiceView extends StatelessWidget {
             return GestureDetector(
               onTap: () {
                 if (items[index].label == S.of(context).weatherForcast) {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const WeatherView(),
-                    ),
-                  );
+                  Navigator.pushNamed(context, WeatherView.routeName);
+                  
                 } else if (items[index].label ==
                     S.of(context).currenyConverter) {
                   Navigator.pushNamed(context, CurrencyConverter.routeName);

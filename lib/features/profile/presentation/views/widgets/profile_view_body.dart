@@ -126,13 +126,8 @@ class ProfileViewBody extends StatelessWidget {
                             icon: IconlyLight.closeSquare,
                             text: S.of(context).extraServices,
                             function: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const ExtraServiceView(),
-                                ),
-                              );
+                              Navigator.pushNamed(context, ExtraServiceView.routeName);
+                              
                             },
                           ),
                           const Divider(

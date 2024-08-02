@@ -17,7 +17,7 @@ class HomeViewBody extends StatelessWidget {
         if (state is UserLoaded) {
           return Scaffold(
             body: Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 top: 59.0,
                 bottom: 60,
                 left: 14,
@@ -25,20 +25,20 @@ class HomeViewBody extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  HomeViewAppBar(),
-                  SizedBox(height: 10),
+                  const HomeViewAppBar(),
+                  const SizedBox(height: 10),
                   SectionHeader(
                     title: S.of(context).hiddenGems,
                     isViewAll: false,
                   ),
-                  HiddenGems(),
-                  SizedBox(height: 5),
+                  const HiddenGems(),
+                  const SizedBox(height: 5),
                   SectionHeader(
                     title: S.of(context).hotSpots,
                     isViewAll: false,
                   ),
-                  SizedBox(height: 5),
-                  BestDestinationsWidget(),
+                  const SizedBox(height: 5),
+                  const BestDestinationsWidget(),
                 ],
               ),
             ),

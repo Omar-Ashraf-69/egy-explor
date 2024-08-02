@@ -5,8 +5,9 @@ import 'package:ionicons/ionicons.dart';
 
 // ignore: must_be_immutable
 class SearchWidget extends StatelessWidget {
-  SearchWidget({super.key});
+  SearchWidget({super.key, });
   String cityName = '';
+  static const routeName = '/searchWeatherWidget';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

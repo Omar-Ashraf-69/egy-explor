@@ -5,6 +5,9 @@ import 'package:egy_exlpor/features/extra_services/currecny/ui/convert_currecny.
 import 'package:egy_exlpor/features/extra_services/currecny/ui/exchange_currecny.dart';
 import 'package:egy_exlpor/features/extra_services/gpt_view/gpt_view.dart';
 import 'package:egy_exlpor/features/extra_services/language_translation/translation_view.dart';
+import 'package:egy_exlpor/features/extra_services/presentation/views/extra_service.dart';
+import 'package:egy_exlpor/features/extra_services/weather/presentation/views/weather_view.dart';
+import 'package:egy_exlpor/features/extra_services/weather/presentation/views/widgets/search_widget.dart';
 import 'package:egy_exlpor/features/favorites/presentation/views/favorites_view.dart';
 import 'package:egy_exlpor/features/hotel/presentation/views/hotel_view.dart';
 import 'package:egy_exlpor/features/layout/presentation/views/layout_view.dart';
@@ -38,6 +41,9 @@ final Map<String, WidgetBuilder> routes = {
   CurrencyConverter.routeName: (context) => const CurrencyConverter(),
   ExchangeCurrecny.routeName: (context) => const ExchangeCurrecny(),
   TranslationView.routeName: (context) => const TranslationView(),
+  ExtraServiceView.routeName: (context) => const ExtraServiceView(),
+  WeatherView.routeName: (context) => const WeatherView(),
+  SearchWidget.routeName: (context) =>  SearchWidget(),
 };
 
 MaterialPageRoute<dynamic>? generateRoutes(RouteSettings settings) {

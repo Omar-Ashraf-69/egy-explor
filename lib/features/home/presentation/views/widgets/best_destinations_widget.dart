@@ -7,51 +7,26 @@ import 'package:flutter/material.dart';
 
 class BestDestinationsWidget extends StatefulWidget {
   const BestDestinationsWidget({super.key});
+
   @override
   State<BestDestinationsWidget> createState() => _BestDestinationsWidgetState();
 }
 
 class _BestDestinationsWidgetState extends State<BestDestinationsWidget> {
-  static List<TopPlaces>? cachedPlaces;
-  bool isLoading = false;
+  Future<List<TopPlaces>>? _futurePlaces;
+  static List<TopPlaces>? _cachedPlaces;
 
   @override
   void initState() {
     super.initState();
-    _fetchData();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.395,
-      child: isLoading
-          ? const Center(child: CupertinoActivityIndicator())
-          : ListView.separated(
-              physics: const BouncingScrollPhysics(),
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) {
-                return BestDestinationItem(
-                  place: cachedPlaces![index],
-                );
-              },
-              separatorBuilder: (context, index) => const Padding(
-                    padding: EdgeInsets.only(right: 10),
-                  ),
-              itemCount: cachedPlaces?.length ?? 0),
-    );
-  }
-
-  Future<void> _fetchData() async {
-    if (cachedPlaces != null) {
-      // If data is cached, use it
-      setState(() {});
-      return;
+    if (_cachedPlaces == null) {
+      _futurePlaces = _fetchData();
+    } else {
+      _futurePlaces = Future.value(_cachedPlaces);
     }
+  }
 
-    isLoading = true;
-    setState(() {});
-
+  Future<List<TopPlaces>> _fetchData() async {
     Dio dio = Dio();
     List<dynamic> response = await RecommenderApiService(dio).post(
       url: 'http://10.0.2.2:5001/recommend',
@@ -59,16 +34,46 @@ class _BestDestinationsWidgetState extends State<BestDestinationsWidget> {
     );
 
     if (response.isNotEmpty) {
-      cachedPlaces =
-          response.map((element) => TopPlaces.fromJson(element)).toList();
+      _cachedPlaces = response.map((element) => TopPlaces.fromJson(element)).toList();
+      return _cachedPlaces!;
     } else {
-      // Handle empty or error response
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Failed to fetch data")),
-      );
+      throw Exception("Failed to fetch data");
     }
+  }
 
-    isLoading = false;
-    setState(() {});
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: MediaQuery.of(context).size.height * 0.395,
+      child: FutureBuilder<List<TopPlaces>>(
+        future: _futurePlaces,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CupertinoActivityIndicator());
+          } else if (snapshot.hasError) {
+            return Center(
+              child: Text("Error: ${snapshot.error}"),
+            );
+          } else if (snapshot.hasData) {
+            final places = snapshot.data!;
+            return ListView.separated(
+              physics: const BouncingScrollPhysics(),
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                return BestDestinationItem(
+                  place: places[index],
+                );
+              },
+              separatorBuilder: (context, index) => const Padding(
+                padding: EdgeInsets.only(right: 10),
+              ),
+              itemCount: places.length,
+            );
+          } else {
+            return const Center(child: Text("No data available"));
+          }
+        },
+      ),
+    );
   }
 }

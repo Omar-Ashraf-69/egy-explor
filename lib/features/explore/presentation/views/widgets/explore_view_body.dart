@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_cubit.dart';
 import 'package:egy_exlpor/core/managers/get_user_cubit/user_details_state.dart';
 import 'package:egy_exlpor/core/utils/assets.dart';
@@ -44,9 +43,7 @@ class ExploreViewBody extends StatelessWidget {
                       SearchBar(
                         controller: controller,
                         onSubmitted: (value) {
-                          log(
-                            'https://www.google.com/search?q=$value&hl=${Localizations.localeOf(context).languageCode}',
-                          );
+                          
                           Navigator.push(
                               context,
                               MaterialPageRoute(
