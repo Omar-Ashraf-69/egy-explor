@@ -15,6 +15,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:provider/single_child_widget.dart';
 
 var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
 
@@ -39,19 +40,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [
-        BlocProvider(
-          create: (context) => UserCubit(),
-        ),
-        BlocProvider(
-          create: (context) => ThemeCubit(),
-        ),
-        BlocProvider(
-          create: (context) => ImageCubit(),
-        ),
-        BlocProvider(create: (context) => WeatherCubit()),
-        BlocProvider(create: (context) => FavoritesCubit()),
-      ],
+      providers: providersList,
       child: BlocBuilder<ThemeCubit, bool>(
         builder: (context, isDark) {
           return MaterialApp(
@@ -89,5 +78,21 @@ class MyApp extends StatelessWidget {
         },
       ),
     );
+  }
+
+  List<SingleChildWidget> get providersList {
+    return [
+      BlocProvider(
+        create: (context) => UserCubit(),
+      ),
+      BlocProvider(
+        create: (context) => ThemeCubit(),
+      ),
+      BlocProvider(
+        create: (context) => ImageCubit(),
+      ),
+      BlocProvider(create: (context) => WeatherCubit()),
+      BlocProvider(create: (context) => FavoritesCubit()),
+    ];
   }
 }

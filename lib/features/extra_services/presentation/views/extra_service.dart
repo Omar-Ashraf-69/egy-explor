@@ -71,7 +71,6 @@ class ExtraServiceView extends StatelessWidget {
               onTap: () {
                 if (items[index].label == S.of(context).weatherForcast) {
                   Navigator.pushNamed(context, WeatherView.routeName);
-                  
                 } else if (items[index].label ==
                     S.of(context).currenyConverter) {
                   Navigator.pushNamed(context, CurrencyConverter.routeName);
@@ -108,7 +107,8 @@ class ExtraServiceView extends StatelessWidget {
                 builder: (context) => MultiBlocProvider(
                       providers: [
                         BlocProvider(create: (context) => GeminiCubit()),
-                        BlocProvider(create: (context) => SpeechCubit()),
+                        BlocProvider(
+                            create: (context) => SpeechCubit()..initialize()),
                       ],
                       child: const EgyptBotView(),
                     )),
